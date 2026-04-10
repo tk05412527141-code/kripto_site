@@ -200,6 +200,32 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    // Search Functionality
+    const mainSearch = document.getElementById('main-search');
+    if (mainSearch) {
+        mainSearch.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            
+            // Filter Market List
+            if (marketList) {
+                const rows = marketList.querySelectorAll('.bg-surface-container-low');
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    row.style.display = text.includes(query) ? 'flex' : 'none';
+                });
+            }
+            
+            // Filter P2P Cards
+            if (p2pCardsContainer) {
+                const cards = p2pCardsContainer.querySelectorAll('.glass-card');
+                cards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    card.style.display = text.includes(query) ? 'block' : 'none';
+                });
+            }
+        });
+    }
+
     // Call only once
     fetchLiveCryptoData();
 });

@@ -205,6 +205,19 @@ document.addEventListener('DOMContentLoaded', () => {
     tvScript.src = "https://s3.tradingview.com/tv.js";
     document.head.appendChild(tvScript);
 
+    // Search Functionality
+    const satSearch = document.getElementById('sat-search');
+    if (satSearch) {
+        satSearch.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const rows = assetsList.querySelectorAll('.asset-row-wrapper');
+            rows.forEach(row => {
+                const symbol = row.getAttribute('data-symbol').toLowerCase();
+                row.style.display = symbol.includes(query) ? 'flex' : 'none';
+            });
+        });
+    }
+
     // Initial fetch only once, no setInterval
     fetchTopAssets();
 });
