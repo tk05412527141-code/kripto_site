@@ -8,84 +8,13 @@
   
   <link rel="stylesheet" href="./style.css" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "on-primary-container": "#2e006c",
-            "on-error-container": "#ffb2b9",
-            "on-primary-fixed-variant": "#390083",
-            "secondary-dim": "#58e7ab",
-            "on-primary-fixed": "#000000",
-            "primary-container": "#b28cff",
-            "secondary": "#69f6b8",
-            "primary": "#bd9dff",
-            "on-secondary-fixed": "#00452d",
-            "on-tertiary": "#003b56",
-            "background": "#060e20",
-            "on-error": "#490013",
-            "surface-container-high": "#141f38",
-            "surface-dim": "#060e20",
-            "surface-container-highest": "#192540",
-            "primary-fixed": "#b28cff",
-            "on-surface-variant": "#a3aac4",
-            "on-secondary": "#005a3c",
-            "tertiary-fixed-dim": "#25adf1",
-            "on-surface": "#dee5ff",
-            "error-dim": "#d73357",
-            "on-secondary-fixed-variant": "#006544",
-            "on-tertiary-fixed": "#001a29",
-            "surface-container-low": "#091328",
-            "error-container": "#a70138",
-            "on-tertiary-fixed-variant": "#003d5a",
-            "surface-tint": "#bd9dff",
-            "on-tertiary-container": "#003047",
-            "surface": "#060e20",
-            "surface-container": "#0f1930",
-            "outline-variant": "#40485d",
-            "inverse-on-surface": "#4d556b",
-            "on-secondary-container": "#e1ffec",
-            "outline": "#6d758c",
-            "surface-variant": "#192540",
-            "surface-bright": "#1f2b49",
-            "surface-container-lowest": "#000000",
-            "error": "#ff6e84",
-            "tertiary-dim": "#17a8ec",
-            "inverse-surface": "#faf8ff",
-            "tertiary-fixed": "#40bbff",
-            "on-background": "#dee5ff",
-            "secondary-container": "#006c49",
-            "on-primary": "#3c0089",
-            "inverse-primary": "#742fe5",
-            "tertiary": "#61c2ff",
-            "secondary-fixed-dim": "#58e7ab",
-            "secondary-fixed": "#69f6b8",
-            "primary-dim": "#8a4cfc",
-            "tertiary-container": "#34b5fa",
-            "primary-fixed-dim": "#a67aff"
-          },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-          "fontFamily": {
-            "headline": ["Space Grotesk"],
-            "body": ["Inter"],
-            "label": ["Inter"]
-          }
-        }
-      }
-    }
-  </script>
+  <script src="./tailwind-config.js"></script>
+  <script src="./theme.js"></script>
 </head>
 <body class="bg-background text-on-surface font-body select-none">
 
   <!-- Desktop & Mobile Header -->
-  <header class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl shadow-[0px_0px_40px_rgba(189,157,255,0.08)] border-b border-surface-container-high">
+  <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl shadow-[0px_0px_40px_rgba(var(--color-primary),0.08)] border-b border-surface-container-high">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 h-20 w-full">
       <div class="flex items-center gap-3">
         <img src="./logo.png" alt="Anka Exchange İkon" class="w-16 h-16 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
@@ -101,10 +30,14 @@
 
       <div class="flex items-center gap-2 md:gap-4">
         <!-- Desktop Action -->
-        <button class="hidden md:block px-5 py-2 rounded-full bg-gradient-to-tr from-primary to-primary-dim text-on-primary-container font-semibold transition-transform active:scale-95 shadow-[0px_0px_20px_rgba(189,157,255,0.2)]">İşlem Yap</button>
+        <button class="hidden md:block px-5 py-2 rounded-full bg-gradient-to-tr from-primary to-primary-dim text-on-primary-container font-semibold transition-transform active:scale-95 shadow-md">İşlem Yap</button>
         
-        <button class="hover:bg-[#bd9dff]/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
-          <span class="material-symbols-outlined text-[#bd9dff]" data-icon="notifications">notifications</span>
+        <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
+          <span class="material-symbols-outlined text-primary">light_mode</span>
+        </button>
+        
+        <button class="hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
+          <span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
         </button>
       </div>
     </div>
@@ -183,20 +116,20 @@
   </main>
 
   <!-- BottomNavBar (Mobile Only) -->
-  <nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-4 bg-[#060e20]/80 backdrop-blur-xl rounded-t-2xl z-50 border-t border-surface-container-high shadow-[0px_-4px_20px_rgba(0,0,0,0.5)]">
-    <a class="flex flex-col items-center justify-center text-[#dee5ff]/60 hover:text-[#bd9dff] transition-transform active:scale-90" href="#">
+  <nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-4 bg-background/80 backdrop-blur-xl rounded-t-2xl z-50 border-t border-surface-container-high shadow-[0px_-4px_20px_rgba(0,0,0,0.2)]">
+    <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform active:scale-90" href="#">
       <span class="material-symbols-outlined mb-1 text-xl" data-icon="trending_up">trending_up</span>
       <span class="font-['Inter'] font-medium text-[10px]">Piyasa</span>
     </a>
-    <a class="flex flex-col items-center justify-center text-[#dee5ff]/60 hover:text-[#bd9dff] transition-transform active:scale-90" href="#">
+    <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform active:scale-90" href="#">
       <span class="material-symbols-outlined mb-1 text-xl" data-icon="swap_calls">swap_calls</span>
       <span class="font-['Inter'] font-medium text-[10px]">Takas</span>
     </a>
-    <a class="flex flex-col items-center justify-center text-[#bd9dff] font-bold" href="#">
+    <a class="flex flex-col items-center justify-center text-primary font-bold" href="#">
       <span class="material-symbols-filled mb-1 text-xl" data-icon="account_balance">account_balance</span>
       <span class="font-['Inter'] font-medium text-[10px]">Satış</span>
     </a>
-    <a class="flex flex-col items-center justify-center text-[#dee5ff]/60 hover:text-[#bd9dff] transition-transform active:scale-90" href="#">
+    <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform active:scale-90" href="#">
       <span class="material-symbols-outlined mb-1 text-xl" data-icon="person">person</span>
       <span class="font-['Inter'] font-medium text-[10px]">Profil</span>
     </a>
@@ -244,6 +177,7 @@
       </div>
   </footer>
 
+  <script src="./background-3d.js"></script>
   <script src="./main.js" type="module"></script>
 </body>
 </html>
