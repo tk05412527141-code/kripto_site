@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nasıl Çalışır? | Anka Exchange</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #060e20;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<script src="./tailwind-config.js"></script>
+<script src="./theme.js"></script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
+  <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+    <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3">
+           <img src="./logo.png" alt="Anka Exchange Logo" class="w-16 h-16 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
+           <img src="./logo-text.png" alt="Anka Exchange" class="h-8 md:h-10 object-contain drop-shadow-md hidden sm:block" />
+        </a>
+    </div>
+    <nav class="hidden md:flex flex-1 items-center justify-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-on-surface hover:text-primary transition-colors">Anasayfa</a>
+        <a href="kripto-al.html" class="text-on-surface hover:text-primary transition-colors">Kripto Satın Al</a>
+        <a href="kripto-sat.html" class="text-on-surface hover:text-primary transition-colors">Kripto Sat</a>
+        <div class="relative group h-full flex items-center">
+          <button class="text-primary hover:text-primary-dim transition-all flex items-center gap-1 group-hover:text-primary-dim py-2 text-sm font-medium drop-shadow-[0_0_8px_rgba(189,157,255,0.5)]">
+            Hakkımızda
+            <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180 text-primary">expand_more</span>
+          </button>
+          <div class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
+            <div class="bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+              <a href="nasil-calisir.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary transition-colors text-sm font-medium">
+                <span class="material-symbols-outlined text-xl">rocket_launch</span>
+                Nasıl Çalışır?
+              </a>
+              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium group/item">
+                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">verified_user</span>
+                KYC Doğrulama
+              </a>
+              <a href="kullanim-kosullari.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium group/item">
+                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">gavel</span>
+                Kullanım Koşulları
+              </a>
+              <div class="h-px bg-outline-variant/20 my-1 mx-2"></div>
+              <a href="gizlilik.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium group/item">
+                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">shield</span>
+                Gizlilik Politikası
+              </a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div class="flex items-center gap-4">
+        <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors">
+          <span class="material-symbols-outlined text-primary">light_mode</span>
+        </button>
+    </div>
+  </div>
+</header>
+
+<main class="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+    <!-- Hero -->
+    <section class="text-center mb-16 relative">
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <h1 class="text-5xl md:text-6xl font-headline font-bold mb-6 tracking-tight">Kripto Ticareti Hiç Bu Kadar <span class="text-primary">Kolay Olmamıştı.</span></h1>
+        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Anka Exchange'in hibrit P2P motoru ile saniyeler içinde işlem yapın. İşte adım adım çalışma sürecimiz.</p>
+    </section>
+
+    <!-- Steps -->
+    <div class="space-y-8">
+        <!-- Step 1 -->
+        <div class="p-10 bg-surface-container-low rounded-[2.5rem] border border-outline-variant/10 text-center">
+            <div class="max-w-xl mx-auto space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary font-headline font-bold text-xl border border-primary/20 mx-auto">01</div>
+                <h2 class="text-3xl font-headline font-bold">Varlığınızı Seçin</h2>
+                <p class="text-on-surface-variant leading-relaxed">Binance üzerindeki ANKA EXCHANGE ilanına tıkla, satın almak istediğin USDT miktarını ve ödeme yöntemini seç. Binance P2P kullanıcı adımız ANKA EXCHANGE.</p>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-10 bg-surface-container-low rounded-[2.5rem] border border-outline-variant/10 text-center">
+            <div class="max-w-xl mx-auto space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary font-headline font-bold text-xl border border-secondary/20 mx-auto">02</div>
+                <h2 class="text-3xl font-headline font-bold">İşlem Emri Verin</h2>
+                <p class="text-on-surface-variant leading-relaxed">P2P panelimizden "Al" veya "Sat" butonuna tıklayarak işlemi başlatın. Sistem sizi en güvenli ve en uygun oranlı partnerimizle anında eşleştirecektir.</p>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-10 bg-surface-container-low rounded-[2.5rem] border border-outline-variant/10 text-center">
+            <div class="max-w-xl mx-auto space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary font-headline font-bold text-xl border border-tertiary/20 mx-auto">03</div>
+                <h2 class="text-3xl font-headline font-bold">Anında Onay</h2>
+                <p class="text-on-surface-variant leading-relaxed">Ödemeniz gerçekleştikten sonra Tether (USDT) veya nakit varlığınız dakikalar içinde hesabınıza yansır. Tüm süreç "Sovereign Engine" güvencesiyle uçtan uca şifrelenir.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-[#060e20] border-t border-[#dee5ff]/10 py-12 px-8 mt-20 text-center">
+    <p class="text-on-surface-variant text-sm mb-4">© 2026 Anka Exchange. Bütün Hakları Saklıdır.</p>
+    <div class="text-[#dee5ff]/40 text-[9px] font-headline tracking-[0.5em]">ANKA F�NANSAL H�ZMETLER</div>
+</footer>
+<script src="./background-3d.js"></script>
+</body></html>
+

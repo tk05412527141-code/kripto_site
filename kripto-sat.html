@@ -39,8 +39,36 @@
       <a href="index.html" class="text-on-surface hover:text-primary transition-colors">Anasayfa</a>
       <a href="kripto-al.html" class="text-on-surface hover:text-primary transition-colors">Kripto Satın Al</a>
       <a href="kripto-sat.html" class="text-primary hover:text-primary-dim transition-colors drop-shadow-[0_0_8px_rgba(189,157,255,0.5)]">Kripto Sat</a>
-      <a href="hakkimizda.html" class="text-on-surface hover:text-primary transition-colors">Hakkımızda</a>
-    </nav>
+        <div class="relative group h-full flex items-center">
+          <button class="text-on-surface hover:text-primary transition-all flex items-center gap-1 group-hover:text-primary py-2 text-sm font-medium">
+            Hakkımızda
+            <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180 text-primary">expand_more</span>
+          </button>
+          
+          <!-- Dropdown Menu -->
+          <div class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
+            <div class="bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+              <a href="nasil-calisir.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium group/item">
+                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">rocket_launch</span>
+                Nasıl Çalışır?
+              </a>
+              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium group/item">
+                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">verified_user</span>
+                KYC Doğrulama
+              </a>
+              <a href="kullanim-kosullari.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium group/item">
+                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">gavel</span>
+                Kullanım Koşulları
+              </a>
+              <div class="h-px bg-outline-variant/20 my-1 mx-2"></div>
+              <a href="gizlilik.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium group/item">
+                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">shield</span>
+                Gizlilik Politikası
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
     <div class="flex items-center gap-2 md:gap-4">
         <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
@@ -123,8 +151,16 @@
           </ul>
         </div>
     </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-surface-container-high flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-surface-variant font-medium uppercase tracking-widest">
+        <p>© 2026 Anka Finansal Hizmetler ve Ticaret Limited Şirketi. Tüm Hakları Saklıdır.</p>
+        <div class="flex gap-6 opacity-60">
+            <span class="hover:text-primary transition-colors cursor-pointer">Sovereign Engine</span>
+            <span class="hover:text-primary transition-colors cursor-pointer">Global Compliance</span>
+        </div>
+    </div>
 </footer>
 
 <script src="./background-3d.js"></script>
 <script src="./kripto-sat.js" type="module"></script>
 </body></html>
+
