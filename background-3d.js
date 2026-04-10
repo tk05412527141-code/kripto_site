@@ -1,5 +1,5 @@
 /**
- * Anka Exchange - Interactive 3D Plexus Background
+ * Anka Exchange - Floating Candlestick Matrix Background
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,44 +18,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
     let width, height;
     
-    // Parçacık listesi
-    let particles = [];
-    const particleCount = 70; // Sayfadaki nokta sayısı
-    const connectionDistance = 120; // Noktalar arası çizgi oluşma mesafesi
-    const mouseConnectionDistance = 180; // Fare ile noktalar arası ilişki
+    // Mum parçacıkları listesi
+    let candles = [];
+    const candleCount = window.innerWidth > 768 ? 120 : 60; // Mobilde daha az mum (Performans için)
     
-    // Fare pozisyonunu takip et
-    let mouse = {
-        x: undefined,
-        y: undefined
-    };
+    // Fare pozisyonu
+    let mouse = { x: undefined, y: undefined };
 
     window.addEventListener('mousemove', (event) => {
         mouse.x = event.x;
         mouse.y = event.y;
     });
+    window.addEventListener('mouseout', () => {
+        mouse.x = undefined;
+        mouse.y = undefined;
+    });
 
-    // Tema Değişimlerini İzlemek İçin
-    let primaryColorRgb = '189, 157, 255'; 
-    let secondaryColorRgb = '105, 246, 184';
+    // Renk Temaları
+    let colors = {
+        bull: '105, 246, 184', // Green (Secondary)
+        bear: '255, 110, 132'  // Red (Error)
+    };
     
     function updateColors() {
         const rootStyles = getComputedStyle(document.documentElement);
-        // RGB değerlerini CSS variables'dan çek (%100 temizleyerek)
-        const pColor = rootStyles.getPropertyValue('--color-primary').replace(/[^\d,\s]/g, '').trim().split(/\s+/).join(',');
-        const sColor = rootStyles.getPropertyValue('--color-secondary').replace(/[^\d,\s]/g, '').trim().split(/\s+/).join(',');
+        // RGB Stringlerini CSS değişkenlerinden parçalayarak çıkar
+        const cGreen = rootStyles.getPropertyValue('--color-secondary').replace(/[^\d,\s]/g, '').trim().split(/\s+/).join(',');
+        const cRed = rootStyles.getPropertyValue('--color-error').replace(/[^\d,\s]/g, '').trim().split(/\s+/).join(',');
         
-        if (pColor && pColor.length > 5) primaryColorRgb = pColor;
-        if (sColor && sColor.length > 5) secondaryColorRgb = sColor;
+        if (cGreen && cGreen.length > 5) colors.bull = cGreen;
+        if (cRed && cRed.length > 5) colors.bear = cRed;
     }
 
-    // MutationObserver ile temanın dark/light geçişlerini anında yakala
-    const observer = new MutationObserver(() => {
-        updateColors();
-    });
+    // Temanın anlık değişmesine adapte ol
+    const observer = new MutationObserver(updateColors);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
-    // Ekran boyutunu güncelle
     function resize() {
         width = window.innerWidth;
         height = window.innerHeight;
@@ -66,128 +64,107 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('resize', resize);
     
-    // Parçacık Sınıfı
-    class Particle {
+    // Mum (Candlestick) Sınıfı
+    class Candlestick {
         constructor() {
+            this.reset(true);
+        }
+
+        reset(initial = false) {
+            // Z-Depth parralax etkisi (0.2 en arkada küçük, 1.0 en önde büyük ve hızlı)
+            this.z = Math.random() * 0.8 + 0.2; 
+            this.w = this.z * 8 + 1; // 1px ile 9px kalınlığında gövde
+            
+            // Yükseklik rastgele (Z'ye göre scale edilmiş)
+            this.h = (Math.random() * 40 + 10) * this.z; 
+            
+            // Çizgi (Wick) Gövdeden daha uzun olmalı
+            this.wickLength = this.h + (Math.random() * 50 + 15) * this.z;
+            this.wickOffset = Math.random() * (this.wickLength - this.h) * 0.7; // Fitil ile gövde hizalaması
+            
             this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.vx = (Math.random() - 0.5) * 0.8;
-            this.vy = (Math.random() - 0.5) * 0.8;
-            this.radius = Math.random() * 2 + 0.5;
-            // Bazı noktalar mor (%70), bazıları yeşil (%30)
-            this.type = Math.random() > 0.3 ? 'primary' : 'secondary';
+            // İlk açılışta ekrana dağınık yerleştir, sonrasında sadece alttan çıksın
+            this.y = initial ? Math.random() * (height + 200) - 100 : height + 50; 
+            
+            // Hız: Piyasayı temsil ettiği için yukarıya doğru uçan koinler (Moon effect)
+            this.vy = -(Math.random() * 0.9 + 0.2) * this.z; 
+            this.vx = 0; // Yatay hız (Fare ile etkilenecek)
+            
+            // %50 olasılıkla Yeşil(Yükseliş) veya Kırmızı(Düşüş)
+            this.type = Math.random() > 0.5 ? 'bull' : 'bear'; 
+            
+            // Arkadakiler çok daha silik, öndekiler daha belirgin
+            this.opacity = this.z * 0.45; 
         }
 
         update() {
-            // Fare etkileşimi: Fareden nazikçe kaçma effekti
+            // Fare etkileşimi: Finans piyasasındaki dalgalanmayı manipüle etmek
+            let forceX = 0;
             if (mouse.x !== undefined && mouse.y !== undefined) {
                 const dx = mouse.x - this.x;
-                const dy = mouse.y - this.y;
+                const dy = mouse.y - (this.y + this.wickLength / 2);
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
-                if (distance < mouseConnectionDistance / 2) {
-                    const forceDirectionX = dx / distance;
-                    const forceDirectionY = dy / distance;
-                    const force = (mouseConnectionDistance / 2 - distance) / (mouseConnectionDistance / 2);
-                    
-                    this.vx -= forceDirectionX * force * 0.05;
-                    this.vy -= forceDirectionY * force * 0.05;
+                // Fare yakınındaysa yatay hafif ivme (Rüzgar/Dalgalanma etkisi)
+                if (distance < 150) {
+                    forceX = (dx / distance) * -0.2 * this.z; 
                 }
             }
 
-            // Normal hareket ve sürtünme limiti
+            // Hızı güncelle ve sınırlandır
+            this.vx += (forceX - this.vx) * 0.05; // Yavaşça normalleşme
             this.x += this.vx;
             this.y += this.vy;
             
-            // Hız limiti uygulama
-            const maxSpeed = 1.5;
-            const currentSpeed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
-            if (currentSpeed > maxSpeed) {
-                this.vx = (this.vx / currentSpeed) * maxSpeed;
-                this.vy = (this.vy / currentSpeed) * maxSpeed;
+            // En tepeye ulaştığında ve tamamen ekrandan çıkınca aşağıdan tekrar başlat
+            if (this.y + this.wickLength < -50) {
+                this.reset(false);
             }
-
-            // Kenarlara çarpınca geri dön
-            if (this.x < 0 || this.x > width) this.vx *= -1;
-            if (this.y < 0 || this.y > height) this.vy *= -1;
+            
+            // Ekranın sağına/soluna kayarsa karşıdan geri çıkar
+            if (this.x > width + 20) this.x = -20;
+            if (this.x < -20) this.x = width + 20;
         }
 
         draw() {
+            const rgb = this.type === 'bull' ? colors.bull : colors.bear;
+            const cx = this.x + this.w / 2;
+            
+            // Fitil (Wick) Çizimi - Daha ince
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            const colorRgb = this.type === 'primary' ? primaryColorRgb : secondaryColorRgb;
-            ctx.fillStyle = `rgba(${colorRgb}, 0.5)`;
-            ctx.fill();
+            ctx.moveTo(cx, this.y);
+            ctx.lineTo(cx, this.y + this.wickLength);
+            ctx.strokeStyle = `rgba(${rgb}, ${this.opacity * 0.7})`;
+            // Derinliğe göre fitil kalınlığı
+            ctx.lineWidth = Math.max(1, this.w * 0.15);
+            ctx.stroke();
+            
+            // Mum Gövdesi (Body) Çizimi
+            ctx.fillStyle = `rgba(${rgb}, ${this.opacity})`;
+            ctx.fillRect(this.x, this.y + this.wickOffset, this.w, this.h);
         }
     }
 
     function init() {
         resize();
-        particles = [];
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
+        candles = [];
+        for (let i = 0; i < candleCount; i++) {
+            candles.push(new Candlestick());
         }
     }
 
     function animate() {
         requestAnimationFrame(animate);
         
-        // Temaya göre arkaplanı hafif şeffaf bırak ki iz efekti kalsın
+        // Ekranı temizle (Şeffaflıkla silerek Motion Blur/İz bırakma efekti yarat)
         ctx.clearRect(0, 0, width, height);
 
-        // Çizgileri çiz
-        for (let i = 0; i < particles.length; i++) {
-            particles[i].update();
-            particles[i].draw();
-
-            // Parçacıklar arası bağlar
-            for (let j = i; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < connectionDistance) {
-                    const opacity = 1 - (distance / connectionDistance);
-                    // Rengi ağırlıklı olan noktaya göre belirle
-                    const rgb = particles[i].type === 'primary' ? primaryColorRgb : secondaryColorRgb;
-                    
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(${rgb}, ${opacity * 0.25})`;
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-                }
-            }
-            
-            // Fare ile parçacıklar arası bağlar
-            if (mouse.x !== undefined && mouse.y !== undefined) {
-                const dx = particles[i].x - mouse.x;
-                const dy = particles[i].y - mouse.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < mouseConnectionDistance) {
-                    const opacity = 1 - (distance / mouseConnectionDistance);
-                    const rgb = particles[i].type === 'primary' ? primaryColorRgb : secondaryColorRgb;
-                    
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(mouse.x, mouse.y);
-                    ctx.strokeStyle = `rgba(${rgb}, ${opacity * 0.4})`; // Fare bağlarında daha belirgin parlaklık
-                    ctx.lineWidth = 1.5;
-                    ctx.stroke();
-                }
-            }
+        for (let i = 0; i < candles.length; i++) {
+            candles[i].update();
+            candles[i].draw();
         }
     }
 
-    // Sayfa kenarına mouse gidince takibi bırak
-    window.addEventListener('mouseout', () => {
-        mouse.x = undefined;
-        mouse.y = undefined;
-    });
-
     init();
-    // Gecikmeli başlatarak değişkenlerin set olmasını bekle
     setTimeout(animate, 100);
 });
