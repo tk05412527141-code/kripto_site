@@ -4,6 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Keep track of currently open chart
     let currentlyOpenSymbol = null;
+    let wsConnection = null;
+
+    const formatPrice = (priceStr) => {
+        const p = parseFloat(priceStr);
+        if(p < 0.1) return p.toLocaleString('en-US', { minimumFractionDigits: 4, maximumFractionDigits: 5 });
+        if(p < 1) return p.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 4 });
+        return p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    };
+
+    const getSparkline = (isPositive) => {
+        if(isPositive) {
+            return `<svg class="w-full h-full stroke-secondary drop-shadow-[0_0_4px_#69f6b8]" viewBox="0 0 100 40"><path d="M0,30 Q25,10 50,25 T100,5" fill="none" stroke-width="2.5"></path></svg>`;
+        }
+        return `<svg class="w-full h-full stroke-error drop-shadow-[0_0_4px_#ff6e84]" viewBox="0 0 100 40"><path d="M0,10 Q25,35 50,20 T100,35" fill="none" stroke-width="2.5"></path></svg>`;
+    };
 
     async function fetchTopAssets() {
       try {
@@ -14,16 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const usdtPairs = data.filter(item => item.symbol.endsWith('USDT') && !['USDCUSDT', 'FDUSDUSDT', 'TUSDUSDT'].includes(item.symbol));
         usdtPairs.sort((a, b) => parseFloat(b.quoteVolume) - parseFloat(a.quoteVolume));
         const top50 = usdtPairs.slice(0, 50);
-
-        const formatPrice = (priceStr) => {
-            const p = parseFloat(priceStr);
-            if(p < 0.1) return p.toLocaleString('en-US', { minimumFractionDigits: 4, maximumFractionDigits: 5 });
-            if(p < 1) return p.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 4 });
-            return p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-        };
-  
-        const greenLine = `<svg class="w-full h-full stroke-secondary drop-shadow-[0_0_4px_#69f6b8]" viewBox="0 0 100 40"><path d="M0,30 Q25,10 50,25 T100,5" fill="none" stroke-width="2.5"></path></svg>`;
-        const redLine = `<svg class="w-full h-full stroke-error drop-shadow-[0_0_4px_#ff6e84]" viewBox="0 0 100 40"><path d="M0,10 Q25,35 50,20 T100,35" fill="none" stroke-width="2.5"></path></svg>`;
   
         assetsList.innerHTML = top50.map((item, index) => {
           const isPositive = parseFloat(item.priceChangePercent) >= 0;
@@ -31,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const iconUrl = `https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/${baseCoin.toLowerCase()}.png`;
           const fallbackLogo = './logo.png';
           
-          const sparkline = isPositive ? greenLine : redLine;
+          const sparkline = getSparkline(isPositive);
           const textColorClass = isPositive ? 'text-secondary' : 'text-error';
           const sign = isPositive ? '+' : '';
           
@@ -56,23 +61,23 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
                   <div>
                     <div class="flex items-center gap-2 mb-0.5">
-                      <h4 class="font-headline font-bold text-on-surface leading-none">${baseCoin}</h4>
-                      ${badgeHtml}
+                       <h4 class="font-headline font-bold text-on-surface leading-none">${baseCoin}</h4>
+                       ${badgeHtml}
                     </div>
                     <span class="text-xs text-on-surface-variant tracking-widest font-label uppercase text-primary/60 group-hover:text-primary transition-colors">GRAFİĞİ AÇ / GİZLE</span>
                   </div>
                 </div>
                 
                 <div class="hidden md:block flex-1 text-center px-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="h-8 w-24 relative overflow-hidden mx-auto">
+                  <div class="h-8 w-24 relative overflow-hidden mx-auto" id="spark-${item.symbol}">
                     ${sparkline}
                   </div>
                 </div>
                 
                 <div class="text-right flex items-center gap-4 justify-end">
                   <div class="tabular-nums tracking-tight">
-                    <p class="font-headline font-bold text-on-surface">$${formatPrice(item.lastPrice)}</p>
-                    <p class="text-xs font-bold ${textColorClass}">${sign}${parseFloat(item.priceChangePercent).toFixed(2)}%</p>
+                    <p id="price-${item.symbol}" class="font-headline font-bold text-on-surface transition-colors duration-300" data-price="${item.lastPrice}">$${formatPrice(item.lastPrice)}</p>
+                    <p id="perc-${item.symbol}" class="text-xs font-bold ${textColorClass} transition-colors duration-300">${sign}${parseFloat(item.priceChangePercent).toFixed(2)}%</p>
                   </div>
                   <button class="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-2 rounded-full text-xs font-bold transition-colors active:scale-95 shadow-[0_0_8px_rgba(189,157,255,0.1)] pointer-events-none">Al</button>
                 </div>
@@ -92,9 +97,61 @@ document.addEventListener('DOMContentLoaded', () => {
            if(rowToOpen) toggleTradingViewChart(rowToOpen.firstElementChild, currentlyOpenSymbol, true);
         }
 
+        // Initialize WebSocket for live updates
+        initWebSocket();
+
       } catch (error) {
         console.error("Binance varlık datası çekilirken hata oluştu:", error);
       }
+    }
+
+    function initWebSocket() {
+        if(wsConnection) wsConnection.close();
+        wsConnection = new WebSocket('wss://stream.binance.com:9443/ws/!ticker@arr');
+        
+        wsConnection.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            
+            data.forEach(item => {
+                // item.s (symbol), item.c (last price), item.P (price change percent)
+                const priceEl = document.getElementById(`price-${item.s}`);
+                if (priceEl) {
+                    const newPrice = parseFloat(item.c);
+                    const oldPriceStr = priceEl.getAttribute('data-price') || "0";
+                    const oldPrice = parseFloat(oldPriceStr);
+                    
+                    priceEl.textContent = '$' + formatPrice(newPrice);
+                    priceEl.setAttribute('data-price', newPrice);
+                    
+                    // Flash animation for price update
+                    if (newPrice > oldPrice && oldPrice !== 0) {
+                        priceEl.style.color = '#69f6b8'; // green
+                        setTimeout(() => priceEl.style.color = '', 300);
+                    } else if (newPrice < oldPrice && oldPrice !== 0) {
+                        priceEl.style.color = '#ff6e84'; // red
+                        setTimeout(() => priceEl.style.color = '', 300);
+                    }
+
+                    const percEl = document.getElementById(`perc-${item.s}`);
+                    const sparkEl = document.getElementById(`spark-${item.s}`);
+                    if (percEl) {
+                        const isPositive = parseFloat(item.P) >= 0;
+                        const sign = isPositive ? '+' : '';
+                        percEl.textContent = sign + parseFloat(item.P).toFixed(2) + '%';
+                        percEl.className = `text-xs font-bold transition-colors duration-300 ${isPositive ? 'text-secondary' : 'text-error'}`;
+                        
+                        // Update sparkline dynamicly
+                        if (sparkEl) {
+                           sparkEl.innerHTML = getSparkline(isPositive);
+                        }
+                    }
+                }
+            });
+        };
+        
+        wsConnection.onclose = () => {
+            setTimeout(initWebSocket, 3000); // Reconnect on drop
+        };
     }
   
     // Global TV Chart Toggler
@@ -148,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tvScript.src = "https://s3.tradingview.com/tv.js";
     document.head.appendChild(tvScript);
 
-    // Initial fetch
+    // Initial fetch only once, no setInterval
     fetchTopAssets();
-    setInterval(fetchTopAssets, 30000);
 });
