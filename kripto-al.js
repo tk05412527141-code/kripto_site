@@ -2,17 +2,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const assetsList = document.getElementById('assets-list');
   
+    // Keep track of currently open chart
+    let currentlyOpenSymbol = null;
+
     async function fetchTopAssets() {
       try {
         // Fetch all 24hr tickers from Binance without any specific symbols
         const response = await fetch(`https://api.binance.com/api/v3/ticker/24hr`);
         const data = await response.json();
         
-        // Filter out non-USDT pairs and stable coins (e.g., FDUSDUSDT, USDCUSDT) if possible
-        // We'll primarily focus on general USDT pairs and sort by Quote Volume descending
         const usdtPairs = data.filter(item => item.symbol.endsWith('USDT') && !['USDCUSDT', 'FDUSDUSDT', 'TUSDUSDT'].includes(item.symbol));
-        
-        // Sort by quoteVolume (most traded first) and slice top 50
         usdtPairs.sort((a, b) => parseFloat(b.quoteVolume) - parseFloat(a.quoteVolume));
         const top50 = usdtPairs.slice(0, 50);
 
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         };
   
-        // Generic Shared Sparkline logic to mimic visual flow
         const greenLine = `<svg class="w-full h-full stroke-secondary drop-shadow-[0_0_4px_#69f6b8]" viewBox="0 0 100 40"><path d="M0,30 Q25,10 50,25 T100,5" fill="none" stroke-width="2.5"></path></svg>`;
         const redLine = `<svg class="w-full h-full stroke-error drop-shadow-[0_0_4px_#ff6e84]" viewBox="0 0 100 40"><path d="M0,10 Q25,35 50,20 T100,35" fill="none" stroke-width="2.5"></path></svg>`;
   
@@ -46,46 +44,111 @@ document.addEventListener('DOMContentLoaded', () => {
               </span>`;
           }
 
+          // Satır için HTML oluşturma
           return `
-            <div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-xl hover:bg-surface-container transition-all cursor-pointer border border-transparent hover:border-primary/20">
-              <div class="flex items-center gap-4 flex-1">
-                <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center p-1.5 shadow-inner border border-outline-variant/10">
-                  <img src="${iconUrl}" onerror="this.src='${fallbackLogo}'" alt="${baseCoin}" class="w-full h-full object-contain" />
-                </div>
-                <div>
-                  <div class="flex items-center gap-2 mb-0.5">
-                    <h4 class="font-headline font-bold text-on-surface leading-none">${baseCoin}</h4>
-                    ${badgeHtml}
+            <div class="asset-row-wrapper group flex flex-col bg-surface-container-low rounded-xl border border-transparent hover:border-primary/20 transition-all overflow-hidden mb-3" data-symbol="${item.symbol}">
+              
+              <!-- Ana Liste Satırı (Tıklanabilir) -->
+              <div class="flex items-center justify-between p-4 cursor-pointer" onclick="toggleTradingViewChart(this, '${item.symbol}')">
+                <div class="flex items-center gap-4 flex-1">
+                  <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center p-1.5 shadow-inner border border-outline-variant/10">
+                    <img src="${iconUrl}" onerror="this.src='${fallbackLogo}'" alt="${baseCoin}" class="w-full h-full object-contain" />
                   </div>
-                  <span class="text-xs text-on-surface-variant tracking-widest font-label uppercase">${baseCoin}</span>
+                  <div>
+                    <div class="flex items-center gap-2 mb-0.5">
+                      <h4 class="font-headline font-bold text-on-surface leading-none">${baseCoin}</h4>
+                      ${badgeHtml}
+                    </div>
+                    <span class="text-xs text-on-surface-variant tracking-widest font-label uppercase text-primary/60 group-hover:text-primary transition-colors">GRAFİĞİ AÇ / GİZLE</span>
+                  </div>
+                </div>
+                
+                <div class="hidden md:block flex-1 text-center px-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                  <div class="h-8 w-24 relative overflow-hidden mx-auto">
+                    ${sparkline}
+                  </div>
+                </div>
+                
+                <div class="text-right flex items-center gap-4 justify-end">
+                  <div class="tabular-nums tracking-tight">
+                    <p class="font-headline font-bold text-on-surface">$${formatPrice(item.lastPrice)}</p>
+                    <p class="text-xs font-bold ${textColorClass}">${sign}${parseFloat(item.priceChangePercent).toFixed(2)}%</p>
+                  </div>
+                  <button class="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-2 rounded-full text-xs font-bold transition-colors active:scale-95 shadow-[0_0_8px_rgba(189,157,255,0.1)] pointer-events-none">Al</button>
                 </div>
               </div>
-              
-              <div class="hidden md:block flex-1 text-center px-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="h-8 w-24 relative overflow-hidden mx-auto">
-                  ${sparkline}
-                </div>
-              </div>
-              
-              <div class="text-right flex items-center gap-4 justify-end">
-                <div class="tabular-nums tracking-tight">
-                  <p class="font-headline font-bold text-on-surface">$${formatPrice(item.lastPrice)}</p>
-                  <p class="text-xs font-bold ${textColorClass}">${sign}${parseFloat(item.priceChangePercent).toFixed(2)}%</p>
-                </div>
-                <button class="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-2 rounded-full text-xs font-bold transition-colors active:scale-95 shadow-[0_0_8px_rgba(189,157,255,0.1)]">Al</button>
+
+              <!-- Gizli TradingView Grafik Alanı (Accordion) -->
+              <div class="chart-container overflow-hidden h-0 transition-all duration-500 bg-[#0c1222]">
+                  <!-- TV Widget will be injected here -->
               </div>
             </div>
           `;
         }).join('');
+
+        // Re-open previously opened chart if refreshed
+        if (currentlyOpenSymbol) {
+           const rowToOpen = document.querySelector(`.asset-row-wrapper[data-symbol="${currentlyOpenSymbol}"]`);
+           if(rowToOpen) toggleTradingViewChart(rowToOpen.firstElementChild, currentlyOpenSymbol, true);
+        }
+
       } catch (error) {
         console.error("Binance varlık datası çekilirken hata oluştu:", error);
-        assetsList.innerHTML = `<div class="p-6 text-center text-error border border-error/20 rounded-xl bg-error/5">Piyasa verileri alınamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.</div>`;
       }
     }
   
+    // Global TV Chart Toggler
+    window.toggleTradingViewChart = function(element, symbol, forceOpen = false) {
+       const wrapper = element.closest('.asset-row-wrapper');
+       const chartContainer = wrapper.querySelector('.chart-container');
+       
+       const isOpen = chartContainer.style.height !== '' && chartContainer.style.height !== '0px';
+
+       // Tuşa basıldığında diğer açık grafikleri tamamen kapat 
+       document.querySelectorAll('.chart-container').forEach(c => {
+           c.style.height = '0px';
+           c.innerHTML = '';
+       });
+
+       if (isOpen && !forceOpen) {
+           // Sadece kapatmak istiyordu
+           currentlyOpenSymbol = null;
+           return;
+       }
+
+       // Grafiği Aç
+       currentlyOpenSymbol = symbol;
+       chartContainer.style.height = '500px';
+       chartContainer.innerHTML = `
+        <div class="tradingview-widget-container h-full w-full border-t border-surface-container-high relative">
+          <div id="tv_${symbol}" class="h-full w-full"></div>
+        </div>`;
+
+       // TV Script Injection
+       new window.TradingView.widget({
+          "autosize": true,
+          "symbol": "BINANCE:" + symbol,
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "tr",
+          "enable_publishing": false,
+          "backgroundColor": "#0c1222",
+          "gridColor": "rgba(189, 157, 255, 0.05)",
+          "hide_top_toolbar": false,
+          "hide_legend": false,
+          "save_image": false,
+          "container_id": "tv_" + symbol
+       });
+    };
+
+    // Include TradingView Library script into document
+    const tvScript = document.createElement('script');
+    tvScript.src = "https://s3.tradingview.com/tv.js";
+    document.head.appendChild(tvScript);
+
     // Initial fetch
     fetchTopAssets();
-    
-    // Refresh every 30 seconds to keep market data live entirely
     setInterval(fetchTopAssets, 30000);
 });
