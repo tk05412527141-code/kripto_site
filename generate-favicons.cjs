@@ -17,6 +17,24 @@ async function generateFavicons() {
         .png()
         .toFile(path.join(__dirname, 'favicon-32x32.png'));
 
+    // favicon-48x48 (Crucial for Google Search Results)
+    await sharp(logoPath)
+        .resize(48, 48)
+        .png()
+        .toFile(path.join(__dirname, 'favicon-48x48.png'));
+
+    // favicon-96x96
+    await sharp(logoPath)
+        .resize(96, 96)
+        .png()
+        .toFile(path.join(__dirname, 'favicon-96x96.png'));
+
+    // favicon-144x144
+    await sharp(logoPath)
+        .resize(144, 144)
+        .png()
+        .toFile(path.join(__dirname, 'favicon-144x144.png'));
+
     // apple-touch-icon (180x180)
     await sharp(logoPath)
         .resize(180, 180)
@@ -64,6 +82,9 @@ async function generateFavicons() {
     const files = [
         'favicon-16x16.png',
         'favicon-32x32.png',
+        'favicon-48x48.png',
+        'favicon-96x96.png',
+        'favicon-144x144.png',
         'apple-touch-icon.png',
         'android-chrome-192x192.png',
         'android-chrome-512x512.png',
