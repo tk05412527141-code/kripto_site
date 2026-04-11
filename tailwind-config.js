@@ -130,6 +130,15 @@ window.tailwind.config = {
                 "headline": ["Space Grotesk"],
                 "body": ["Inter"],
                 "label": ["Inter"]
+            },
+            animation: {
+                'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+                'pulse-glow': {
+                    '0%, 100%': { opacity: 1, filter: 'drop-shadow(0 0 8px rgba(189, 157, 255, 0.8))' },
+                    '50%': { opacity: 0.8, filter: 'drop-shadow(0 0 16px rgba(189, 157, 255, 1))' },
+                }
             }
         }
     }

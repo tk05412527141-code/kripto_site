@@ -14,19 +14,192 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         body { font-family: 'Inter', sans-serif; background-color: #060e20; }
         h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .sidebar-link.active { background-color: rgba(189, 157, 255, 0.1); color: #bd9dff; border-left: 3px solid #bd9dff; }
     </style>
 </head>
-<body class="bg-surface text-on-surface min-h-screen">
-<header class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
-  <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-    <div class="flex items-center gap-3"><a href="index.html"><img src="./logo.png" alt="Anka" class="w-16 h-16 object-contain" /></a></div>
-  </div>
-</header>
-<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 space-y-12 text-on-surface-variant">
-    <h2 class="text-4xl font-headline font-bold text-on-surface">Kullanım Koşulları</h2>
-    <p>Anka Exchange platformunu kullanarak aşağıdaki şartları kabul etmiş sayılırsınız.</p>
-</main>
-<footer class="text-center py-12 border-t border-surface-container-high mt-20">&copy; 2026 Anka Exchange. Tüm Hakları Saklıdır.</footer>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen">
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
+    <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+       <div class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center gap-3 text-primary transition-all active:scale-90 animate-pulse-glow">
+             <img src="./logo.png" alt="Anka Exchange Logo" class="w-12 h-12 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
+             <img src="./logo-text.png" alt="Anka Exchange" class="h-8 md:h-10 object-contain drop-shadow-md hidden sm:block dark:invert-0 dark:hue-rotate-0 invert hue-rotate-180 transition-all duration-300" />
+          </a>
+       </div>
+      <nav class="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-medium">
+          <a href="index.html" class="text-on-surface/80 hover:text-primary transition-colors">Anasayfa</a>
+          <a href="kripto-al.html" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Satın Al</a>
+          <a href="kripto-sat.html" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Sat</a>
+          <div class="relative group h-full flex items-center">
+            <button class="text-primary hover:text-primary-dim transition-all flex items-center gap-1 font-bold drop-shadow-[0_0_15px_rgba(189,157,255,0.6)] py-2 text-sm animate-pulse-glow px-3 bg-primary/5 rounded-xl">
+              Kurumsal
+              <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">expand_more</span>
+            </button>
+                                          <div class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-[280px] pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
+            <div class="bg-surface-container-high/95 backdrop-blur-2xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex flex-col gap-0.5">
+              <a href="hakkimizda.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">info</span>Hakkımızda</a>
+              <a href="nasil-calisir.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">rocket_launch</span>Nasıl Çalışır?</a>
+              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">verified_user</span>KYC Doğrulama</a>
+              <div class="h-px bg-outline-variant/10 my-1 mx-2"></div>
+              <a href="kullanim-kosullari.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">gavel</span>Kullanım Koşulları</a>
+              <a href="dolandiricilik-onleme.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">security</span>Dolandırıcılık Önleme</a>
+              <a href="mesafeli-satis.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">history_edu</span>Mesafeli Satış</a>
+              <a href="gizlilik.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">shield</span>Gizlilik Politikası</a>
+              <a href="acik-riza.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">border_color</span>Açık Rıza Metni</a>
+              <a href="veri-isleme.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">database</span>Veri İşleme ve İmha</a>
+              <a href="sorumluluk-reddi.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">warning</span>Sorumluluk Reddi</a>
+            </div>
+          </div>
+          </div>
+      </nav>
+      <div class="flex items-center gap-4">
+          <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
+            <span class="material-symbols-outlined text-primary">light_mode</span>
+          </button>
+      </div>
+    </div>
+  </header>
+<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 flex flex-col md:flex-row gap-12">
+                                <aside class="w-full md:w-64 shrink-0 space-y-8">
+        <div class="bg-surface-container-low rounded-3xl p-2 border border-outline-variant/10">
+            <h3 class="px-4 pt-4 pb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant opacity-50">Kurumsal Menü</h3>
+            <div class="space-y-1">
+                <a href="hakkimizda.html" data-file="hakkimizda.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">info</span>Hakkımızda</a>
+                <a href="nasil-calisir.html" data-file="nasil-calisir.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">rocket_launch</span>Nasıl Çalışır?</a>
+                <a href="kyc-dogrulama.html" data-file="kyc-dogrulama.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified_user</span>KYC Doğrulama</a>
+                <a href="kullanim-kosullari.html" data-file="kullanim-kosullari.html" class="active sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl  hover:text-primary transition-all text-sm font-medium  group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">gavel</span>Kullanım Koşulları</a>
+                <a href="dolandiricilik-onleme.html" data-file="dolandiricilik-onleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">security</span>Dolandırıcılık Önleme</a>
+                <a href="mesafeli-satis.html" data-file="mesafeli-satis.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">history_edu</span>Mesafeli Satış</a>
+                <a href="acik-riza.html" data-file="acik-riza.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">border_color</span>Açık Rıza Metni</a>
+                <a href="veri-isleme.html" data-file="veri-isleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">database</span>Veri İşleme ve İmha</a>
+                <a href="sorumluluk-reddi.html" data-file="sorumluluk-reddi.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">warning</span>Sorumluluk Reddi</a>
+            </div>
+        </div>
+    </aside>>
+    <div class="flex-1 max-w-4xl space-y-12 text-on-surface-variant leading-relaxed">\n
+        <div class="space-y-4">
+            <h2 class="text-4xl font-headline font-bold text-on-surface">Platform Kullanım Koşulları ve OTC Çerçeve Sözleşmesi</h2>
+            <h3 class="text-2xl font-bold text-primary">Bağlayıcı Hukuki Sözleşme</h3>
+            <p class="text-lg">Bu metin, Turan Dijital Yazılım ve Ticaret Ltd. Şti. (bundan böyle "Şirket") ile işlem yapan kişiler ("Kullanıcı") arasındaki yasal "OTC (Over-The-Counter) Çerçeve Satış Sözleşmesi"dir. Taraflar, platformla herhangi bir etkileşime girdiklerinde aşağıda yer alan Sermaye Piyasası, Türk Ceza Kanunu ve Veri Koruma düzenlemelerine ilişkin risk analizlerini ve hukuki beyanları tereddütsüz kabul etmiş sayılır.</p>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">1. Faaliyetin Tanımı ve Hukuki Statü</h3>
+            <p>Turan Dijital Yazılım ve Ticaret Limited Şirketi (bundan böyle "Şirket"), kendi mülkiyetinde ve envanterinde bulunan dijital ürünleri, bilişim varlıklarını ve yazılım kodlarını doğrudan nihai kullanıcıya (Bilateral/Birebir) satan bir e-ticaret kuruluşudur.</p>
+            <div class="p-4 rounded-xl bg-error/10 border border-error/20 text-error-dim">
+                <strong>KRİTİK BEYAN:</strong> Şirket, kullanıcılar arasında bir işlem organizasyonu kurmaz, alıcı ve satıcıyı eşleştirmez ve süreklilik arz eden üçüncü taraf işlemlerine aracılık etmez. Tüm ticaret doğrudan Şirket ile Kullanıcı arasında gerçekleşir.
+            </div>
+            <p>Kullanıcı, Şirketin faaliyet modelinin 6362 sayılı Sermaye Piyasası Kanunu (SPK) regülasyonlarına tabi bir "Kripto Varlık Platformu (Borsa)" statüsünde olmadığını bilmekte ve kabul etmektedir. Zira Şirket;</p>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Emanet (Custody) Hizmeti Sağlamaz:</strong> Kullanıcıların fonları veya dijital varlıkları sistemde/platformda tutulmaz.</li>
+                <li><strong>Emir Defteri (Orderbook) İşletmez:</strong> Kullanıcıları kendi aralarında eşleştirmez. İşlemler daima Kullanıcı ile Şirket arasında "ikili (bilateral) ticari işlem" olarak tasarlanmıştır.</li>
+                <li><strong>Aracılık Faaliyeti Yoktur:</strong> Şirket, süreklilik arz eden üçüncü taraf işlemlerine kesinlikle aracılık etmez.</li>
+                <li><strong>Al-Sat Organizasyonu Kurmaz:</strong> Yalnızca kendi öz sermayesi, kurumsal bilançosu ve şirket envanterinden peşin ödemeli dijital ürün teslimatı veya ticari alımı gerçekleştirir.</li>
+            </ul>
+            <p>Bu hukuki model altında, sunulan hizmet saf bir pazar yeri OTC (Tezgâh Altı) işleminden ibarettir.</p>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">2. Üyelik ve Kimlik Doğrulama (Fraud Önleme)</h3>
+            <p>Platformda sunulan dijital ürünlerden faydalanabilmek için Kullanıcı'nın, Şirket tarafından belirlenen siber güvenlik ve kimlik doğrulama prosedürlerini tamamlaması zorunludur. Bu prosedürler; çalıntı ödeme araçlarının kullanımını engellemek (Anti-Fraud) ve siparişi verenin gerçek kişi olduğunu teyit etmek amacıyla işletilmektedir.</p>
+            <p>Şirket, yüksek riskli dijital ticaretteki ödeme güvenliğini temin etmek zorunluluğu nedeniyle global KYC kuruluşu olan Sumsub üzerinden kimlik doğrulama gerçekleştirmektedir. Bu doğrulama operasyonunda:</p>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>KVKK Statüsü:</strong> Şirket tam teşekküllü "Veri Sorumlusu", altyapıyı sağlayan Sumsub ise "Veri İşleyen" konumundadır. Süreç, kapsamlı Aydınlatma Metnimiz ve Kullanıcının verdiği "Açık Rıza" uyarınca tam denetimle işletilir.</li>
+                <li><strong>Sorumluluk Çerçevesi ve KYC Sınırı:</strong> KYC işlemi yalnızca ödeme ve işlem (siber) güvenliği amaçlıdır; şirket tarafından hiçbir şekilde finansal analiz, mali profil çıkarma veya müşteri sınıflandırması yapılmaz. KYC verileri yalnızca şahsi kimlik ispatı yapmak ve olası bir idari/adli vakada yasal kanıt oluşturmak içindir.</li>
+            </ul>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">3. Türk Ceza Kanunu (TCK 158 ve TCK 282) Kapsamında İbraz ve Garantiler</h3>
+            <p>Kullanıcı, şirketin dijital doğasına yönelik eylemlerinden şahsen hukuki ve cezai olarak sorumludur ve aşağıdaki kritik maddeleri kayıtsız şartsız taahhüt eder:</p>
+            
+            <div class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/10">
+                <h4 class="text-lg font-bold text-primary mb-3">A. Suçtan Kaynaklanan Malvarlığını Aklama (TCK Madde 282)</h4>
+                <p>Şirketimize transfer edilen tüm nakdi veya kriptografik fonların kaynağı tamamen meşru ticari / şahsi kazanımlardır. Platformun veya ilanların, illegal kökenli (bahis, uyuşturucu ticareti, haksız kazanç, terör finansmanı vb.) servetin aklanması maksadıyla bir "arayüz" olarak kullanılması kati surette yasaktır.</p>
+            </div>
+            
+            <div class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/10">
+                <h4 class="text-lg font-bold text-primary mb-3">B. Bilişim Sistemleri Vasıtasıyla Dolandırıcılık (TCK Madde 158/1-f)</h4>
+                <p>Kullanıcı, alışveriş esnasında kullandığı kredi kartı veya banka hesabının %100 kendi mülkiyetinde / yasal yetkisinde olduğunu ispatlamak zorundadır. Üçüncü şahıslara ait banka hesaplarının izinsiz kullanımından doğan şüpheli (fraud) işlemlerde:</p>
+                <div class="mt-4 p-4 rounded-xl bg-primary/10 border border-primary/20 text-on-surface">
+                    <strong>Yasal Delil Karinesi:</strong> Şirket, platform üzerinden gerçekleştirilen işlemlerde elde ettiği cihaz tespiti (IP), zaman damgası ve Sumsub KYC (kimlik-biyometrik) doğrulama kanıtlarını, olası bir adli ihtilafta hukuki süreçlerde doğrudan yasal delil olarak kullanabilir ve yetkili kolluk/savcılık makamlarına mağdur sıfatıyla sunacaktır.
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">4. İşlem Limitleri, Şüpheli Aktivite ve Fesih Hakları</h3>
+            <p>Şirket, standart ticaret hukuku prensipleri ve e-ticaret risk yönetimi gereğince; platformlarına/ilanlarına yönelen olağandışı ödemelerde aşağıdaki tedbirleri tek taraflı olarak uygulayabilir:</p>
+            <ul class="list-disc pl-5 space-y-2 text-on-surface-variant">
+                <li>Şirket; belirli ticari limitler üzerindeki taleplerde, işlemin teyidi için ek güvenlik belgeleri talep etme yahut siber riskler bağlamında işlemi tamamen reddetme hakkına sahiptir.</li>
+                <li>Şirket, yasal kaynağı belirsiz şüpheli tutarları geldiği yasal kaynağa iade etme veya adli süreçler sonuçlanana dek ticari işlemi dondurma yetkisini elinde tutar.</li>
+            </ul>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">5. Fiyatlandırma ve Elektronik Faturalandırma Süreci</h3>
+            <p>Platformda veya pazar yerinde yayımlanan kurlar/fiyatlar, dijital ürünün anlık piyasa değeridir. Şirketimiz bir aracı kurum veya menkul kıymet brokeri olmadığı için, işleme dayalı bir "aracılık/komisyon faturası" <strong>KESMEZ</strong>.</p>
+            <p>Taraflar arasındaki bu satın alım veya tedarik, tamamen ticari bir "Bilişim, Yazılım Teknolojileri ve Dijital Ürün Satışı" mukavelesidir. Vergi Usul Kanunu (VUK) hükümleri ve Gelir İdaresi (GİB) yönergeleri uyarınca; Şirket bu elektronik e-ticaret işlemine (kârına yahut bedeline) karşılık, alıcının onaylı KYC safhasındaki yasal TCKN/VKN bilgilerine tam tutarlı "e-Arşiv / e-Fatura" tanzim etmektedir. Tüm işlemler kurumsal mali kayıt altında gerçekleştirilir.</p>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">6. Uyuşmazlık Çözümü</h3>
+            <p>İşbu OTC çerçeve sözleşmesinden veya bireysel satış siparişlerinden doğan tüm hukuki itilaflarda İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri kesin yetkili kılınmıştır. Kullanıcı, elektronik ortamda verdiği onay sebebiyle doğacak asil cezai müeyyidelerin şahsi muhatabıdır.</p>
+            
+            <div class="p-6 rounded-3xl bg-surface-container border border-outline-variant/20">
+                <h4 class="text-lg font-bold text-primary mb-2">Yasal Yükümlülük Teyidi</h4>
+                <p>Şirket, sadece faturalı, yasalara saygılı ve ispatlanabilir ticaret yapmayı benimser. KYC biyometrik kontrol aşamasını başlatıp platformla temas kuran herkes; eylemlerinden doğan maddi tazminat ve suç yükümlülüklerine (TCK) bizzat katlanacağını net olarak peşinen onaylamıştır.</p>
+            </div>
+        </div>
+\n    </div>\n</main>
+<footer class="bg-surface-container-lowest border-t border-surface-container-high py-20 relative z-10">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
+          <div class="space-y-8">
+            <div class="flex items-center gap-3">
+                <img src="./logo.png" alt="Anka" class="w-12 h-12 object-contain" />
+                 <img src="./logo-text.png" alt="Anka Exchange" class="h-6 object-contain dark:invert-0 dark:hue-rotate-0 invert hue-rotate-180 transition-all duration-300" />
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Yeni nesil finansal dünya için geliştirilen, güvenli ve hızlı kripto para işlem platformu.</p>
+            <div class="space-y-2">
+                <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">İletişim Üssü</p>
+                <a href="mailto:info@ankaexchange.com" class="text-sm font-bold text-on-surface hover:text-primary transition-colors">info@ankaexchange.com</a>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h4 class="font-headline font-bold text-on-surface">Piyasalar</h4>
+            <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
+                <li class="hover:text-primary cursor-pointer transition-colors">USDT Pariteleri</li>
+                <li class="hover:text-primary cursor-pointer transition-colors">BTC Piyasası</li>
+                <li class="hover:text-primary cursor-pointer transition-colors">Yüksek Hacim</li>
+            </ul>
+          </div>
+          <div class="space-y-6">
+            <h4 class="font-headline font-bold text-on-surface">Platform</h4>
+            <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
+                <li><a href="kripto-al.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">Kripto Al</a></li>
+                <li><a href="kripto-sat.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">Kripto Sat</a></li>
+                <li><a href="nasil-calisir.html" class="hover:text-primary transition-colors">Nasıl Çalışır?</a></li>
+                <li><a href="kyc-dogrulama.html" class="hover:text-primary transition-colors">KYC Doğrulama</a></li>
+            </ul>
+          </div>
+          <div class="space-y-6">
+            <h4 class="font-headline font-bold text-on-surface">Yasal</h4>
+            <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
+                <li><a href="gizlilik.html" class="hover:text-primary transition-colors">Gizlilik Politikası</a></li>
+                <li><a href="kullanim-kosullari.html" class="hover:text-primary transition-colors">Kullanım Koşulları</a></li>
+                <li><a href="acik-riza.html" class="hover:text-primary transition-colors">Açık Rıza Metni</a></li>
+                <li><a href="sorumluluk-reddi.html" class="hover:text-primary transition-colors">Sorumluluk Reddi</a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-surface-container-high flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em]">
+          <p>© 2026 Anka Finansal Hizmetler ve Ticaret Limited Şirketi. Tüm Hakları Saklıdır.</p>
+          <div class="flex gap-8 opacity-40">
+              <span class="hover:text-primary transition-colors cursor-pointer">Sovereign Motoru</span>
+              <span class="hover:text-primary transition-colors cursor-pointer">Küresel Uyumluluk</span>
+          </div>
+      </div>
+  </footer>
 <script src="./background-3d.js"></script>
 </body>
 </html>

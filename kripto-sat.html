@@ -18,73 +18,82 @@
 </head>
 <body class="bg-surface text-on-surface min-h-screen pb-24 selection:bg-primary selection:text-on-primary-container">
 
-<header class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
-  <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-    <div class="flex items-center gap-3">
-        <a href="index.html" class="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95">
-           <img src="./logo.png" alt="Anka Exchange Logo" class="w-16 h-16 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
-           <img src="./logo-text.png" alt="Anka Exchange" class="h-8 md:h-10 object-contain drop-shadow-md hidden sm:block" />
-        </a>
-    </div>
-    <nav class="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-medium">
-        <a href="index.html" class="text-on-surface hover:text-primary transition-colors">Anasayfa</a>
-        <a href="kripto-al.html" class="text-on-surface hover:text-primary transition-colors">Kripto Satın Al</a>
-        <a href="kripto-sat.html" class="text-primary hover:text-primary-dim transition-all font-bold drop-shadow-[0_0_8px_rgba(189,157,255,0.4)]">Kripto Sat</a>
-        <div class="relative group h-full flex items-center">
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
+    <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+       <div class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center gap-3 text-primary transition-all active:scale-90 animate-pulse-glow">
+             <img src="./logo.png" alt="Anka Exchange Logo" class="w-12 h-12 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
+             <img src="./logo-text.png" alt="Anka Exchange" class="h-8 md:h-10 object-contain drop-shadow-md hidden sm:block dark:invert-0 dark:hue-rotate-0 invert hue-rotate-180 transition-all duration-300" />
+          </a>
+       </div>
+      <nav class="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-medium">
+          <a href="index.html" class="text-on-surface/80 hover:text-primary transition-colors">Anasayfa</a>
+          <a href="kripto-al.html" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Satın Al</a>
+          <a href="kripto-sat.html" class="text-primary hover:text-primary-dim transition-all font-bold drop-shadow-[0_0_15px_rgba(189,157,255,0.6)] animate-pulse-glow px-3 py-1 bg-primary/5 rounded-xl">Kripto Sat</a>
+          <div class="relative group h-full flex items-center">
             <button class="text-on-surface/80 hover:text-primary transition-all flex items-center gap-1 group-hover:text-primary py-2 text-sm font-medium">
               Kurumsal
               <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">expand_more</span>
             </button>
-            <div class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
-                <div class="bg-surface-container-high/95 backdrop-blur-2xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.6)]">
-                    <a href="hakkimizda.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">Hakkımızda</a>
-                    <a href="nasil-calisir.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">Nasıl Çalışır?</a>
-                    <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">KYC Doğrulama</a>
-                </div>
+                                          <div class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-[280px] pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
+            <div class="bg-surface-container-high/95 backdrop-blur-2xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex flex-col gap-0.5">
+              <a href="hakkimizda.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">info</span>Hakkımızda</a>
+              <a href="nasil-calisir.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">rocket_launch</span>Nasıl Çalışır?</a>
+              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">verified_user</span>KYC Doğrulama</a>
+              <div class="h-px bg-outline-variant/10 my-1 mx-2"></div>
+              <a href="kullanim-kosullari.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">gavel</span>Kullanım Koşulları</a>
+              <a href="dolandiricilik-onleme.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">security</span>Dolandırıcılık Önleme</a>
+              <a href="mesafeli-satis.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">history_edu</span>Mesafeli Satış</a>
+              <a href="gizlilik.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">shield</span>Gizlilik Politikası</a>
+              <a href="acik-riza.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">border_color</span>Açık Rıza Metni</a>
+              <a href="veri-isleme.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">database</span>Veri İşleme ve İmha</a>
+              <a href="sorumluluk-reddi.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">warning</span>Sorumluluk Reddi</a>
             </div>
-        </div>
-    </nav>
-  </div>
-</header>
+          </div>
+          </div>
+      </nav>
+      <div class="flex items-center gap-4">
+          <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
+            <span class="material-symbols-outlined text-primary">light_mode</span>
+          </button>
+      </div>
+    </div>
+  </header>
 
 <main class="pt-28 px-4 max-w-5xl mx-auto">
-    <section class="mb-12">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-            <div class="space-y-1">
-                <div class="flex items-center gap-3">
-                    <h2 class="text-3xl font-headline font-bold text-on-surface">Kripto Satış İlanları</h2>
-                    <span class="flex items-center gap-1.5 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-[10px] font-bold uppercase tracking-widest border border-secondary/20">
-                        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-                        Canlı
-                    </span>
-                </div>
-                <p class="text-on-surface-variant text-sm">Size uygun ilanı seçerek hemen elinizdeki kripto varlıkları nakde çevirin.</p>
-            </div>
+    <div class="mb-8 space-y-6">
+        <div class="relative">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+            <input id="sat-search" class="w-full bg-surface-container-highest border border-outline-variant/10 rounded-xl py-4 pl-12 pr-4 text-on-surface placeholder:text-on-surface-variant focus:ring-2 focus:ring-error-dim/50 transition-all outline-none" placeholder="Kripto varlık ara..." type="text"/>
         </div>
+    </div>
 
-        <div id="p2p-sell-cards" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-            <div class="col-span-full py-16 flex flex-col items-center justify-center gap-4 opacity-40">
-                <div class="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-                <p class="text-sm font-bold uppercase tracking-widest animate-pulse">İlanlar Yükleniyor...</p>
-            </div>
+    <div id="assets-list" class="space-y-3">
+        <div class="py-12 flex flex-col items-center opacity-40 bg-surface-container-low rounded-xl border border-outline-variant/10">
+            <span class="material-symbols-outlined text-4xl mb-4 animate-spin text-primary">data_usage</span>
+            <span class="text-sm font-medium tracking-wide">Piyasalar taranıyor...</span>
         </div>
-    </section>
+    </div>
 </main>
 
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-4 bg-[#060e20]/90 backdrop-blur-2xl rounded-t-3xl z-50 border-t border-surface-container-high shadow-[0px_-8px_30px_rgba(0,0,0,0.5)]">
-    <a href="index.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
-      <span class="material-symbols-outlined mb-1 text-2xl font-bold">home</span>
-      <span class="font-medium text-[10px]">Piyasa</span>
-    </a>
-    <a href="kripto-al.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
-      <span class="material-symbols-outlined mb-1 text-2xl">add_shopping_cart</span>
-      <span class="font-medium text-[10px]">Alış</span>
-    </a>
-    <a href="kripto-sat.html" class="flex flex-col items-center justify-center text-primary transition-all active:scale-90">
-      <span class="material-symbols-outlined mb-1 text-2xl">sell</span>
-      <span class="font-medium text-[10px]">Satış</span>
-    </a>
-</nav>
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-4 bg-surface/90 backdrop-blur-2xl rounded-t-3xl z-50 border-t border-surface-container-high shadow-[0px_-8px_30px_rgba(0,0,0,0.5)]">
+      <a href="index.html" class="flex flex-col items-center justify-center text-primary transition-all active:scale-90 animate-pulse-glow">
+        <span class="material-symbols-outlined mb-1 text-2xl font-bold">home</span>
+        <span class="font-medium text-[10px]">Piyasa</span>
+      </a>
+      <a href="kripto-al.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
+        <span class="material-symbols-outlined mb-1 text-2xl">add_shopping_cart</span>
+        <span class="font-medium text-[10px]">Alış</span>
+      </a>
+      <a href="kripto-sat.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
+        <span class="material-symbols-outlined mb-1 text-2xl">sell</span>
+        <span class="font-medium text-[10px]">Satış</span>
+      </a>
+      <a href="hakkimizda.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
+        <span class="material-symbols-outlined mb-1 text-2xl">corporate_fare</span>
+        <span class="font-medium text-[10px]">Kurumsal</span>
+      </a>
+  </nav>
 
 <script src="./background-3d.js"></script>
 <script src="./kripto-sat.js" type="module"></script>
