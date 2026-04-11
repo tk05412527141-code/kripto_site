@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kiþisel Veri Ýþleme ve Ýmha Politikasý | Anka Exchange</title>
+    <title>Veri Ä°ÅŸleme ve Ä°mha PolitikasÄ± | Anka Exchange</title>
     <link rel="icon" type="image/png" href="./logo.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -14,182 +14,19 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         body { font-family: 'Inter', sans-serif; background-color: #060e20; }
         h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
-        .sidebar-link.active { background-color: rgba(189, 157, 255, 0.1); color: #bd9dff; border-left: 3px solid #bd9dff; }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen">
-
-<!-- Header -->
 <header class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
-  <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-    <div class="flex items-center gap-3">
-        <a href="index.html" class="flex items-center gap-3">
-           <img src="./logo.png" alt="Anka Exchange Logo" class="w-16 h-16 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
-           <img src="./logo-text.png" alt="Anka Exchange" class="h-8 md:h-10 object-contain drop-shadow-md hidden sm:block" />
-        </a>
-    </div>
-    <nav class="hidden md:flex flex-1 items-center justify-center gap-6 text-sm font-medium">
-        <a href="index.html" class="text-on-surface hover:text-primary transition-colors">Anasayfa</a>
-        <a href="kripto-al.html">Kripto Satýn Al</a>
-        <a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="text-on-surface hover:text-primary transition-colors">Kripto Sat</a>
-        <div class="relative group h-full flex items-center">
-          <button class="text-primary hover:text-primary-dim transition-all flex items-center gap-1 group-hover:text-primary-dim py-2 text-sm font-medium drop-shadow-[0_0_8px_rgba(189,157,255,0.5)]">
-            Kurumsal
-            <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180 text-primary">expand_more</span>
-          </button>
-          <div class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
-            <div class="bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
-              <a href="hakkimizda.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
-                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">info</span>
-                Hakkýmýzda
-              </a>
-              <a href="nasil-calisir.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
-                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">rocket_launch</span>
-                Nasýl Çalýþýr?
-              </a>
-              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
-                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">verified_user</span>
-                KYC Doðrulama
-              </a>
-              <a href="kullanim-kosullari.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
-                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">gavel</span>
-                Kullaným Koþullarý
-              </a>
-              <div class="h-px bg-outline-variant/20 my-1 mx-2"></div>
-              <a href="gizlilik.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium group/item">
-                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">shield</span>
-                Gizlilik Politikasý
-              </a>
-            </div>
-          </div>
-        </div>
-    </nav>
-    <div class="flex items-center gap-4">
-        <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
-          <span class="material-symbols-outlined text-primary">light_mode</span>
-        </button>
-    </div>
+  <div class="max-w-7xl mx-auto flex items-center justify-between w-full h-full px-6">
+    <a href="index.html"><img src="./logo.png" alt="Anka" class="w-16 h-16 object-contain" /></a>
   </div>
 </header>
-
-<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
-    <!-- Sidebar -->
-    <aside class="w-full md:w-80 flex-shrink-0 space-y-8">
-        <div class="bg-surface-container-low rounded-3xl p-6 border border-outline-variant/10">
-            <h4 class="px-2 py-2 text-xs font-bold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
-                <span class="material-symbols-outlined text-sm">folder_open</span>
-                Kurumsal Belgeler
-            </h4>
-            <div class="space-y-1">
-                <a href="dogrulama-rehberi.html" id="link-dogrulama" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified</span>
-                    Platform Doðrulama (Kimlik Doðrulama) Rehberi
-                </a>
-                <a href="kyc-dogrulama.html" id="link-kyc" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">fact_check</span>
-                    KYC Doðrulama Bilgisi
-                </a>
-                <a href="gizlilik.html" id="link-gizlilik" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">shield</span>
-                    Gizlilik Politikasý
-                </a>
-                <a href="kullanim-kosullari.html" id="link-kosullar" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">gavel</span>
-                    Kullaným Koþullarý
-                </a>
-                <a href="dolandiricilik-onleme.html" id="link-dolandiricilik" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">security</span>
-                    Dolandýrýcýlýk Önleme Politikasý
-                </a>
-                <a href="mesafeli-satis.html" id="link-mesafeli" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">history_edu</span>
-                    Mesafeli Satýþ Sözleþmesi
-                </a>
-                <a href="acik-riza.html" id="link-riza" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">border_color</span>
-                    Açýk Rýza Metni
-                </a>
-                <a href="veri-isleme.html" id="link-veri" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-2xl transition-all text-sm font-medium group">
-                    <span class="material-symbols-outlined text-xl">database</span>
-                    Veri Ýþleme ve Ýmha
-                </a>
-                <a href="sorumluluk-reddi.html" id="link-sorumluluk" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">warning</span>
-                    Sorumluluk Reddi (Uyarý)
-                </a>
-            </div>
-        </div>
-        
-        <div class="bg-primary/5 rounded-3xl p-6 border border-primary/10">
-            <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
-                <span class="material-symbols-outlined text-sm">support_agent</span>
-                Uyumluluk Birimi
-            </h4>
-            <div class="space-y-3">
-                <a href="mailto:info@ankaexchange.com" class="flex items-center gap-3 text-xs font-bold text-on-surface hover:text-primary transition-colors">
-                    <span class="material-symbols-outlined text-lg opacity-60">mail</span>
-                    info@ankaexchange.com
-                </a>
-            </div>
-        </div>
-
-        <div class="px-6 py-4 bg-surface-container-low rounded-2xl border border-outline-variant/10 flex items-center justify-between">
-            <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60">Son Güncelleme</span>
-            <span class="text-[10px] font-bold text-primary">11.04.2026</span>
-        </div>
-    </aside>
-
-    <!-- Main Content -->
-    <div class="flex-1 max-w-4xl space-y-12">
-        <section>
-            <h1 class="text-4xl font-headline font-bold mb-2 text-on-surface">Kiþisel Veri Ýþleme ve Ýmha Politikasý</h1>
-            <p class="text-primary font-bold uppercase tracking-widest text-xs mb-8">Teknik ve Ýdari Tedbirler</p>
-            
-            <div class="space-y-10 text-on-surface-variant leading-relaxed text-sm md:text-base">
-                
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">1</div>
-                        <h2 class="text-2xl font-headline font-bold text-on-surface">Veri Ýþleme Politikasýnýn Amacý</h2>
-                    </div>
-                    <p>Kapsamlý Gizlilik bildirimimizde (Aydýnlatma Metni) kamuoyuna duyurulan maddelerin teknik ve algoritmik uygulanýþýný aydýnlatan bu spesifik politika; þirketimize idari ve güvenlik teyidi vesilesiyle ibraz edilen verilerin fiziksel/elektronik olarak hangi þifreleme alt yapýlarýnda idame ettirildiðini ve yasal saklama/kullaným hedefleri eridiðinde ve miadýný doldurduðunda ne tür "Geri Dönülemez" imha senaryolarýyla (Deletion/Anonymization) kalýcý bir biçimde yok edildiðini (imha) detaylýca tarif eder.</p>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">2</div>
-                        <h2 class="text-2xl font-headline font-bold text-on-surface">Teknik Að ve Kurumsal Ýdari Tedbirlerimiz</h2>
-                    </div>
-                    <p>Þirket iç aðý donaným ve yazýlým bazlý küresel güvenlik duvarlarý (Firewall) ile 7/24 izlenir ve korunur. Dýþ unsurlardan ve internete açýk alanlardan gelecek olasý yetkisiz sýzmalara ve siber korsanlýk giriþimlerine karþý <strong>256-bit AES endüstri standardý</strong> seviyesinde þifrelemesi uygulamalarý esastýr.</p>
-                    <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
-                        <p class="text-xs italic leading-relaxed">Hukuken saklanmasý zaruri olan Ticari E-Fatura veya adres verilerinize sadece þirketimizde bu konuya vakýf atanmýþ idari ve mali personel salt eriþebilir. Kullanýcýnýn siber riskini önlemeye yarayan biyometrik harita veya KYC iþlem evraký dökümlerinize dair eriþim kayýtlarý saniye bazýnda loglanmýþtýr.</p>
-                    </div>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">3</div>
-                        <h2 class="text-2xl font-headline font-bold text-on-surface">Veri Ýmha Periyodlarý ve Yok Etme Esaslarý</h2>
-                    </div>
-                    <p>Kullanýcýnýn sistem doðrulama safhasýnda Özel Özgür Açýk Rýza prensibi ile saðladýðý yüksek seviyeli bilgiler (Özellikle Sumsub Canlý Yüz Analiz Biyometrisi), olasý dolandýrýcýlýk veya chargeback (ters ibraz) þüphesinin kaybolduðu güvenli ticaret zamanlamasýndan takriben <strong>30 ila 180 gün</strong> sonrasýnda periyodik iþletilen algoritmik silme betikleri ile sistemden kati ve geri dönülemez olarak silinir.</p>
-                    <div class="p-5 bg-primary/5 rounded-xl border border-primary/10">
-                        <p class="text-xs">Kanunen yok edilmesi faturaya iþlenmiþ TCKN yahut müþteri ad-soyad iletiþim verisi; ticaret kanunlarý ile Vergi Usul Kanunu ve TBK hükümlerince mali vergi arþivi bünyesinde zorunlu olarak takribi <strong>5 yýl</strong> durmak zorundadýr. Bu süre sonrasýnda anonim maske ile yahut donanýmsal temizleme yöntemleriyle yok edilir.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </div>
+<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 space-y-12 text-on-surface-variant">
+    <h2 class="text-4xl font-headline font-bold text-on-surface">Veri Ä°ÅŸleme ve Ä°mha PolitikasÄ±</h2>
+    <p>KiÅŸisel verilerinizin iÅŸlenmesi ve muhafazasÄ± ile ilgili teknik ve idari tedbirler.</p>
 </main>
-
-<footer class="bg-[#060e20] border-t border-surface-container-high py-12 px-8 mt-20 text-center">
-    <p class="text-on-surface-variant text-sm mb-4">&copy; 2026 Anka Exchange. Tüm Haklarý Saklýdýr.</p>
-    <div class="text-[#dee5ff]/40 text-[9px] font-headline tracking-[0.5em] uppercase">Anka Finansal Hizmetler</div>
-</footer>
-
+<footer class="text-center py-12 border-t border-surface-container-high mt-20">&copy; 2026 Anka Exchange. TÃ¼m HaklarÄ± SaklÄ±dÄ±r.</footer>
 <script src="./background-3d.js"></script>
 </body>
 </html>
-
-
-

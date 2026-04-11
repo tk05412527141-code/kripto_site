@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gizlilik Politikasý (KVKK) | Anka Exchange</title>
+    <title>Gizlilik PolitikasÄ± | Anka Exchange</title>
     <link rel="icon" type="image/png" href="./logo.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -14,271 +14,34 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         body { font-family: 'Inter', sans-serif; background-color: #060e20; }
         h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
-        .sidebar-link.active { background-color: rgba(189, 157, 255, 0.1); color: #bd9dff; border-left: 3px solid #bd9dff; }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen">
-
-<!-- Header -->
 <header class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
   <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
     <div class="flex items-center gap-3">
         <a href="index.html" class="flex items-center gap-3">
-           <img src="./logo.png" alt="Anka Exchange Logo" class="w-16 h-16 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
-           <img src="./logo-text.png" alt="Anka Exchange" class="h-8 md:h-10 object-contain drop-shadow-md hidden sm:block" />
+           <img src="./logo.png" alt="Anka Exchange Logo" class="w-16 h-16 object-contain" />
         </a>
     </div>
     <nav class="hidden md:flex flex-1 items-center justify-center gap-6 text-sm font-medium">
         <a href="index.html" class="text-on-surface hover:text-primary transition-colors">Anasayfa</a>
-        <a href="kripto-al.html">Kripto Satýn Al</a>
-        <a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="text-on-surface hover:text-primary transition-colors">Kripto Sat</a>
-        <div class="relative group h-full flex items-center">
-          <button class="text-primary hover:text-primary-dim transition-all flex items-center gap-1 group-hover:text-primary-dim py-2 text-sm font-medium drop-shadow-[0_0_8px_rgba(189,157,255,0.5)]">
-            Kurumsal
-            <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180 text-primary">expand_more</span>
-          </button>
-          <div class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
-            <div class="bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
-              <a href="hakkimizda.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
-                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">info</span>
-                Hakkýmýzda
-              </a>
-              <a href="nasil-calisir.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
-                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">rocket_launch</span>
-                Nasýl Çalýþýr?
-              </a>
-              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
-                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">verified_user</span>
-                KYC Doðrulama
-              </a>
-              <a href="kullanim-kosullari.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
-                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">gavel</span>
-                Kullaným Koþullarý
-              </a>
-              <div class="h-px bg-outline-variant/20 my-1 mx-2"></div>
-              <a href="gizlilik.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary transition-colors text-sm font-medium">
-                <span class="material-symbols-outlined text-xl">shield</span>
-                Gizlilik Politikasý
-              </a>
-            </div>
-          </div>
-        </div>
     </nav>
-    <div class="flex items-center gap-4">
-        <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
-          <span class="material-symbols-outlined text-primary">light_mode</span>
-        </button>
-    </div>
   </div>
 </header>
-
-<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
-    <!-- Sidebar -->
-    <aside class="w-full md:w-80 flex-shrink-0 space-y-8">
-        <div class="bg-surface-container-low rounded-3xl p-6 border border-outline-variant/10">
-            <h4 class="px-2 py-2 text-xs font-bold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
-                <span class="material-symbols-outlined text-sm">folder_open</span>
-                Kurumsal Belgeler
-            </h4>
-            <div class="space-y-1">
-                <a href="dogrulama-rehberi.html" id="link-dogrulama" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified</span>
-                    Platform Doðrulama (Kimlik Doðrulama) Rehberi
-                </a>
-                <a href="kyc-dogrulama.html" id="link-kyc" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">fact_check</span>
-                    KYC Doðrulama Bilgisi
-                </a>
-                <a href="gizlilik.html" id="link-gizlilik" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-2xl transition-all text-sm font-medium group">
-                    <span class="material-symbols-outlined text-xl">shield</span>
-                    Gizlilik Politikasý
-                </a>
-                <a href="kullanim-kosullari.html" id="link-kosullar" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">gavel</span>
-                    Kullaným Koþullarý
-                </a>
-                <a href="dolandiricilik-onleme.html" id="link-dolandiricilik" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">security</span>
-                    Dolandýrýcýlýk Önleme Politikasý
-                </a>
-                <a href="mesafeli-satis.html" id="link-mesafeli" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">history_edu</span>
-                    Mesafeli Satýþ Sözleþmesi
-                </a>
-                <a href="acik-riza.html" id="link-riza" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">border_color</span>
-                    Açýk Rýza Metni
-                </a>
-                <a href="veri-isleme.html" id="link-veri" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">database</span>
-                    Veri Ýþleme ve Ýmha
-                </a>
-                <a href="sorumluluk-reddi.html" id="link-sorumluluk" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">warning</span>
-                    Sorumluluk Reddi (Uyarý)
-                </a>
-            </div>
-        </div>
-        
-        <div class="bg-primary/5 rounded-3xl p-6 border border-primary/10">
-            <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
-                <span class="material-symbols-outlined text-sm">support_agent</span>
-                Uyumluluk Birimi
-            </h4>
-            <div class="space-y-3">
-                <a href="mailto:info@ankaexchange.com" class="flex items-center gap-3 text-xs font-bold text-on-surface hover:text-primary transition-colors">
-                    <span class="material-symbols-outlined text-lg opacity-60">mail</span>
-                    info@ankaexchange.com
-                </a>
-                <a href="mailto:kvkk@anka.exchange" class="flex items-center gap-3 text-xs font-bold text-on-surface hover:text-primary transition-colors">
-                    <span class="material-symbols-outlined text-lg opacity-60">gavel</span>
-                    kvkk@anka.exchange
-                </a>
-            </div>
-        </div>
-
-        <div class="px-6 py-4 bg-surface-container-low rounded-2xl border border-outline-variant/10 flex items-center justify-between">
-            <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60">Son Güncelleme</span>
-            <span class="text-[10px] font-bold text-primary">11.04.2026</span>
-        </div>
-    </aside>
-
-    <!-- Main Content -->
-    <div class="flex-1 max-w-4xl space-y-12">
-        <section>
-            <h1 class="text-4xl font-headline font-bold mb-2 text-on-surface">Gizlilik Politikasý (KVKK)</h1>
-            <p class="text-primary font-bold uppercase tracking-widest text-xs mb-8">Hukuki Statü ve KVKK Aydýnlatma Metni</p>
-            
-            <div class="space-y-8 text-on-surface-variant leading-relaxed text-sm md:text-base">
-                <div class="p-8 bg-surface-container-low rounded-[2rem] border border-outline-variant/10 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
-                    <p class="relative z-10"><strong>Anka Finansal Hizmetler ve Ticaret Limited Þirketi</strong> (“Þirket“, “Biz” veya “Bize”) siber güvenlik standartlarýna uyumlu bir dijital e-ticaret kuruluþudur.</p>
-                    <p class="relative z-10 mt-4 text-xs italic"><strong>Önemli Kapsam Beyaný:</strong> Þirketimiz kesinlikle bir "finansal hizmet saðlayýcý", "aracý kurum" veya "kripto borsa" DEÐÝLDÝR. Faaliyetimiz; Türk Borçlar Kanunu çerçevesinde tamamen kendi envanterimizden gerçekleþtirilen doðrudan dijital ürün satýþýndan ibarettir.</p>
-                </div>
-
-                <div class="space-y-4">
-                    <h2 class="text-2xl font-headline font-bold text-on-surface">1. Veri Sorumlusu ve VERBÝS Yükümlülüðü</h2>
-                    <p>KVKK uyarýnca kiþisel verileriniz veri sorumlusu sýfatýyla tarafýmýzca iþlenmektedir. Þirketimiz idari ve hukuki yükümlülükleri gereðince VERBÝS kayýt ve güncellemelerini yasal süreler dahilinde tamamlayan, denetime açýk þeffaf bir tüzel kiþiliktir.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-surface-container-low p-6 rounded-2xl border border-outline-variant/10">
-                        <div class="space-y-2">
-                            <p><strong>Unvan:</strong> Anka Finansal Hizmetler ve Ticaret Limited Þirketi</p>
-                            <p><strong>Mersis No:</strong> 0869111932500001</p>
-                            <p><strong>Vergi Kimlik No:</strong> 8691119325</p>
-                        </div>
-                        <div class="space-y-2">
-                            <p><strong>Ticaret Sicil No:</strong> 1128726</p>
-                            <p><strong>E-posta:</strong> kvkk@anka.exchange</p>
-                            <p><strong>Adres:</strong> ATATÜRK MAH. METROPOL ISTANBUL, ATAÞEHÝR / ÝSTANBUL</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-4">
-                    <h2 class="text-2xl font-headline font-bold text-on-surface">2. Risk Bazlý Veri Minimizasyonu ve Toplanan Veriler</h2>
-                    <p>Þirketimiz "Ne kadar veri o kadar iyi" zihniyetini deðil, KVKK Veri Minimizasyonu ilkesini uygular. Yalnýzca iþlemin risk skoruna göre zorunlu olan minimum veriyi süzerek iþleriz.</p>
-                    <div class="overflow-x-auto rounded-2xl border border-outline-variant/10">
-                        <table class="w-full text-left text-xs">
-                            <thead class="bg-surface-container-high border-b border-outline-variant/10">
-                                <tr>
-                                    <th class="px-4 py-3 font-bold text-primary">Veri Kategorisi</th>
-                                    <th class="px-4 py-3 font-bold text-primary">Ýçerik</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-outline-variant/10">
-                                <tr>
-                                    <td class="px-4 py-3 font-medium bg-surface-container-low/30">Temel Kimlik ve Ýletiþim</td>
-                                    <td class="px-4 py-3">Adýnýz, soyadýnýz, TCKN/Pasaport No, e-posta ve telefon numaranýz.</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-3 font-medium bg-surface-container-low/30">Finansal ve Ticari</td>
-                                    <td class="px-4 py-3">Ürünün teslim edileceði / ödemenin geleceði IBAN bilgileri ile fatura adresi.</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-3 font-medium bg-surface-container-low/30">Sözleþme / Güvenlik</td>
-                                    <td class="px-4 py-3">Elektronik onay, IP adresi ve zaman damgasý.</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-3 font-medium bg-surface-container-low/30">Hassas (Biyometrik)</td>
-                                    <td class="px-4 py-3 italic">Sadece fraud þüphesini önlemek adýna açýk rýza bazlý kimlik doðrulama verisi.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="space-y-4">
-                    <h2 class="text-2xl font-headline font-bold text-on-surface">3. Ýþleme Amaçlarý ve Hukuki Dayanaklar</h2>
-                    <div class="space-y-6">
-                        <div class="p-6 bg-surface-container-low rounded-2xl border-l-4 border-primary">
-                            <h4 class="font-bold text-primary mb-2">A. Sözleþmenin Ýfasý ve Hukuki Yükümlülük</h4>
-                            <p class="text-xs">Mesafeli Satýþ Sözleþmesinin kurulmasý ve Vergi Usul Kanunu uyarýnca E-Fatura düzenlenmesi zorunluluðu nedeniyle iþlenir.</p>
-                        </div>
-                        <div class="p-6 bg-surface-container-low rounded-2xl border-l-4 border-secondary">
-                            <h4 class="font-bold text-secondary mb-2">B. Veri Sorumlusunun Meþru Menfaati</h4>
-                            <p class="text-xs">Siber sahtecilik (dolandýrýcýlýk) vakalarýný ve ticari kayýplarý engellemek maksadýyla yapýlan temel kimlik eþleþtirme kontrolleri.</p>
-                        </div>
-                        <div class="p-6 bg-surface-container-low rounded-2xl border-l-4 border-tertiary">
-                            <h4 class="font-bold text-tertiary mb-2">C. AÇIK RIZA (Hassas Veriler)</h4>
-                            <p class="text-xs">Yüksek güvenlik teyidi gerektiren videolu yüz doðrulama / canlýlýk taramasý sadece açýk rýzanýza istinaden iþlenir.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-4">
-                    <h2 class="text-2xl font-headline font-bold text-on-surface">4. Kiþisel Verilerinizin Aktarýmý</h2>
-                    <p>Þirketimiz salt ticari kazanç gayesiyle veri satmaz. Paylaþýmlar yasal ve teknik zorunluluklarla sýnýrlýdýr:</p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Adli Makamlar:</strong> TCK 158 þüphesi uyandýran sahte transferlerde resmi makamlara yasal raporlama yapýlýr.</li>
-                        <li><strong>KYC Ýþ Ortaklarý (Yurtdýþý):</strong> Biyometrik teyit için AB GDPR uyumlu global saðlayýcýlarla (Örn: Sumsub) paylaþýlabilir.</li>
-                        <li><strong>Mali ve Teknik Saðlayýcýlar:</strong> E-fatura entegratörleri ve mali müþavirlik birimleri.</li>
-                    </ul>
-                </div>
-
-                <div class="space-y-4">
-                    <h2 class="text-2xl font-headline font-bold text-on-surface">5. Saklama Ýþlemleri ve Veri Ýmhasý</h2>
-                    <p>Fatura ve sözleþme verileri kanuni zamanaþýmý sürelerince saklanýr. Açýk rýzaya istinat eden "Biyometrik veriler", yasal riskin ortadan kalktýðý saptanan iþlemlerin ardýndan en kýsa sürede <strong>anonimleþtirilerek</strong> yok edilir.</p>
-                </div>
-
-                <div class="space-y-4">
-                    <h2 class="text-2xl font-headline font-bold text-on-surface">6. Ýlgili Kiþi Olarak Haklarýnýz</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-medium">
-                        <div class="flex items-start gap-2">
-                            <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-                            Verilerinizin iþlenip iþlenmediðini öðrenme.
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-                            Yanlýþ/eksik verileri düzeltme.
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-                            Açýk rýzayý anýnda geri çekme/iptal etme.
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-                            Silme ve anonimleþtirme talep etme.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-8 bg-primary/5 rounded-3xl border border-primary/10 mt-8">
-                    <h3 class="text-lg font-headline font-bold text-on-surface mb-4">7. Baþvurularýn Ýletilmesi</h3>
-                    <p class="text-xs mb-4">KVKK kapsamýndaki taleplerinizi info@ankaexchange.com üzerinden veya resmi adresimize yazýlý olarak iletebilirsiniz. Talepleriniz en geç 30 gün içinde çözümlenir.</p>
-                    <p class="text-[10px] uppercase font-bold text-on-surface-variant">Anka Finansal Hizmetler ve Ticaret Limited Þirketi</p>
-                </div>
-            </div>
-        </section>
+<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 space-y-12 text-on-surface-variant leading-relaxed">
+    <h2 class="text-4xl font-headline font-bold text-on-surface">Gizlilik PolitikasÄ±</h2>
+    <p>Anka Exchange, kullanÄ±cÄ±larÄ±nÄ±n gizliliÄŸine ve verilerinin korunmasÄ±na en Ã¼st dÃ¼zeyde Ã¶nem verir.</p>
+    <div class="space-y-6">
+        <h3 class="text-xl font-bold text-on-surface">1. Hangi Verileri Topluyoruz?</h3>
+        <p>Kimlik bilgileriniz, iletiÅŸim bilgileriniz ve iÅŸlem geÃ§miÅŸiniz gÃ¼venliÄŸiniz iÃ§in toplanmaktadÄ±r.</p>
+        <h3 class="text-xl font-bold text-on-surface">2. Verilerin KullanÄ±mÄ±</h3>
+        <p>Toplanan veriler sadece yasal gereklilikler ve size daha iyi hizmet sunmak amacÄ±yla kullanÄ±lmaktadÄ±r.</p>
     </div>
 </main>
-
 <footer class="bg-[#060e20] border-t border-surface-container-high py-12 px-8 mt-20 text-center">
-    <p class="text-on-surface-variant text-sm mb-4">&copy; 2026 Anka Exchange. Tüm Haklarý Saklýdýr.</p>
-    <div class="text-[#dee5ff]/40 text-[9px] font-headline tracking-[0.5em] uppercase">Anka Finansal Hizmetler</div>
+    <p class="text-sm">&copy; 2026 Anka Exchange. TÃ¼m HaklarÄ± SaklÄ±dÄ±r.</p>
 </footer>
-
 <script src="./background-3d.js"></script>
 </body>
 </html>
-
-
-

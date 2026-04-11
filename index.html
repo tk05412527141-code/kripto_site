@@ -18,13 +18,9 @@
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen relative">
-
-  <!-- Background 3D placeholder / particles will be here -->
   <div class="fixed inset-0 z-0 pointer-events-none opacity-40">
       <div class="hero-gradient absolute inset-0"></div>
   </div>
-
-  <!-- Header -->
   <header class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
     <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
       <div class="flex items-center gap-3">
@@ -36,7 +32,7 @@
       <nav class="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-medium">
           <a href="index.html" class="text-primary hover:text-primary-dim transition-all font-bold drop-shadow-[0_0_8px_rgba(189,157,255,0.4)]">Anasayfa</a>
           <a href="kripto-al.html" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Satın Al</a>
-          <a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Sat</a>
+          <a href="kripto-sat.html" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Sat</a>
           <div class="relative group h-full flex items-center">
             <button class="text-on-surface/80 hover:text-primary transition-all flex items-center gap-1 group-hover:text-primary py-2 text-sm font-medium">
               Kurumsal
@@ -72,9 +68,7 @@
       </div>
     </div>
   </header>
-
   <main class="relative z-10 pt-20">
-      <!-- Hero Section -->
       <section class="max-w-7xl mx-auto px-6 pt-20 pb-20 text-center space-y-8 relative overflow-hidden">
           <div class="inline-flex items-center gap-2 px-4 py-2 border border-primary/20 bg-primary/5 rounded-full text-primary font-bold text-xs uppercase tracking-widest animate-fade-in">
               <span class="material-symbols-outlined text-sm animate-pulse">verified</span>
@@ -87,7 +81,7 @@
               Anka Exchange ile saniyeler içinde, %100 güvenli ve yerelleştirilmiş bir e-ticaret deneyimine adım atın. 
           </p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary-container font-bold rounded-2xl hover:bg-primary-dim transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+              <a href="kripto-sat.html"  class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary-container font-bold rounded-2xl hover:bg-primary-dim transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
                   Hemen Başla
                   <span class="material-symbols-outlined text-xl">trending_up</span>
               </a>
@@ -96,37 +90,73 @@
                   <span class="material-symbols-outlined text-xl">help_outline</span>
               </a>
           </div>
-
-          <!-- Fast Access Markets (Moved here) -->
-          <div class="pt-20 space-y-12 text-left">
-              <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                  <div class="space-y-2">
-                      <h2 class="text-3xl md:text-5xl font-headline font-bold tracking-tighter text-on-surface">Piyasalar</h2>
-                      <p class="text-on-surface-variant text-sm md:text-base font-medium">Canlı verilerle P2P piyasasını takip edin.</p>
+          <div class="pt-24 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto animate-fade-in-up">
+              <div class="p-6 bg-surface-container-lowest rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
+                 <div class="flex flex-col items-center gap-3">
+                   <div class="w-12 h-12 rounded-2xl bg-[#141f38] p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/usdt.png" alt="USDT" class="w-full h-full object-contain">
+                   </div>
+                   <div>
+                     <div class="text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">USDT/TRY</div>
+                     <div class="text-2xl font-bold font-headline text-on-surface" id="p2pprice-USDTTRY">₺ --.--</div>
+                   </div>
+                 </div>
+              </div>
+              <div class="p-6 bg-surface-container-lowest rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
+                 <div class="flex flex-col items-center gap-3">
+                   <div class="w-12 h-12 rounded-2xl bg-[#141f38] p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/btc.png" alt="BTC" class="w-full h-full object-contain">
+                   </div>
+                   <div>
+                     <div class="text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">BTC/TRY</div>
+                     <div class="text-2xl font-bold font-headline text-on-surface" id="p2pprice-BTCTRY">₺ --.--</div>
+                   </div>
+                 </div>
+              </div>
+              <div class="p-6 bg-surface-container-lowest rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
+                 <div class="flex flex-col items-center gap-3">
+                   <div class="w-12 h-12 rounded-2xl bg-[#141f38] p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/eth.png" alt="ETH" class="w-full h-full object-contain">
+                   </div>
+                   <div>
+                     <div class="text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">ETH/TRY</div>
+                     <div class="text-2xl font-bold font-headline text-on-surface" id="p2pprice-ETHTRY">₺ --.--</div>
+                   </div>
+                 </div>
+              </div>
+              <div class="p-6 bg-surface-container-lowest rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
+                 <div class="flex flex-col items-center gap-3">
+                   <div class="w-12 h-12 rounded-2xl bg-[#141f38] p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/bnb.png" alt="BNB" class="w-full h-full object-contain">
+                   </div>
+                   <div>
+                     <div class="text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">BNB/TRY</div>
+                     <div class="text-2xl font-bold font-headline text-on-surface" id="p2pprice-BNBTRY">₺ --.--</div>
+                   </div>
+                 </div>
+              </div>
+          </div>
+      </section>
+      <section class="max-w-7xl mx-auto px-6 pb-32">
+          <div class="bg-surface-container-lowest/40 backdrop-blur-3xl rounded-[3rem] border border-outline-variant/10 overflow-hidden shadow-2xl">
+              <div class="p-8 md:p-12 border-b border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                  <div>
+                      <h2 class="text-3xl font-headline font-bold text-on-surface mb-2">Canlı Piyasa Fiyatları</h2>
+                      <p class="text-sm text-on-surface-variant font-medium">Binance Spot ve P2P pazarından anlık veriler.</p>
                   </div>
-                  <div class="relative w-full md:w-80 group">
-                      <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-                          <span class="material-symbols-outlined text-primary/40 group-focus-within:text-primary transition-colors">search</span>
-                      </div>
-                      <input type="text" id="main-search" placeholder="Varlık veya parite ara..." class="w-full bg-surface-container-low border-outline-variant/20 focus:border-primary focus:ring-4 focus:ring-primary/10 rounded-2xl py-4 pl-12 pr-4 text-sm font-bold transition-all shadow-xl shadow-primary/5" />
+                  <div class="relative w-full md:w-80">
+                      <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+                      <input type="text" id="main-search" placeholder="Coin Ara... (BTC, ETH, USDT)" class="w-full bg-surface-container-high border-none rounded-2xl py-4 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary/50 transition-all font-medium" />
                   </div>
               </div>
-
-              <div id="market-list" class="grid grid-cols-1 xl:grid-cols-2 gap-8">
-                  <!-- Grid items will be injected by main.js -->
-                  <div class="col-span-full py-20 flex flex-col items-center justify-center opacity-40">
-                      <div class="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4"></div>
+              <div class="p-8 md:p-12">
+                  <div id="market-list" class="grid grid-cols-1 gap-6 min-h-[400px] items-center justify-center">
                       <p class="font-headline font-bold tracking-widest text-[10px] uppercase animate-pulse">Piyasa Verileri Yükleniyor...</p>
                   </div>
               </div>
           </div>
       </section>
-
-      <!-- Stats/Features -->
-      <section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-
-      <!-- Mobile Steps Preview (Visible only on mobile or small desktops) -->
-      <section class="max-w-7xl mx-auto px-6 py-20 bg-primary/5 rounded-[4rem] border border-primary/10 mb-20">
+      <section class="max-w-7xl mx-auto px-6 py-20 bg-primary/5 rounded-[4rem] border border-primary/10 mb-20 text-center">
           <div class="text-center space-y-4 mb-12">
               <h2 class="text-3xl font-headline font-bold text-on-surface">Nasıl Başlanır?</h2>
               <p class="text-on-surface-variant text-sm">4 Kolay adımda güvenli alışverişe başlayın.</p>
@@ -157,8 +187,6 @@
           </div>
       </section>
   </main>
-
-  <!-- Footer -->
   <footer class="bg-surface-container-lowest border-t border-surface-container-high py-20 relative z-10">
       <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
           <div class="space-y-8">
@@ -172,7 +200,6 @@
                 <a href="mailto:info@ankaexchange.com" class="text-sm font-bold text-on-surface hover:text-primary transition-colors">info@ankaexchange.com</a>
             </div>
           </div>
-          
           <div class="space-y-6">
             <h4 class="font-headline font-bold text-on-surface">Piyasalar</h4>
             <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
@@ -181,17 +208,15 @@
                 <li class="hover:text-primary cursor-pointer transition-colors">Yüksek Hacim</li>
             </ul>
           </div>
-
           <div class="space-y-6">
             <h4 class="font-headline font-bold text-on-surface">Platform</h4>
             <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
-                <li><a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Kripto Al</a></li>
-                <li><a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Kripto Sat</a></li>
+                <li><a href="kripto-al.html"  class="hover:text-primary transition-colors">Kripto Al</a></li>
+                <li><a href="kripto-sat.html" class="hover:text-primary transition-colors">Kripto Sat</a></li>
                 <li><a href="nasil-calisir.html" class="hover:text-primary transition-colors">Nasıl Çalışır?</a></li>
                 <li><a href="kyc-dogrulama.html" class="hover:text-primary transition-colors">KYC Doğrulama</a></li>
             </ul>
           </div>
-
           <div class="space-y-6">
             <h4 class="font-headline font-bold text-on-surface">Yasal</h4>
             <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
@@ -206,22 +231,20 @@
           <p>© 2026 Anka Finansal Hizmetler ve Ticaret Limited Şirketi. Tüm Hakları Saklıdır.</p>
           <div class="flex gap-8 opacity-40">
               <span class="hover:text-primary transition-colors cursor-pointer">Sovereign Motoru</span>
-              <span class="hover:text-primary transition-colors cursor-pointer">K�resel Uyumluluk</span>
+              <span class="hover:text-primary transition-colors cursor-pointer">Küresel Uyumluluk</span>
           </div>
       </div>
   </footer>
-
-  <!-- BottomNavBar for Mobile -->
   <nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-4 bg-[#060e20]/90 backdrop-blur-2xl rounded-t-3xl z-50 border-t border-surface-container-high shadow-[0px_-8px_30px_rgba(0,0,0,0.5)]">
       <a href="index.html" class="flex flex-col items-center justify-center text-primary transition-all active:scale-90">
         <span class="material-symbols-outlined mb-1 text-2xl font-bold">home</span>
         <span class="font-medium text-[10px]">Piyasa</span>
       </a>
-      <a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
+      <a href="kripto-al.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
         <span class="material-symbols-outlined mb-1 text-2xl">add_shopping_cart</span>
         <span class="font-medium text-[10px]">Alış</span>
       </a>
-      <a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
+      <a href="kripto-sat.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
         <span class="material-symbols-outlined mb-1 text-2xl">sell</span>
         <span class="font-medium text-[10px]">Satış</span>
       </a>
@@ -230,11 +253,7 @@
         <span class="font-medium text-[10px]">Kurumsal</span>
       </a>
   </nav>
-
   <script src="./background-3d.js"></script>
   <script src="./main.js" type="module"></script>
 </body>
 </html>
-
-
-
