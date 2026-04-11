@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const formatPrice = (priceStr) => {
         const p = parseFloat(priceStr);
-        if(p < 0.1) return p.toLocaleString('en-US', { minimumFractionDigits: 4, maximumFractionDigits: 5 });
-        if(p < 1) return p.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 4 });
-        return p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        if(p < 0.1) return p.toLocaleString('tr-TR', { minimumFractionDigits: 4, maximumFractionDigits: 5 });
+        if(p < 1) return p.toLocaleString('tr-TR', { minimumFractionDigits: 3, maximumFractionDigits: 4 });
+        return p.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     };
 
     const getSparkline = (isPositive) => {

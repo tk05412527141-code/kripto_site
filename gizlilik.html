@@ -1,277 +1,158 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="tr"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Gizlilik Politikası | Anka Exchange</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #060e20;
-        }
-        h1, h2, h3, .font-headline {
-            font-family: 'Space Grotesk', sans-serif;
-        }
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gizlilik Politikası | Anka Exchange</title>
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="./tailwind-config.js"></script>
+    <script src="./theme.js"></script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        body { font-family: 'Inter', sans-serif; background-color: #060e20; }
+        h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .sidebar-link.active { background-color: rgba(189, 157, 255, 0.1); color: #bd9dff; border-left: 3px solid #bd9dff; }
     </style>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-secondary-container": "#e1ffec",
-                        "primary-container": "#b28cff",
-                        "error-dim": "#d73357",
-                        "tertiary-fixed-dim": "#25adf1",
-                        "outline": "#6d758c",
-                        "inverse-primary": "#742fe5",
-                        "primary-fixed": "#b28cff",
-                        "secondary-fixed": "#69f6b8",
-                        "error": "#ff6e84",
-                        "surface-container-lowest": "#000000",
-                        "outline-variant": "#40485d",
-                        "on-secondary": "#005a3c",
-                        "on-error": "#490013",
-                        "on-error-container": "#ffb2b9",
-                        "surface-container-high": "#141f38",
-                        "secondary-fixed-dim": "#58e7ab",
-                        "surface-dim": "#060e20",
-                        "on-tertiary-fixed": "#001a29",
-                        "surface-container-low": "#091328",
-                        "secondary-dim": "#58e7ab",
-                        "tertiary-container": "#34b5fa",
-                        "surface-container-highest": "#192540",
-                        "surface-variant": "#192540",
-                        "inverse-on-surface": "#4d556b",
-                        "on-surface": "#dee5ff",
-                        "on-primary-fixed": "#000000",
-                        "on-primary-container": "#2e006c",
-                        "on-tertiary-fixed-variant": "#003d5a",
-                        "on-tertiary-container": "#003047",
-                        "tertiary-fixed": "#40bbff",
-                        "on-surface-variant": "#a3aac4",
-                        "primary": "#bd9dff",
-                        "surface-tint": "#bd9dff",
-                        "primary-fixed-dim": "#a67aff",
-                        "on-secondary-fixed-variant": "#006544",
-                        "surface-bright": "#1f2b49",
-                        "on-primary-fixed-variant": "#390083",
-                        "error-container": "#a70138",
-                        "surface": "#060e20",
-                        "tertiary-dim": "#17a8ec",
-                        "surface-container": "#0f1930",
-                        "secondary-container": "#006c49",
-                        "tertiary": "#61c2ff",
-                        "primary-dim": "#8a4cfc",
-                        "on-primary": "#3c0089",
-                        "background": "#060e20",
-                        "on-tertiary": "#003b56",
-                        "inverse-surface": "#faf8ff",
-                        "secondary": "#69f6b8",
-                        "on-secondary-fixed": "#00452d",
-                        "on-background": "#dee5ff"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container">
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen">
+
 <!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-[#060e20]/70 backdrop-blur-xl shadow-[0_0_40px_rgba(189,157,255,0.08)] flex items-center px-6 h-16 w-full">
-<div class="flex items-center gap-4 cursor-pointer" onclick="window.history.back()">
-<span class="material-symbols-outlined text-[#bd9dff] active:scale-95 duration-200 cursor-pointer">arrow_back</span>
-<h1 class="text-lg font-bold text-[#bd9dff] font-['Space_Grotesk'] tracking-tighter uppercase">EXCHANGE</h1>
-</div>
+<header class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
+  <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+    <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3">
+           <img src="./logo.png" alt="Anka Exchange Logo" class="w-16 h-16 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
+           <img src="./logo-text.png" alt="Anka Exchange" class="h-8 md:h-10 object-contain drop-shadow-md hidden sm:block" />
+        </a>
+    </div>
+    <nav class="hidden md:flex flex-1 items-center justify-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-on-surface hover:text-primary transition-colors">Anasayfa</a>
+        <a href="kripto-al.html" class="text-on-surface hover:text-primary transition-colors">Kripto Satın Al</a>
+        <a href="kripto-sat.html" class="text-on-surface hover:text-primary transition-colors">Kripto Sat</a>
+        <div class="relative group h-full flex items-center">
+          <button class="text-primary hover:text-primary-dim transition-all flex items-center gap-1 group-hover:text-primary-dim py-2 text-sm font-medium drop-shadow-[0_0_8px_rgba(189,157,255,0.5)]">
+            Kurumsal
+            <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180 text-primary">expand_more</span>
+          </button>
+          <div class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
+            <div class="bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+              <a href="hakkimizda.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
+                <span class="material-symbols-outlined text-xl">info</span>
+                Hakkımızda
+              </a>
+              <a href="nasil-calisir.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
+                <span class="material-symbols-outlined text-xl">rocket_launch</span>
+                Nasıl Çalışır?
+              </a>
+              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
+                <span class="material-symbols-outlined text-xl">verified_user</span>
+                KYC Doğrulama
+              </a>
+              <a href="kullanim-kosullari.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium group/item">
+                <span class="material-symbols-outlined text-xl text-primary/60 group-hover/item:text-primary">gavel</span>
+                Kullanım Koşulları
+              </a>
+              <div class="h-px bg-outline-variant/20 my-1 mx-2"></div>
+              <a href="gizlilik.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary transition-colors text-sm font-medium">
+                <span class="material-symbols-outlined text-xl">shield</span>
+                Gizlilik Politikası
+              </a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div class="flex items-center gap-4">
+        <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors">
+          <span class="material-symbols-outlined text-primary">light_mode</span>
+        </button>
+    </div>
+  </div>
 </header>
-<main class="pt-24 pb-20 px-6 max-w-2xl mx-auto">
-<!-- Hero Section -->
-<section class="mb-12 relative">
-<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-[80px]"></div>
-<h2 class="text-4xl font-headline font-bold text-on-surface tracking-tight mb-4">Gizlilik Politikası</h2>
-<div class="h-1 w-20 bg-gradient-to-r from-primary to-primary-dim rounded-full mb-6"></div>
-<p class="text-on-surface-variant text-sm leading-relaxed max-w-prose">
-                Anka Exchange olarak verilerinizin güvenliği ve gizliliği en öncelikli konumuzdur. Bu politika, "Sovereign Engine" altyapımızda verilerinizin nasıl işlendiğini açıklar.
-            </p>
-</section>
-<!-- Privacy Content Blocks -->
-<div class="space-y-6">
-<!-- 1. Veri Sorumlusu -->
-<div class="p-6 bg-surface-container-low rounded-xl border-l-2 border-primary/30">
-<div class="flex items-center gap-3 mb-4">
-<span class="text-xs font-headline font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg">01</span>
-<h3 class="font-headline font-semibold text-lg text-primary uppercase tracking-tight">Veri Sorumlusu</h3>
-</div>
-<div class="text-on-surface-variant text-sm space-y-2">
-<p class="font-bold text-on-surface">Anka Exchange</p>
-<p class="font-mono text-xs opacity-70 tracking-wider">ankaexchance.com</p>
-</div>
-</div>
-<!-- 2. Toplanan Veriler -->
-<div class="p-6 bg-surface-container-low rounded-xl">
-<div class="flex items-center gap-3 mb-4">
-<span class="text-xs font-headline font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg">02</span>
-<h3 class="font-headline font-semibold text-lg text-primary uppercase tracking-tight">Toplanan Veriler</h3>
-</div>
-<ul class="grid grid-cols-1 gap-3">
-<li class="flex items-center gap-3 text-sm text-on-surface-variant p-3 bg-surface-container rounded-lg">
-<span class="material-symbols-outlined text-tertiary text-sm">fingerprint</span> Kimlik bilgileri
-                    </li>
-<li class="flex items-center gap-3 text-sm text-on-surface-variant p-3 bg-surface-container rounded-lg">
-<span class="material-symbols-outlined text-tertiary text-sm">alternate_email</span> İletişim bilgileri
-                    </li>
-<li class="flex items-center gap-3 text-sm text-on-surface-variant p-3 bg-surface-container rounded-lg">
-<span class="material-symbols-outlined text-tertiary text-sm">security</span> İşlem güvenliği bilgileri
-                    </li>
-<li class="flex items-center gap-3 text-sm text-on-surface-variant p-3 bg-surface-container rounded-lg">
-<span class="material-symbols-outlined text-tertiary text-sm">data_exploration</span> Kullanım verileri
-                    </li>
-<li class="flex items-center gap-3 text-sm text-on-surface-variant p-3 bg-surface-container rounded-lg">
-<span class="material-symbols-outlined text-tertiary text-sm">cookie</span> Çerezler
-                    </li>
-</ul>
-</div>
-<!-- 3. İşlenme Amaçları -->
-<div class="p-6 bg-surface-container-low rounded-xl border-l-2 border-primary/30">
-<div class="flex items-center gap-3 mb-4">
-<span class="text-xs font-headline font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg">03</span>
-<h3 class="font-headline font-semibold text-lg text-primary uppercase tracking-tight">İşlenme Amaçları</h3>
-</div>
-<div class="space-y-3">
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1.5 rounded-full bg-surface-container-highest text-[10px] uppercase font-bold tracking-widest text-on-surface border border-outline-variant/20">Hizmet Sunumu</span>
-<span class="px-3 py-1.5 rounded-full bg-surface-container-highest text-[10px] uppercase font-bold tracking-widest text-on-surface border border-outline-variant/20">Kullanıcı Deneyimi</span>
-<span class="px-3 py-1.5 rounded-full bg-surface-container-highest text-[10px] uppercase font-bold tracking-widest text-on-surface border border-outline-variant/20">Güvenlik</span>
-<span class="px-3 py-1.5 rounded-full bg-surface-container-highest text-[10px] uppercase font-bold tracking-widest text-on-surface border border-outline-variant/20">Yasal Yükümlülükler</span>
-</div>
-</div>
-</div>
-<!-- Image Accent Section -->
-<div class="relative overflow-hidden rounded-2xl h-48 my-8 group">
-<img alt="Cyber Security" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Abstract cyber security background with purple neon light trails and digital data flows in dark environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD17_GRTc6KrkdJrBUynjOnhewmX3Tb-mMN6H3U-qR-ksXDDwDZgg0F824CK0paCTUwhKWTgJIgGJtcI5yQE2ZvKqJbPBJkTusueGiEhUDkkhGdhmTRVVHccgxTwCTg2tfBQT38uB-DXNjGFV1kxqPf5onebN-YC02oYwun6IA4DIP2Q0fd39yQ7RhnMUGu_pq9RObrk08iioD7nr6ovuEeawWpu8jlZ-UbjwXEQt96weE99M-R7dk9USW0gfPawsgbLgOx_KFyjYc"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
-<div class="absolute bottom-4 left-4 right-4">
-<p class="text-[10px] font-headline uppercase tracking-[0.3em] text-primary">Sovereign Data Guard</p>
-<p class="text-xs text-on-surface-variant font-light">Verileriniz askeri düzeyde şifreleme ile korunmaktadır.</p>
-</div>
-</div>
-<!-- 4. Çerez Politikası & 5. Veri Aktarımı -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="p-6 bg-surface-container-low rounded-xl">
-<div class="flex items-center gap-3 mb-4">
-<span class="text-xs font-headline font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg">04</span>
-<h3 class="font-headline font-semibold text-lg text-primary uppercase tracking-tight">Çerezler</h3>
-</div>
-<p class="text-xs leading-relaxed text-on-surface-variant">Tercihler, analitik veriler ve pazarlama faaliyetleri için optimize edilmiş çerezler kullanılmaktadır.</p>
-</div>
-<div class="p-6 bg-surface-container-low rounded-xl">
-<div class="flex items-center gap-3 mb-4">
-<span class="text-xs font-headline font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg">05</span>
-<h3 class="font-headline font-semibold text-lg text-primary uppercase tracking-tight">Aktarım</h3>
-</div>
-<p class="text-xs leading-relaxed text-on-surface-variant">KVKK uyumlu olarak yetkili kurumlar ve stratejik iş ortakları ile veri aktarımı yapılabilir.</p>
-</div>
-</div>
-<!-- 6. Üçüncü Taraf & 7. Veri Güvenliği -->
-<div class="p-6 bg-surface-container-low rounded-xl border-l-2 border-primary/30">
-<div class="flex items-center gap-3 mb-4">
-<span class="text-xs font-headline font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg">06-07</span>
-<h3 class="font-headline font-semibold text-lg text-primary uppercase tracking-tight">Altyapı &amp; Güvenlik</h3>
-</div>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant/30">
-<span class="material-symbols-outlined text-secondary text-lg">verified_user</span>
-</div>
-<div>
-<p class="text-sm font-bold text-on-surface">Teknik &amp; İdari Önlemler</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Global Security Standards</p>
-</div>
-</div>
-<p class="text-xs text-on-surface-variant italic">Google Analytics ve Google Ads servisleri aracılığıyla anonim veri analizi gerçekleştirilmektedir.</p>
-</div>
-</div>
-<!-- 8. KVKK Hakları -->
-<div class="p-6 bg-surface-container-low rounded-xl">
-<div class="flex items-center gap-3 mb-4">
-<span class="text-xs font-headline font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg">08</span>
-<h3 class="font-headline font-semibold text-lg text-primary uppercase tracking-tight">KVKK Hakları</h3>
-</div>
-<div class="grid grid-cols-2 gap-2">
-<div class="p-2 border border-outline-variant/10 rounded-lg text-[11px] text-on-surface flex items-center gap-2">
-<span class="material-symbols-outlined text-[14px] text-primary">info</span> Bilgi Talep Etme
-                    </div>
-<div class="p-2 border border-outline-variant/10 rounded-lg text-[11px] text-on-surface flex items-center gap-2">
-<span class="material-symbols-outlined text-[14px] text-primary">edit</span> Düzeltme
-                    </div>
-<div class="p-2 border border-outline-variant/10 rounded-lg text-[11px] text-on-surface flex items-center gap-2">
-<span class="material-symbols-outlined text-[14px] text-primary">delete_forever</span> Silme
-</div>
-<div class="p-2 border border-outline-variant/10 rounded-lg text-[11px] text-on-surface flex items-center gap-2">
-<span class="material-symbols-outlined text-[14px] text-primary">gavel</span> İtiraz
-</div>
-</div>
-</div>
-<!-- 9. Değişiklikler -->
-<div class="p-6 bg-surface-container-low rounded-xl border-t border-primary/10">
-<div class="flex items-center gap-3 mb-4">
-<span class="text-xs font-headline font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg">09</span>
-<h3 class="font-headline font-semibold text-lg text-primary uppercase tracking-tight">Değişiklikler</h3>
-</div>
-<p class="text-xs text-on-surface-variant leading-relaxed">
-                    Bu politika metni üzerinde yapılan tüm güncellemeler web sitemizde yayınlandığı an itibarıyla yürürlüğe girmektedir.
-                </p>
-</div>
-<!-- 10. İletişim Card -->
-<div class="p-8 bg-gradient-to-br from-surface-container-high to-surface-container-lowest rounded-2xl border border-primary/20 shadow-[0_0_40px_rgba(189,157,255,0.05)] text-center relative overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
-<span class="material-symbols-outlined text-8xl">contact_support</span>
-</div>
-<div class="relative z-10">
-<h3 class="font-headline font-bold text-xl text-primary mb-6 uppercase tracking-widest">BİZE ULAŞIN</h3>
-<div class="space-y-4">
-<a class="block p-4 bg-surface rounded-xl hover:bg-primary/5 transition-colors border border-outline-variant/20" href="mailto:info@ankaexchange.com">
-<p class="text-[10px] uppercase font-headline tracking-widest text-on-surface-variant mb-1">Email</p>
-<p class="text-primary font-medium">info@ankaexchange.com</p>
-</a>
-<a class="block p-4 bg-surface rounded-xl hover:bg-primary/5 transition-colors border border-outline-variant/20" href="https://ankaexchance.com">
-<p class="text-[10px] uppercase font-headline tracking-widest text-on-surface-variant mb-1">Web</p>
-<p class="text-primary font-medium">ankaexchance.com</p>
-</a>
-</div>
-</div>
-</div>
-</div>
+
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+    
+    <!-- Sidebar -->
+    <aside class="w-full md:w-64 flex-shrink-0">
+        <div class="sticky top-32 space-y-2">
+            <h4 class="px-4 py-2 text-xs font-bold uppercase tracking-widest text-outline mb-2">Politikalar & Rehberler</h4>
+            <a href="dogrulama-rehberi.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">menu_book</span>
+                Doğrulama Rehberi
+            </a>
+            <a href="kyc-dogrulama.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified_user</span>
+                KYC Doğrulama
+            </a>
+            <a href="gizlilik.html" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl">shield</span>
+                Gizlilik Politikası
+            </a>
+            <a href="kullanim-kosullari.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">gavel</span>
+                Kullanım Koşulları
+            </a>
+            <a href="dolandiricilik-onleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">report_problem</span>
+                Dolandırıcılık Önleme
+            </a>
+            <a href="mesafeli-satis.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">contract</span>
+                Mesafeli Satış Sözleşmesi
+            </a>
+            <a href="acik-riza.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">handshake</span>
+                Açık Rıza Metni
+            </a>
+            <a href="veri-isleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">database</span>
+                Veri İşleme ve İmha
+            </a>
+            <a href="sorumluluk-reddi.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">info</span>
+                Sorumluluk Reddi (Uyarı)
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 max-w-4xl text-on-surface-variant">
+        <section class="mb-12">
+            <h1 class="text-4xl font-headline font-bold mb-6 text-on-surface">Gizlilik Politikası</h1>
+            <p class="mb-4 font-medium italic">Son Güncelleme: 11 Nisan 2026</p>
+            
+            <div class="space-y-8 leading-relaxed">
+                <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+                    <h2 class="text-xl font-headline font-bold text-on-surface mb-3">1. Veri Toplama</h2>
+                    <p>Anka Exchange olarak, kullanıcılarımızın güvenliğini sağlamak ve yasal yükümlülüklerimizi (AML/KYC) yerine getirmek amacıyla bazı kişisel bilgileri topluyoruz. Bu bilgiler; ad, soyad, e-posta, kimlik belgesi ve adres bilgilerini içerebilir.</p>
+                </div>
+
+                <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+                    <h2 class="text-xl font-headline font-bold text-on-surface mb-3">2. Veri Güvenliği</h2>
+                    <p>Topladığımız tüm veriler, ISO 27001 standartlarına uygun olarak yüksek güvenlikli ve şifreli sunucularımızda saklanmaktadır. Verilerinize sadece yetkili personelimiz erişebilir.</p>
+                </div>
+
+                <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+                    <h2 class="text-xl font-headline font-bold text-on-surface mb-3">3. Üçüncü Taraflarla Paylaşım</h2>
+                    <p>Kişisel verileriniz, yasal zorunluluklar haricinde asla üçüncü şahıslarla veya kurumlarla ticari amaçlarla paylaşılmaz.</p>
+                </div>
+
+                <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+                    <h2 class="text-xl font-headline font-bold text-on-surface mb-3">4. Çerez Politikası</h2>
+                    <p>Sitemizde kullanıcı deneyimini iyileştirmek ve anonim istatistikler toplamak amacıyla teknik çerezler kullanılmaktadır.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
-<!-- Footer -->
-<footer class="bg-[#060e20] border-t border-[#dee5ff]/15 w-full py-12 px-8 flex flex-col items-center gap-6 w-full mt-auto">
-<div class="flex gap-8 mb-4">
-<a href="gizlilik.html" class="text-[#dee5ff]/60 font-['Inter'] text-[10px] uppercase tracking-widest hover:text-[#61c2ff] transition-all cursor-pointer">Privacy</a>
-<span class="text-[#dee5ff]/60 font-['Inter'] text-[10px] uppercase tracking-widest hover:text-[#61c2ff] transition-all cursor-pointer">Terms</span>
-<span class="text-[#dee5ff]/60 font-['Inter'] text-[10px] uppercase tracking-widest hover:text-[#61c2ff] transition-all cursor-pointer">Security</span>
-<span class="text-[#dee5ff]/60 font-['Inter'] text-[10px] uppercase tracking-widest hover:text-[#61c2ff] transition-all cursor-pointer">Support</span>
-</div>
-<div class="text-[#dee5ff]/40 text-[9px] font-headline tracking-[0.5em] mb-4">SOVEREIGN ENGINE</div>
-<p class="text-[#bd9dff] font-['Inter'] text-[10px] uppercase tracking-widest opacity-80">© 2026 Anka Finansal Hizmetler ve Ticaret Limited �irketi. ANKARA / TURKEY. T�m Haklar� Sakl�d�r.</p>
+
+<footer class="bg-[#060e20] border-t border-surface-container-high py-12 px-8 mt-20 text-center">
+    <p class="text-on-surface-variant text-sm mb-4">&copy; 2026 Anka Exchange. Bütün Hakları Saklıdır.</p>
+    <div class="text-[#dee5ff]/40 text-[9px] font-headline tracking-[0.5em] uppercase">Anka Finansal Hizmetler</div>
 </footer>
-</body></html>
 
-
-
+<script src="./background-3d.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KYC Doğrulama | Anka Exchange</title>
+    <title>Dolandırıcılık Önleme Politikası | Anka Exchange</title>
     <link rel="icon" type="image/png" href="./logo.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -47,7 +47,7 @@
                 <span class="material-symbols-outlined text-xl">rocket_launch</span>
                 Nasıl Çalışır?
               </a>
-              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary transition-colors text-sm font-medium">
+              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-sm font-medium">
                 <span class="material-symbols-outlined text-xl">verified_user</span>
                 KYC Doğrulama
               </a>
@@ -82,8 +82,8 @@
                 <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">menu_book</span>
                 Doğrulama Rehberi
             </a>
-            <a href="kyc-dogrulama.html" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl">verified_user</span>
+            <a href="kyc-dogrulama.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified_user</span>
                 KYC Doğrulama
             </a>
             <a href="gizlilik.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
@@ -94,8 +94,8 @@
                 <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">gavel</span>
                 Kullanım Koşulları
             </a>
-            <a href="dolandiricilik-onleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">report_problem</span>
+            <a href="dolandiricilik-onleme.html" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium group">
+                <span class="material-symbols-outlined text-xl">report_problem</span>
                 Dolandırıcılık Önleme
             </a>
             <a href="mesafeli-satis.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
@@ -118,54 +118,26 @@
     </aside>
 
     <!-- Main Content -->
-    <div class="flex-1 max-w-2xl">
-        <!-- Hero Section -->
-        <section class="mb-12 relative text-left">
-            <div class="absolute -top-20 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-[80px]"></div>
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 border border-secondary/20 mb-6 shadow-[0_0_30px_rgba(105,246,184,0.2)]">
-                <span class="material-symbols-outlined text-3xl text-secondary">verified</span>
+    <div class="flex-1 max-w-4xl text-on-surface-variant">
+        <section class="mb-12">
+            <h1 class="text-4xl font-headline font-bold mb-6 text-on-surface">Dolandırıcılık Önleme Politikası</h1>
+            <div class="space-y-6">
+                <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+                    <h2 class="text-xl font-headline font-bold text-on-surface mb-3">Güvenliğiniz Önceliğimizdir</h2>
+                    <p>Anka Exchange, kullanıcılarını siber suçlara ve dolandırıcılık girişimlerine karşı korumak için ileri düzey güvenlik algoritmaları ve yapay zeka destekli izleme sistemleri kullanır.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-5 bg-surface-container-low rounded-xl border border-outline-variant/10">
+                        <h4 class="font-bold text-on-surface mb-2">P2P Güvenliği</h4>
+                        <p class="text-xs leading-relaxed">Binance P2P üzerindeki tüm siparişler, emanet (escrow) sistemiyle korunmaktadır.</p>
+                    </div>
+                    <div class="p-5 bg-surface-container-low rounded-xl border border-outline-variant/10">
+                        <h4 class="font-bold text-on-surface mb-2">Kimlik Doğrulama</h4>
+                        <p class="text-xs leading-relaxed">Sadece doğrulanmış kullanıcıların işlem yapmasına izin verilerek riskler minimize edilir.</p>
+                    </div>
+                </div>
             </div>
-            <h2 class="text-4xl font-headline font-bold text-on-surface tracking-tight mb-4">KYC Doğrulama</h2>
-            <p class="text-on-surface-variant text-sm leading-relaxed max-w-prose">
-                Müşterini Tanı (Know Your Customer) protokolü, Anka Exchange'de güvenli bir ticaret ortamı sağlamak ve global finansal standartlara uyum sağlamak için zorunluluktur.
-            </p>
         </section>
-
-        <!-- Content Cards -->
-        <div class="space-y-6">
-            <div class="p-6 bg-surface-container-low rounded-xl border-l-2 border-secondary/30">
-                <h3 class="font-headline font-bold text-lg text-on-surface mb-3 uppercase tracking-tight">Neden Gereklidir?</h3>
-                <p class="text-on-surface-variant text-sm leading-relaxed italic">"Güvenlik bir tercih değil, temel bir haktır."</p>
-                <p class="text-on-surface-variant text-sm mt-3">Anonim işlemlerden kaynaklanabilecek riskleri minimize etmek, kara para aklama (AML) faaliyetlerini engellemek ve hesabınızın sadece size ait olduğunu garantilemek için bu süreci işletiyoruz.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="p-5 bg-surface-container-low rounded-xl border border-outline-variant/10">
-                    <span class="material-symbols-outlined text-2xl text-primary mb-3">account_balance_wallet</span>
-                    <h4 class="font-bold text-sm mb-2 text-on-surface">Limit Artışı</h4>
-                    <p class="text-xs text-on-surface-variant leading-relaxed">Doğrulama işlemini tamamlayan kullanıcılarımız daha yüksek günlük alım/satım limitlerine sahip olur.</p>
-                </div>
-                <div class="p-5 bg-surface-container-low rounded-xl border border-outline-variant/10">
-                    <span class="material-symbols-outlined text-2xl text-secondary mb-3">speed</span>
-                    <h4 class="font-bold text-sm mb-2 text-on-surface">Hızlı Onay</h4>
-                    <p class="text-xs text-on-surface-variant leading-relaxed">Doğrulanmış hesapların Binance P2P üzerindeki işlem onayları saniyeler içinde gerçekleşir.</p>
-                </div>
-            </div>
-
-            <div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant/10 italic text-primary/80 text-sm">
-                ANKA Exchange, global standartlarda kimlik doğrulama süreçleri kullanarak kullanıcılarının varlıklarını ve kişisel verilerini en üst düzeyde korur. Aşağıdaki rehberleri inceleyerek süreç hakkında daha fazla bilgi alabilirsiniz.
-            </div>
-
-            <div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant/10">
-                <div class="flex items-center gap-3 mb-4">
-                    <span class="material-symbols-outlined text-tertiary">priority_high</span>
-                    <h3 class="font-headline font-bold text-sm uppercase tracking-widest text-on-surface">Önemli Bildirim</h3>
-                </div>
-                <p class="text-[11px] text-on-surface-variant leading-relaxed">
-                    Gönderdiğiniz tüm belgeler ISO 27001 Bilgi Güvenliği standartlarına uygun olarak şifreli sunucularımızda saklanmakta ve üçüncü taraflarla asla paylaşılmamaktadır. İşlem süresi genellikle 1-4 saat arasındadır.
-                </p>
-            </div>
-        </div>
     </div>
 </main>
 

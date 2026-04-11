@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div>
                   <div class="font-bold text-on-surface font-headline tracking-tight">${item.pair}</div>
-                  <div class="text-[10px] text-outline font-medium tracking-wide">Vol: <span id="vol-${item.symbol}">${item.volume}</span></div>
+                  <div class="text-[10px] text-outline font-medium tracking-wide">Hacim: <span id="vol-${item.symbol}">${item.volume}</span></div>
                 </div>
               </div>
               
