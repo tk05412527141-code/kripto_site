@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gizlilik Politikası | Anka Exchange</title>
+    <title>Veri İşleme ve İmha | Anka Exchange</title>
     <link rel="icon" type="image/png" href="/assets/logo-6UL8bjhX.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -14,6 +14,7 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         body { font-family: 'Inter', sans-serif; background-color: #060e20; }
         h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .sidebar-link.active { background-color: rgba(189, 157, 255, 0.1); color: #bd9dff; border-left: 3px solid #bd9dff; }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen">
@@ -58,16 +59,63 @@
       </div>
     </div>
   </header>
-<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 space-y-12 text-on-surface-variant leading-relaxed">
-    <h2 class="text-4xl font-headline font-bold text-on-surface">Gizlilik Politikası</h2>
-    <p>Anka Exchange, kullanıcılarının gizliliğine ve verilerinin korunmasına en üst düzeyde önem verir.</p>
-    <div class="space-y-6">
-        <h3 class="text-xl font-bold text-on-surface">1. Hangi Verileri Topluyoruz?</h3>
-        <p>Kimlik bilgileriniz, iletişim bilgileriniz ve işlem geçmişiniz güvenliğiniz için toplanmaktadır.</p>
-        <h3 class="text-xl font-bold text-on-surface">2. Verilerin Kullanımı</h3>
-        <p>Toplanan veriler sadece yasal gereklilikler ve size daha iyi hizmet sunmak amacıyla kullanılmaktadır.</p>
-    </div>
-</main>
+<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 flex flex-col md:flex-row gap-12">
+                                <aside class="w-full md:w-64 shrink-0 space-y-8">
+        <div class="bg-surface-container-low rounded-3xl p-2 border border-outline-variant/10">
+            <h3 class="px-4 pt-4 pb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant opacity-50">Kurumsal Menü</h3>
+            <div class="space-y-1">
+                <a href="hakkimizda.html" data-file="hakkimizda.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">info</span>Hakkımızda</a>
+                <a href="nasil-calisir.html" data-file="nasil-calisir.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">rocket_launch</span>Nasıl Çalışır?</a>
+                <a href="kyc-dogrulama.html" data-file="kyc-dogrulama.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified_user</span>KYC Doğrulama</a>
+                <a href="kullanim-kosullari.html" data-file="kullanim-kosullari.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">gavel</span>Kullanım Koşulları</a>
+                <a href="dolandiricilik-onleme.html" data-file="dolandiricilik-onleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">security</span>Dolandırıcılık Önleme</a>
+                <a href="mesafeli-satis.html" data-file="mesafeli-satis.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">history_edu</span>Mesafeli Satış</a>
+                <a href="acik-riza.html" data-file="acik-riza.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">border_color</span>Açık Rıza Metni</a>
+                <a href="veri-isleme.html" data-file="veri-isleme.html" class="active sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl  hover:text-primary transition-all text-sm font-medium  group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">database</span>Veri İşleme ve İmha</a>
+                <a href="sorumluluk-reddi.html" data-file="sorumluluk-reddi.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">warning</span>Sorumluluk Reddi</a>
+            </div>
+        </div>
+    </aside>>
+    <div class="flex-1 max-w-4xl space-y-12 text-on-surface-variant leading-relaxed">\n
+        <div class="space-y-4">
+            <h2 class="text-4xl font-headline font-bold text-on-surface">Kişisel Veri İşleme ve İmha Politikası</h2>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">1. Veri İşleme Politikasının Amacı</h3>
+            <p>Kapsamlı Gizlilik bildirimimizde (Aydınlatma Metni) kamuoyuna duyurulan maddelerin teknik ve algoritmik uygulanışını aydınlatan bu spesifik politika; şirketimize idari ve güvenlik teyidi vesilesiyle ibraz edilen verilerin fiziksel/elektronik olarak hangi şifreleme alt yapılarında idame ettirildiğini ve yasal saklama/kullanım hedefleri eridiğinde ve miadını doldurduğunda ne tür "Geri Dönülemez" imha senaryolarıyla (Deletion/Anonymization) kalıcı bir biçimde yok edildiğini (imha) detaylıca tarif eder.</p>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">2. Teknik Ağ ve Kurumsal İdari Tedbirlerimiz</h3>
+            <p>Şirket iç ağı donanım ve yazılım bazlı küresel güvenlik duvarları (Firewall) ile 7/24 izlenir ve korunur. Dış unsurlardan ve internete açık alanlardan gelecek olası yetkisiz sızmalara ve siber korsanlık girişimlerine karşı 256-bit AES endüstri standardı seviyesinde şifrelemesi uygulamaları esastır.</p>
+            <div class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/10 mt-4 space-y-4">
+                <div class="flex gap-4 items-start">
+                    <span class="material-symbols-outlined text-primary text-3xl shrink-0 mt-1">admin_panel_settings</span>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-primary mb-1">Katı Personel Erişimi</h4>
+                        <p class="text-sm">Hukuken saklanması zaruri olan Ticari E-Fatura veya adres verilerinize sadece şirketimizde bu konuya vakıf (görev tanımları bağlamında sert izin yetkileri ile sınırlandırılmış) atanmış idari ve mali personel salt erişebilir.</p>
+                    </div>
+                </div>
+                <div class="h-px bg-outline-variant/10 w-full"></div>
+                <div class="flex gap-4 items-start">
+                    <span class="material-symbols-outlined text-primary text-3xl shrink-0 mt-1">history</span>
+                    <div>
+                        <h4 class="text-[15px] font-bold text-primary mb-1">Kesin Loglama ve İz Takibi</h4>
+                        <p class="text-sm">Kullanıcının siber riskini önlemeye yarayan biyometrik harita veya KYC işlem evrakı dökümlerinize dair erişim kayıtları ise tamamen saniye bazında loglanmış (elektronik iz formunda kayıt altına alınmış) olup, mahkeme kararı yahut yasal bir emniyet/savcılık tahkikatı doğmadıkça yönetim kurulu dahil hiç kimse tarafından keyfi olarak sorgulanamaz ve arşiv dosyaları indirilemez/açılamaz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">3. Veri İmha Periyodları ve Yok Etme Esasları</h3>
+            <p>Kullanıcının sistem doğrulama safhasında Özel Özgür Açık Rızası prensibi ile sağladığı yüksek seviyeli bilgiler (Özellikle Sumsub Canlı Yüz Analiz Biyometrisi), P2P dijital cüzdan e-ticaret pratiklerinde olası dolandırıcılık veya chargeback (ters ibraz) şüphesinin kaybolduğu güvenli ticaret zamanlamasından takriben <strong class="text-primary">30 ila 180 gün sonrasında</strong> periyodik işletilen algoritmik silme (cronjob vb.) betikleri ile sistemden kati ve geri dönülemez (unrecoverable) olarak silinir.</p>
+            <div class="p-6 bg-primary/5 rounded-3xl border border-primary/20 text-on-surface">
+                <p>Kanunen yok edilmesi cezai yaptırıma sebebiyet veren ve faturaya işlenmiş TCKN yahut müşteri ad-soyad iletişim verisi; ticaret kanunları ile Vergi Usul Kanunu ve TBK hükümlerince mali vergi arşivi (muhasebe) bünyesinde zorunlu olarak takribi <strong class="text-primary">5 yıl durmak zorundadır</strong> (idari zorunluluktur). Biyometrik veya şifreli veriden ayrıştırılarak tamamen izole edilmiş bu düz veri takımları (evrak dosyaları), 5 yıllık adli zamanaşımını sorunsuz bir şekilde doldurduğunda şirket içi Veri İmha Kurulu denetiminde anonim maske ile yahut donanımsal temizleme yöntemleriyle güvenle ve yasal tutanakla yok edilir.</p>
+            </div>
+        </div>
+\n    </div>\n</main>
 <footer class="bg-surface-container-lowest border-t border-surface-container-high py-20 relative z-10">
       <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
           <div class="space-y-8">

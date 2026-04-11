@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gizlilik Politikası | Anka Exchange</title>
+    <title>Dolandırıcılık Önleme | Anka Exchange</title>
     <link rel="icon" type="image/png" href="/assets/logo-6UL8bjhX.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -14,6 +14,7 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         body { font-family: 'Inter', sans-serif; background-color: #060e20; }
         h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .sidebar-link.active { background-color: rgba(189, 157, 255, 0.1); color: #bd9dff; border-left: 3px solid #bd9dff; }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen">
@@ -58,16 +59,68 @@
       </div>
     </div>
   </header>
-<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 space-y-12 text-on-surface-variant leading-relaxed">
-    <h2 class="text-4xl font-headline font-bold text-on-surface">Gizlilik Politikası</h2>
-    <p>Anka Exchange, kullanıcılarının gizliliğine ve verilerinin korunmasına en üst düzeyde önem verir.</p>
-    <div class="space-y-6">
-        <h3 class="text-xl font-bold text-on-surface">1. Hangi Verileri Topluyoruz?</h3>
-        <p>Kimlik bilgileriniz, iletişim bilgileriniz ve işlem geçmişiniz güvenliğiniz için toplanmaktadır.</p>
-        <h3 class="text-xl font-bold text-on-surface">2. Verilerin Kullanımı</h3>
-        <p>Toplanan veriler sadece yasal gereklilikler ve size daha iyi hizmet sunmak amacıyla kullanılmaktadır.</p>
-    </div>
-</main>
+<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 flex flex-col md:flex-row gap-12">
+                                <aside class="w-full md:w-64 shrink-0 space-y-8">
+        <div class="bg-surface-container-low rounded-3xl p-2 border border-outline-variant/10">
+            <h3 class="px-4 pt-4 pb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant opacity-50">Kurumsal Menü</h3>
+            <div class="space-y-1">
+                <a href="hakkimizda.html" data-file="hakkimizda.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">info</span>Hakkımızda</a>
+                <a href="nasil-calisir.html" data-file="nasil-calisir.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">rocket_launch</span>Nasıl Çalışır?</a>
+                <a href="kyc-dogrulama.html" data-file="kyc-dogrulama.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified_user</span>KYC Doğrulama</a>
+                <a href="kullanim-kosullari.html" data-file="kullanim-kosullari.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">gavel</span>Kullanım Koşulları</a>
+                <a href="dolandiricilik-onleme.html" data-file="dolandiricilik-onleme.html" class="active sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl  hover:text-primary transition-all text-sm font-medium  group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">security</span>Dolandırıcılık Önleme</a>
+                <a href="mesafeli-satis.html" data-file="mesafeli-satis.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">history_edu</span>Mesafeli Satış</a>
+                <a href="acik-riza.html" data-file="acik-riza.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">border_color</span>Açık Rıza Metni</a>
+                <a href="veri-isleme.html" data-file="veri-isleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">database</span>Veri İşleme ve İmha</a>
+                <a href="sorumluluk-reddi.html" data-file="sorumluluk-reddi.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">warning</span>Sorumluluk Reddi</a>
+            </div>
+        </div>
+    </aside>>
+    <div class="flex-1 max-w-4xl space-y-12 text-on-surface-variant leading-relaxed">\n
+        <div class="space-y-4">
+            <h2 class="text-4xl font-headline font-bold text-on-surface">Dolandırıcılık Önleme ve Güvenlik Politikası</h2>
+            <h3 class="text-2xl font-bold text-primary">Siber Güvenlik Standartları</h3>
+            <p class="text-lg">Turan Dijital Yazılım ve Ticaret Ltd. Şti. (bundan böyle "Şirket"), ticari faaliyetlerini siber risklerden arındırılmış güvenli bir zeminde yürütür. Bu politika; her türlü sahtecilik (fraud), başkasına ait kaynaklarla ticaret ve siber hırsızlık vakalarının engellenmesi amacıyla teknik güvenlik protokollerini kapsar.</p>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">1. Amaç ve Kapsam</h3>
+            <p>Şirketimiz, dijital ürün tedariki sürecinde hem kendi ticari güvenliğini hem de dürüst kullanıcıların güvenliğini gözetmektedir. İşbu politika; siparişlerin yalnızca yasal sahipleri tarafından verildiğini teyit etmek ve siber suç odaklarının platformu istismar etmesini önlemek amacıyla oluşturulmuştur.</p>
+            <div class="p-4 rounded-xl bg-error/10 border border-error/20 text-error-dim">
+                <strong class="text-error">Aracılık Sınırı:</strong> Şirketimiz kullanıcılar arasında bir işlem organizasyonu kurmaz ve üçüncü taraf ticari geçişlerine aracılık etmez. Yapılan her işlem doğrudan Şirket envanterinden kullanıcıya yönelik ikili bir ticari akittir.
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">2. Ticari Onay ve Güvenlik Filtreleri</h3>
+            <p>Bilişim altyapımız üzerinden bize ulaşan her ticari talep, siber risk analizinden geçmektedir. Kullanıcı işlemleri; güvenlik skoruna göre aşağıdaki filtrelerden geçebilir:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/10 hover:border-primary/30 transition-colors">
+                    <h4 class="text-lg font-bold text-primary mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Genel Güvenlik Onayı</h4>
+                    <p class="text-sm">Standart kullanıcı doğrulaması ile isim ve IBAN verisi uyuşan doğrudan işlemler.</p>
+                </div>
+                <div class="p-6 bg-surface-container-low rounded-3xl border border-error/20 hover:border-error/50 transition-colors">
+                    <h4 class="text-lg font-bold text-error mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-error">gpp_maybe</span> Yüksek Güvenlik Teyidi</h4>
+                    <p class="text-sm">Şüpheli cihaz/lokasyon kullanımı veya olağandışı ticari hacimlerde, Şirket ek kimlik teyidi (OCR/Canlılık testi) talep etme hakkını saklı tutar.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">3. Sahtecilikle Mücadele Kontrolleri</h3>
+            <p>Ticareti suistimal etmeye yönelik (fraud) girişimleri durdurmak adına:</p>
+            <ul class="list-disc pl-5 space-y-2 text-on-surface-variant">
+                <li>Kullanılan kimlik belgelerinin geçerlilik ve gerçeklik kontrolü,</li>
+                <li>İşlemi anlık yapan kişinin belge sahibiyle eşleşme durumu (biyometrik teyit),</li>
+                <li>Ödemenin yapıldığı kaynak ile teslimat isminin uyuşma durumu teknik olarak denetlenir.</li>
+            </ul>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">4. Şüpheli Durumlar ve Adli Bildirim</h3>
+            <p>Şirketimiz; bilişim suçlarının, kart hırsızlığının ve her türlü dolandırıcılığın karşısındadır. Bir e-ticaret firması olarak; mülkiyetimizdeki dijital ürünlerin haksız yöntemlerle edinilmeye çalışılması halinde ticari işlemi anında durdurma, bedeli iade etme veya şüphe kuvvetli ise mağdur sıfatıyla resmi makamlara bildirim yapma hakkımızı kullanırız.</p>
+        </div>
+\n    </div>\n</main>
 <footer class="bg-surface-container-lowest border-t border-surface-container-high py-20 relative z-10">
       <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
           <div class="space-y-8">

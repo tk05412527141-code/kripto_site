@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gizlilik Politikası | Anka Exchange</title>
+    <title>Mesafeli Satış | Anka Exchange</title>
     <link rel="icon" type="image/png" href="/assets/logo-6UL8bjhX.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -14,6 +14,7 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         body { font-family: 'Inter', sans-serif; background-color: #060e20; }
         h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .sidebar-link.active { background-color: rgba(189, 157, 255, 0.1); color: #bd9dff; border-left: 3px solid #bd9dff; }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen">
@@ -58,16 +59,55 @@
       </div>
     </div>
   </header>
-<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 space-y-12 text-on-surface-variant leading-relaxed">
-    <h2 class="text-4xl font-headline font-bold text-on-surface">Gizlilik Politikası</h2>
-    <p>Anka Exchange, kullanıcılarının gizliliğine ve verilerinin korunmasına en üst düzeyde önem verir.</p>
-    <div class="space-y-6">
-        <h3 class="text-xl font-bold text-on-surface">1. Hangi Verileri Topluyoruz?</h3>
-        <p>Kimlik bilgileriniz, iletişim bilgileriniz ve işlem geçmişiniz güvenliğiniz için toplanmaktadır.</p>
-        <h3 class="text-xl font-bold text-on-surface">2. Verilerin Kullanımı</h3>
-        <p>Toplanan veriler sadece yasal gereklilikler ve size daha iyi hizmet sunmak amacıyla kullanılmaktadır.</p>
-    </div>
-</main>
+<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 flex flex-col md:flex-row gap-12">
+                                <aside class="w-full md:w-64 shrink-0 space-y-8">
+        <div class="bg-surface-container-low rounded-3xl p-2 border border-outline-variant/10">
+            <h3 class="px-4 pt-4 pb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant opacity-50">Kurumsal Menü</h3>
+            <div class="space-y-1">
+                <a href="hakkimizda.html" data-file="hakkimizda.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">info</span>Hakkımızda</a>
+                <a href="nasil-calisir.html" data-file="nasil-calisir.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">rocket_launch</span>Nasıl Çalışır?</a>
+                <a href="kyc-dogrulama.html" data-file="kyc-dogrulama.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified_user</span>KYC Doğrulama</a>
+                <a href="kullanim-kosullari.html" data-file="kullanim-kosullari.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">gavel</span>Kullanım Koşulları</a>
+                <a href="dolandiricilik-onleme.html" data-file="dolandiricilik-onleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">security</span>Dolandırıcılık Önleme</a>
+                <a href="mesafeli-satis.html" data-file="mesafeli-satis.html" class="active sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl  hover:text-primary transition-all text-sm font-medium  group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">history_edu</span>Mesafeli Satış</a>
+                <a href="acik-riza.html" data-file="acik-riza.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">border_color</span>Açık Rıza Metni</a>
+                <a href="veri-isleme.html" data-file="veri-isleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">database</span>Veri İşleme ve İmha</a>
+                <a href="sorumluluk-reddi.html" data-file="sorumluluk-reddi.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">warning</span>Sorumluluk Reddi</a>
+            </div>
+        </div>
+    </aside>>
+    <div class="flex-1 max-w-4xl space-y-12 text-on-surface-variant leading-relaxed">\n
+        <div class="space-y-4">
+            <h2 class="text-4xl font-headline font-bold text-on-surface">Mesafeli Dijital Ürün Satış Sözleşmesi</h2>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">Madde 1 - Taraflar ve Kapsam</h3>
+            <p>İşbu Sözleşme, 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği hükümleri gereğince, yasal e-ticaret işlemlerini sürdüren Turan Dijital Yazılım ve Ticaret Ltd. Şti. (Satıcı/Tedarikçi) ile dijital ürün teslimi/tedariki talep eden Kullanıcı (Alıcı/Müşteri) arasında akdedilmiştir. Sözleşmenin konusu; fiziki veya kargo ile teslimatı olmayan, tamamen gayrimaddi özellikteki teknolojik yazılımların veya "Dijital Ürünlerin" elektronik yolla satışına ve transferine ilişkindir.</p>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">Madde 2 - Ürünün Temel Nitelikleri ve İfası</h3>
+            <p>Platformlar (veya entegre ticari e-pazar yerleri) üzerinden Kullanıcı'nın cüzdanına (adresine) veya üyelik hesabına elektronik olarak gönderilen kod, dijital anahtar yahut algoritmik blokzincir transferleri işbu sözleşmenin yegane mal/hizmet konusudur. İlgili ürün değerleri serbest ve küresel anlık kurlarla arz-talep oranında şirketimizce tespit edilir ve satım anında butona basılarak onay verilen tutar üzerinden Türkiye Cumhuriyeti vergi yükümlülüklerine istinaden faturalandırılır. Malın ifası, kriptografik ağda veya elektronik dijital fihristte "Transfer Tamamlandı / Confirmed" konumuna geçtiği an gerçekleşmiş ve tarafların borcu sona ermiş sayılır.</p>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">Madde 3 - Elektronik Teslimat ve Cayma Hakkı İstisnası (Önemli Hüküm)</h3>
+            <div class="p-6 bg-surface-container-low rounded-3xl border border-error/20">
+                <p class="text-error-dim">Mesafeli Sözleşmeler Yönetmeliği Madde 15 (ğ) bendi yasal uyarısı uyarınca; "Elektronik ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen gayrimaddi mallara ilişkin mesafeli sözleşmeler" kapsamında yasama organımızca <strong class="text-error">CAYMA HAKKI İSTİSNASI</strong> tanınmıştır ve <strong class="text-error">CAYMA HAKKI KULLANILAMAZ.</strong> Dijital ticari değer cüzdanınıza veya hesabınıza ulaştığı andan itibaren sipariş "iadesi, cayma talebi veya işlemi geriye doğru sarma eylemi" donanımsal ve yasal olarak kabul edilmemektedir.</p>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">Madde 4 - Fiyat Hataları ve Platform İptal İnisiyatifi</h3>
+            <p>Sistem kaynaklı yavaşlamalar, teknolojik API arızaları veya siber ataklardan kaynaklanan olağanüstü/aşırı zarar verici veya hileli fiyatlanmalara karşı Şirketimiz; henüz ifa (onay/transfer) edilmemiş ilgili elektronik satış akdini (para iadesi sağlamak suretiyle) tek taraflı feshetme ve satışı durdurma yetkisini elinde barındırır.</p>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">Madde 5 - Fatura Tanzimi ve Vergilendirme</h3>
+            <p>İşbu Sözleşme'ye konu olan elektronik transfer/teslimat neticelendiğinde Şirket (Satıcı), Kullanıcının (Alıcının) sisteme sunduğu yasal T.C. Kimlik veya Vergi Kimlik Numarası üzerine "Bilişim Hizmetleri ve Dijital Ürün Satışı" mahiyetinde yasal VUK faturası (e-Fatura / e-Arşiv) düzenler. Tüm alım satım işlemleri şirketin resmi muhasebe kayıtları altındadır. Kullanıcı, faturanın düzenlenebilmesi için kendisine veya şirketine ait bilgileri eksiksiz ve doğru beyan etmekle kanunen mükelleftir.</p>
+        </div>
+\n    </div>\n</main>
 <footer class="bg-surface-container-lowest border-t border-surface-container-high py-20 relative z-10">
       <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
           <div class="space-y-8">

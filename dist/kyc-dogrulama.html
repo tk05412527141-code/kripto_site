@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gizlilik Politikası | Anka Exchange</title>
+    <title>KYC Doğrulama | Anka Exchange</title>
     <link rel="icon" type="image/png" href="/assets/logo-6UL8bjhX.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -14,6 +14,7 @@
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         body { font-family: 'Inter', sans-serif; background-color: #060e20; }
         h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .sidebar-link.active { background-color: rgba(189, 157, 255, 0.1); color: #bd9dff; border-left: 3px solid #bd9dff; }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen">
@@ -58,14 +59,60 @@
       </div>
     </div>
   </header>
-<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 space-y-12 text-on-surface-variant leading-relaxed">
-    <h2 class="text-4xl font-headline font-bold text-on-surface">Gizlilik Politikası</h2>
-    <p>Anka Exchange, kullanıcılarının gizliliğine ve verilerinin korunmasına en üst düzeyde önem verir.</p>
-    <div class="space-y-6">
-        <h3 class="text-xl font-bold text-on-surface">1. Hangi Verileri Topluyoruz?</h3>
-        <p>Kimlik bilgileriniz, iletişim bilgileriniz ve işlem geçmişiniz güvenliğiniz için toplanmaktadır.</p>
-        <h3 class="text-xl font-bold text-on-surface">2. Verilerin Kullanımı</h3>
-        <p>Toplanan veriler sadece yasal gereklilikler ve size daha iyi hizmet sunmak amacıyla kullanılmaktadır.</p>
+<main class="max-w-7xl mx-auto px-6 pt-32 pb-20 flex flex-col md:flex-row gap-12">
+                                <aside class="w-full md:w-64 shrink-0 space-y-8">
+        <div class="bg-surface-container-low rounded-3xl p-2 border border-outline-variant/10">
+            <h3 class="px-4 pt-4 pb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant opacity-50">Kurumsal Menü</h3>
+            <div class="space-y-1">
+                <a href="hakkimizda.html" data-file="hakkimizda.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">info</span>Hakkımızda</a>
+                <a href="nasil-calisir.html" data-file="nasil-calisir.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium hover:bg-primary/10 transition-all text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">rocket_launch</span>Nasıl Çalışır?</a>
+                <a href="kyc-dogrulama.html" data-file="kyc-dogrulama.html" class="active sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium  transition-all  group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified_user</span>KYC Doğrulama</a>
+                <a href="kullanim-kosullari.html" data-file="kullanim-kosullari.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">gavel</span>Kullanım Koşulları</a>
+                <a href="dolandiricilik-onleme.html" data-file="dolandiricilik-onleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">security</span>Dolandırıcılık Önleme</a>
+                <a href="mesafeli-satis.html" data-file="mesafeli-satis.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">history_edu</span>Mesafeli Satış</a>
+                <a href="acik-riza.html" data-file="acik-riza.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">border_color</span>Açık Rıza Metni</a>
+                <a href="veri-isleme.html" data-file="veri-isleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">database</span>Veri İşleme ve İmha</a>
+                <a href="sorumluluk-reddi.html" data-file="sorumluluk-reddi.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group"><span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">warning</span>Sorumluluk Reddi</a>
+            </div>
+        </div>
+    </aside>>
+    <div class="flex-1 max-w-4xl space-y-12 text-on-surface-variant leading-relaxed">
+        <div class="space-y-4">
+            <h2 class="text-4xl font-headline font-bold text-on-surface">Platform Doğrulama (KYC) Rehberi</h2>
+            <h3 class="text-2xl font-bold text-primary">Siber Güvenlik Uygulaması</h3>
+            <p class="text-lg">Şirketimiz, sahte kimlik ve çalıntı banka hesaplarıyla (fraud) yapılmaya çalışılan e-ticaret hırsızlıklarını önlemek amacı ile uluslararası siber güvenlik protokollerini uygulamaktadır. Sisteme güvenle dahil olabilmek için basit kimlik eşleştirme sürecini nasıl tamamlayacağınız aşağıda anlatılmıştır.</p>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">1. Doğrulama (Verification) Neden İsteniyor?</h3>
+            <p>Şirketimizden "dijital varlık" onayı alabilmeniz ve size atanan ürünleri elektronik ortamda teslim alabilmeniz için; işlemi gerçekleştiren cüzdanın veya ödemeyi yapan banka hesabının yasal sahibi olduğunuzu teyit etmemiz teknolojik e-ticaret güvenlik gereğidir.</p>
+            <p>Bunun için dünya çapında büyük şirketlerin altyapısını koruyan Sumsub gibi teknoloji ağlarıyla entegre çalışarak robotik bot/çalınmış kredi kartları ve sahte dijital kimlik operasyonlarını sistemden dışarıda tutuyoruz.</p>
+        </div>
+
+        <div class="space-y-8">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">2. Doğrulama (Onboarding) Süreci ve Adımları</h3>
+            
+            <div class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/10 hover:border-primary/30 transition-colors">
+                <h4 class="text-lg font-bold text-primary mb-3">Aşama 1 — Elektronik Kimlik İbrazı</h4>
+                <p>Sistem size bir onay bağlantısı verir. Bu bağlantı üzerinden (tercihen akıllı telefonunuz ile) yasal T.C. Kimlik Kartı, Yeni Tip Sürücü Belgesi veya Pasaportunuzun net bir fotoğrafını çekmeniz istenir. Belgeniz Sumsub tarafından analiz edilerek optik sahteciliğe uğrayıp uğramadığı yazılımsal sistem arayüzünde saniyeler içinde sınanır.</p>
+            </div>
+            
+            <div class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/10 hover:border-primary/30 transition-colors">
+                <h4 class="text-lg font-bold text-primary mb-3">Aşama 2 — Canlılık Testi (Liveness / Selfi Testi)</h4>
+                <p>Başvuru esnasında ilgili müşterinin kimlik belgesindeki fotoğrafla tamamen aynı kişi olduğu ve işlem anında orada bulunan (bilgisayar ekranı vb. göstermeyen) gerçek bir kişi olduğunun dijital tespiti yapılır. Kameraya birkaç saniye bakmanız bu test için yeterlidir.</p>
+            </div>
+            
+            <div class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/10 hover:border-primary/30 transition-colors">
+                <h4 class="text-lg font-bold text-primary mb-3">Aşama 3 — Adres / Fatura Belgesi (Sadece Risk Algılanırsa)</h4>
+                <p>Kurumsal alım planlayan yüksek hacimli üyelerde veya risk teşkil eden faili meçhul hacimlerde, işlemin sizin inisiyatifinizde geliştiğini kanıtlamak maksadıyla e-Devlet ikametgah evrakı veya yasal adınıza düzenlenmiş yeni bir fatura istenebilir.</p>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-on-surface border-b border-outline-variant/10 pb-4">3. Sonuç, Hata Kodları ve İtiraz</h3>
+            <p>Eğer kamera ışığınız yetersiz kalmışsa veya kimliğinizin üzerinde ciddi parlama/odak kaybı varsa sistem otomatik ret verebilir. Başkasına ait evrak yüklemek veya farklı bir ekranı dijital taratmak (monitörden fotoğraf çekmek) sistem tarafından risk olarak damgalanmasına sebep olur.</p>
+            <p>Başvurularda yaşanan olağan hatalar veya süreç iptalleri için <strong>info@ankaexchange.com</strong> üzerinden güvenle destek ekibimizle iletişime geçebilirsiniz.</p>
+        </div>
     </div>
 </main>
 <footer class="bg-surface-container-lowest border-t border-surface-container-high py-20 relative z-10">
