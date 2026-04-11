@@ -90,14 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
         if (marketList) {
           marketList.innerHTML = mappedData.map(item => `
-            <div class="bg-surface-container-low p-8 rounded-[2.5rem] flex items-center justify-between hover:bg-surface-container transition-all group cursor-pointer border border-outline-variant/10 hover:border-primary/40 shadow-xl shadow-black/10">
-              <div class="flex-1 flex items-center gap-6">
-                <div class="w-16 h-16 rounded-3xl bg-surface-container-highest flex items-center justify-center p-3 shadow-inner">
+            <div class="bg-surface-container-low p-4 sm:p-8 rounded-2xl sm:rounded-[2.5rem] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0 hover:bg-surface-container transition-all group cursor-pointer border border-outline-variant/10 hover:border-primary/40 shadow-xl shadow-black/10">
+              <div class="flex-1 flex items-center gap-3 sm:gap-6">
+                <div class="w-10 h-10 sm:w-16 sm:h-16 rounded-xl sm:rounded-3xl bg-surface-container-highest flex items-center justify-center p-2 sm:p-3 shadow-inner shrink-0">
                   <img src="${item.icon}" alt="${item.baseCoin}" class="w-full h-full object-contain drop-shadow-lg" />
                 </div>
                 <div>
-                  <div class="text-2xl font-bold text-on-surface font-headline tracking-tighter">${item.pair}</div>
-                  <div class="text-xs text-outline font-medium tracking-widest uppercase opacity-60">Hacim: <span id="vol-${item.symbol}">${item.volume}</span></div>
+                  <div class="text-lg sm:text-2xl font-bold text-on-surface font-headline tracking-tighter">${item.pair}</div>
+                  <div class="text-[10px] sm:text-xs text-outline font-medium tracking-widest uppercase opacity-60">Hacim: <span id="vol-${item.symbol}">${item.volume}</span></div>
                 </div>
               </div>
               
@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
               </div>
               
-              <div class="flex-1 text-right">
-                <div class="text-3xl font-bold text-on-surface tabular-nums tracking-tighter transition-colors duration-300" id="mainprice-${item.symbol}" data-price="${item.rawPrice}">₺ ${item.price}</div>
-                <div class="text-sm font-black ${item.textColorClass} transition-colors duration-300 tracking-widest" id="mainperc-${item.symbol}">${item.change}</div>
+              <div class="flex-1 text-left sm:text-right w-full sm:w-auto flex sm:block items-center justify-between">
+                <div class="text-xl sm:text-3xl font-bold text-on-surface tabular-nums tracking-tighter transition-colors duration-300" id="mainprice-${item.symbol}" data-price="${item.rawPrice}">₺ ${item.price}</div>
+                <div class="text-xs sm:text-sm font-black ${item.textColorClass} transition-colors duration-300 tracking-widest" id="mainperc-${item.symbol}">${item.change}</div>
               </div>
             </div>
           `).join('');
