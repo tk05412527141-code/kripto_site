@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kullanım Koşulları | Anka Exchange</title>
+    <title>Platform Kullanım Koşulları ve OTC Çerçeve Sözleşmesi | Anka Exchange</title>
     <link rel="icon" type="image/png" href="./logo.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -19,7 +19,7 @@
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen">
 
-<!-- TopAppBar -->
+<!-- Header -->
 <header class="fixed top-0 w-full z-50 bg-[#060e20]/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
   <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
     <div class="flex items-center gap-3">
@@ -65,7 +65,7 @@
         </div>
     </nav>
     <div class="flex items-center gap-4">
-        <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors">
+        <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
           <span class="material-symbols-outlined text-primary">light_mode</span>
         </button>
     </div>
@@ -73,74 +73,146 @@
 </header>
 
 <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
-    
     <!-- Sidebar -->
-    <aside class="w-full md:w-64 flex-shrink-0">
-        <div class="sticky top-32 space-y-2">
-            <h4 class="px-4 py-2 text-xs font-bold uppercase tracking-widest text-outline mb-2">Politikalar & Rehberler</h4>
-            <a href="dogrulama-rehberi.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">menu_book</span>
-                Doğrulama Rehberi
-            </a>
-            <a href="kyc-dogrulama.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified_user</span>
-                KYC Doğrulama
-            </a>
-            <a href="gizlilik.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">shield</span>
-                Gizlilik Politikası
-            </a>
-            <a href="kullanim-kosullari.html" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl">gavel</span>
-                Kullanım Koşulları
-            </a>
-            <a href="dolandiricilik-onleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">report_problem</span>
-                Dolandırıcılık Önleme
-            </a>
-            <a href="mesafeli-satis.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">contract</span>
-                Mesafeli Satış Sözleşmesi
-            </a>
-            <a href="acik-riza.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">handshake</span>
-                Açık Rıza Metni
-            </a>
-            <a href="veri-isleme.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">database</span>
-                Veri İşleme ve İmha
-            </a>
-            <a href="sorumluluk-reddi.html" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
-                <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">info</span>
-                Sorumluluk Reddi (Uyarı)
-            </a>
+    <aside class="w-full md:w-80 flex-shrink-0 space-y-8">
+        <div class="bg-surface-container-low rounded-3xl p-6 border border-outline-variant/10">
+            <h4 class="px-2 py-2 text-xs font-bold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm">folder_open</span>
+                Kurumsal Belgeler
+            </h4>
+            <div class="space-y-1">
+                <a href="dogrulama-rehberi.html" id="link-dogrulama" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">verified</span>
+                    Platform Doğrulama (KYC) Rehberi
+                </a>
+                <a href="kyc-dogrulama.html" id="link-kyc" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">fact_check</span>
+                    KYC Doğrulama Bilgisi
+                </a>
+                <a href="gizlilik.html" id="link-gizlilik" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">shield</span>
+                    Gizlilik Politikası
+                </a>
+                <a href="kullanim-kosullari.html" id="link-kosullar" class="sidebar-link active flex items-center gap-3 px-4 py-3 rounded-2xl transition-all text-sm font-medium group">
+                    <span class="material-symbols-outlined text-xl">gavel</span>
+                    Kullanım Koşulları
+                </a>
+                <a href="dolandiricilik-onleme.html" id="link-dolandiricilik" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">security</span>
+                    Dolandırıcılık Önleme Politikası
+                </a>
+                <a href="mesafeli-satis.html" id="link-mesafeli" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">history_edu</span>
+                    Mesafeli Satış Sözleşmesi
+                </a>
+                <a href="acik-riza.html" id="link-riza" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">border_color</span>
+                    Açık Rıza Metni
+                </a>
+                <a href="veri-isleme.html" id="link-veri" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">database</span>
+                    Veri İşleme ve İmha
+                </a>
+                <a href="sorumluluk-reddi.html" id="link-sorumluluk" class="sidebar-link flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-primary/10 hover:text-primary transition-all text-sm font-medium text-on-surface-variant group">
+                    <span class="material-symbols-outlined text-xl opacity-60 group-hover:opacity-100">warning</span>
+                    Sorumluluk Reddi (Uyarı)
+                </a>
+            </div>
+        </div>
+        
+        <div class="bg-primary/5 rounded-3xl p-6 border border-primary/10">
+            <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm">support_agent</span>
+                Uyumluluk Birimi
+            </h4>
+            <div class="space-y-3">
+                <a href="mailto:info@ankaexchange.com" class="flex items-center gap-3 text-xs font-bold text-on-surface hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-lg opacity-60">mail</span>
+                    info@ankaexchange.com
+                </a>
+            </div>
+        </div>
+
+        <div class="px-6 py-4 bg-surface-container-low rounded-2xl border border-outline-variant/10 flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/60">Son Güncelleme</span>
+            <span class="text-[10px] font-bold text-primary">11.04.2026</span>
         </div>
     </aside>
 
     <!-- Main Content -->
-    <div class="flex-1 max-w-4xl text-on-surface-variant">
-        <section class="mb-12">
-            <h1 class="text-4xl font-headline font-bold mb-6 text-on-surface">Kullanım Koşulları</h1>
-            <p class="mb-4 font-medium italic">Son Güncelleme: 11 Nisan 2026</p>
+    <div class="flex-1 max-w-4xl space-y-12">
+        <section>
+            <h1 class="text-4xl font-headline font-bold mb-2 text-on-surface">Platform Kullanım Koşulları ve OTC Çerçeve Sözleşmesi</h1>
+            <p class="text-primary font-bold uppercase tracking-widest text-xs mb-8">Bağlayıcı Hukuki Sözleşme</p>
             
-            <div class="space-y-8 leading-relaxed">
-                <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
-                    <h2 class="text-xl font-headline font-bold text-on-surface mb-3">1. Kabul Koşulları</h2>
-                    <p>Anka Exchange platformuna erişerek ve hizmetlerimizi kullanarak, bu kullanım koşullarını tamamen kabul etmiş sayılırsınız.</p>
+            <div class="space-y-6 text-on-surface-variant leading-relaxed text-sm md:text-base">
+                <p>Bu metin, <strong>Anka Finansal Hizmetler ve Ticaret Limited Şirketi</strong> (bundan böyle "Şirket") ile işlem yapan kişiler ("Kullanıcı") arasındaki yasal "OTC (Over-The-Counter) Çerçeve Satış Sözleşmesi"dir. Taraflar, platformla herhangi bir etkileşime girdiklerinde aşağıda yer alan Sermaye Piyasası, Türk Ceza Kanunu ve Veri Koruma düzenlemelerine ilişkin risk analizlerini ve hukuki beyanları tereddütsüz kabul etmiş sayılır.</p>
+
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-headline font-bold text-on-surface">1. Faaliyetin Tanımı ve Hukuki Statü</h2>
+                    <p>Anka Finansal Hizmetler ve Ticaret Limited Şirketi (bundan böyle "Şirket"), kendi mülkiyetinde ve envanterinde bulunan dijital ürünleri, bilişim varlıklarını ve yazılım kodlarını doğrudan nihai kullanıcıya (Bilateral/Birebir) satan bir e-ticaret kuruluşudur.</p>
+                    <div class="p-5 bg-primary/10 rounded-2xl border border-primary/20">
+                        <p class="text-sm"><strong>KRİTİK BEYAN:</strong> Şirket, kullanıcılar arasında bir işlem organizasyonu kurmaz, alıcı ve satıcıyı eşleştirmez ve süreklilik arz eden üçüncü taraf işlemlerine aracılık etmez. Tüm ticaret doğrudan Şirket ile Kullanıcı arasında gerçekleşir.</p>
+                    </div>
+                    <p>Kullanıcı, Şirketin faaliyet modelinin 6362 sayılı Sermaye Piyasası Kanunu (SPK) regülasyonlarına tabi bir "Kripto Varlık Platformu (Borsa)" statüsünde olmadığını bilmekte ve kabul etmektedir. Zira Şirket;</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Emanet (Custody) Hizmeti Sağlamaz:</strong> Kullanıcıların fonları veya dijital varlıkları sistemde/platformda tutulmaz.</li>
+                        <li><strong>Emir Defteri (Orderbook) İşletmez:</strong> Kullanıcıları kendi aralarında eşleştirmez. İşlemler daima Kullanıcı ile Şirket arasında "ikili (bilateral) ticari işlem" olarak tasarlanmıştır.</li>
+                        <li><strong>Aracılık Faaliyeti Yoktur:</strong> Şirket, süreklilik arz eden üçüncü taraf işlemlerine kesinlikle aracılık etmez.</li>
+                        <li><strong>Al-Sat Organizasyonu Kurmaz:</strong> Yalnızca kendi öz sermayesi, kurumsal bilançosu ve şirket envanterinden peşin ödemeli dijital ürün teslimatı veya ticari alımı gerçekleştirir.</li>
+                    </ul>
+                    <p>Bu hukuki model altında, sunulan hizmet saf bir pazar yeri OTC (Tezgâh Altı) işleminden ibarettir.</p>
                 </div>
 
-                <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
-                    <h2 class="text-xl font-headline font-bold text-on-surface mb-3">2. Hizmet Tanımı</h2>
-                    <p>Anka Exchange, Binance P2P platformu ile entegre çalışan bir kripto para alım-satım ve rehberlik servisidir. İşlemler Binance P2P kuralları çerçevesinde gerçekleşir.</p>
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-headline font-bold text-on-surface">2. Üyelik ve Kimlik Doğrulama (Fraud Önleme)</h2>
+                    <p>Platformda sunulan dijital ürünlerden faydalanabilmek için Kullanıcı'nın, Şirket tarafından belirlenen siber güvenlik ve kimlik doğrulama prosedürlerini tamamlaması zorunludur. Bu prosedürler; çalıntı ödeme araçlarının kullanımını engellemek (Anti-Fraud) ve siparişi verenin gerçek kişi olduğunu teyit etmek amacıyla işletilmektedir.</p>
+                    <p>Şirket, yüksek riskli dijital ticaretteki ödeme güvenliğini temin etmek zorunluluğu nedeniyle global KYC kuruluşu olan Sumsub üzerinden kimlik doğrulama gerçekleştirmektedir. Bu doğrulama operasyonunda:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>KVKK Statüsü:</strong> Şirket tam teşekküllü "Veri Sorumlusu", altyapıyı sağlayan Sumsub ise "Veri İşleyen" konumundadır. Süreç, kapsamlı Aydınlatma Metnimiz ve Kullanıcının verdiği "Açık Rıza" uyarınca tam denetimle işletilir.</li>
+                        <li><strong>Sorumluluk Çerçevesi ve KYC Sınırı:</strong> KYC işlemi yalnızca ödeme ve işlem (siber) güvenliği amaçlıdır; şirket tarafından hiçbir şekilde finansal analiz, mali profil çıkarma veya müşteri sınıflandırması yapılmaz.</li>
+                    </ul>
                 </div>
 
-                <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
-                    <h2 class="text-xl font-headline font-bold text-on-surface mb-3">3. Kullanıcı Sorumlulukları</h2>
-                    <p>Kullanıcılar, kimlik doğrulama süreçlerinde doğru bilgi vermek ve platformu yasalara uygun bir şekilde kullanmakla yükümlüdür. Kripto varlıkların transferi ve saklanması kullanıcının kendi sorumluluğundadır.</p>
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-headline font-bold text-on-surface">3. Türk Ceza Kanunu (TCK 158 ve TCK 282) Kapsamında İbraz ve Garantiler</h2>
+                    <p>Kullanıcı, şirketin dijital doğasına yönelik eylemlerinden şahsen hukuki ve cezai olarak sorumludur ve aşağıdaki kritik maddeleri kayıtsız şartsız taahhüt eder:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+                            <h4 class="font-bold text-on-surface mb-2">Suçtan Kaynaklanan Malvarlığını Aklama (TCK 282)</h4>
+                            <p class="text-xs">Şirketimize transfer edilen tüm nakdi veya kriptografik fonların kaynağı tamamen meşru ticari / şahsi kazanımlardır. Platformun illegal servetin aklanması maksadıyla kullanılması yasaktır.</p>
+                        </div>
+                        <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+                            <h4 class="font-bold text-on-surface mb-2">Bilişim Sistemleri Vasıtasıyla Dolandırıcılık (TCK 158)</h4>
+                            <p class="text-xs">Kullanıcı, alışveriş esnasında kullandığı kredi kartı veya banka hesabının %100 kendi mülkiyetinde / yasal yetkisinde olduğunu ispatlamak zorundadır.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="p-6 bg-surface-container-low rounded-2xl border border-outline-variant/10 italic text-primary/80">
-                    Lütfen bu koşulları dikkatlice okuyunuz. Sorularınız için destek ekibimizle iletişime geçebilirsiniz.
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-headline font-bold text-on-surface">4. İşlem Limitleri, Şüpheli Aktivite ve Fesih Hakları</h2>
+                    <p>Şirket, standart ticaret hukuku prensipleri ve e-ticaret risk yönetimi gereğince; platformlarına/ilanlarına yönelen olağandışı ödemelerde aşağıdaki tedbirleri tek taraflı olarak uygulayabilir:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-sm italic">
+                        <li>Şirket; belirli ticari limitler üzerindeki taleplerde, işlemin teyidi için ek güvenlik belgeleri talep etme hakkına sahiptir.</li>
+                        <li>Şirket, yasal kaynağı belirsiz şüpheli tutarları geldiği yasal kaynağa iade etme hakkını saklı tutar.</li>
+                        <li>Şirket, adli süreçler sonuçlanana dek ticari işlemi dondurma yetkisini elinde tutar.</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-headline font-bold text-on-surface">5. Fiyatlandırma ve Elektronik Faturalandırma Süreci</h2>
+                    <p>Platformda veya pazar yerinde yayımlanan kurlar/fiyatlar, dijital ürünün anlık piyasa değeridir. Şirketimiz bir aracı kurum veya menkul kıymet brokeri olmadığı için, işleme dayalı bir "aracılık/komisyon faturası" KESMEZ.</p>
+                    <p>Taraflar arasındaki bu satın alım veya tedarik, tamamen ticari bir "Bilişim, Yazılım Teknolojileri ve Dijital Ürün Satışı" mukavelesidir. Şirket bu elektronik e-ticaret işlemine karşılık, alıcının onaylı KYC safhasındaki yasal TCKN/VKN bilgilerine tam tutarlı "e-Arşiv / e-Fatura" tanzim etmektedir.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-headline font-bold text-on-surface">6. Uyuşmazlık Çözümü</h2>
+                    <p>İşbu OTC çerçeve sözleşmesinden veya bireysel satış siparişlerinden doğan tüm hukuki itilaflarda İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri kesin yetkili kılınmıştır.</p>
+                </div>
+
+                <div class="p-8 bg-error/10 rounded-3xl border border-error/20 mt-8">
+                    <h4 class="font-bold text-on-surface mb-2 uppercase tracking-widest text-xs">Yasal Yükümlülük Teyidi</h4>
+                    <p class="text-[11px] leading-relaxed">Şirket, sadece faturalı, yasalara saygılı ve ispatlanabilir ticaret yapmayı benimser. KYC biyometrik kontrol aşamasını başlatıp platformla temas kuran herkes; eylemlerinden doğan maddi tazminat ve suç yükümlülüklerine (TCK) bizzat katlanacağını net olarak peşinen onaylamıştır.</p>
                 </div>
             </div>
         </section>
@@ -148,7 +220,7 @@
 </main>
 
 <footer class="bg-[#060e20] border-t border-surface-container-high py-12 px-8 mt-20 text-center">
-    <p class="text-on-surface-variant text-sm mb-4">&copy; 2026 Anka Exchange. Bütün Hakları Saklıdır.</p>
+    <p class="text-on-surface-variant text-sm mb-4">&copy; 2026 Anka Exchange. Tüm Hakları Saklıdır.</p>
     <div class="text-[#dee5ff]/40 text-[9px] font-headline tracking-[0.5em] uppercase">Anka Finansal Hizmetler</div>
 </footer>
 

@@ -56,26 +56,26 @@ document.addEventListener('DOMContentLoaded', () => {
         // Render Market List with Tailwind Space Theme
         if (marketList) {
           marketList.innerHTML = mappedData.map(item => `
-            <div class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between hover:bg-surface-container transition-all group cursor-pointer border-l-2 border-transparent hover:border-primary/40">
-              <div class="flex-1 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center p-1.5 shadow-inner">
-                  <img src="${item.icon}" alt="${item.baseCoin}" class="w-full h-full object-contain drop-shadow-md" />
+            <div class="bg-surface-container-low p-8 rounded-[2.5rem] flex items-center justify-between hover:bg-surface-container transition-all group cursor-pointer border border-outline-variant/10 hover:border-primary/40 shadow-xl shadow-black/10">
+              <div class="flex-1 flex items-center gap-6">
+                <div class="w-16 h-16 rounded-3xl bg-surface-container-highest flex items-center justify-center p-3 shadow-inner">
+                  <img src="${item.icon}" alt="${item.baseCoin}" class="w-full h-full object-contain drop-shadow-lg" />
                 </div>
                 <div>
-                  <div class="font-bold text-on-surface font-headline tracking-tight">${item.pair}</div>
-                  <div class="text-[10px] text-outline font-medium tracking-wide">Hacim: <span id="vol-${item.symbol}">${item.volume}</span></div>
+                  <div class="text-2xl font-bold text-on-surface font-headline tracking-tighter">${item.pair}</div>
+                  <div class="text-xs text-outline font-medium tracking-widest uppercase opacity-60">Hacim: <span id="vol-${item.symbol}">${item.volume}</span></div>
                 </div>
               </div>
               
-              <div class="flex-1 hidden md:flex justify-center px-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="h-8 w-20 relative overflow-hidden" id="spark-${item.symbol}">
+              <div class="flex-1 hidden lg:flex justify-center px-8 opacity-40 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="h-12 w-32 relative overflow-hidden" id="spark-${item.symbol}">
                   ${item.sparkline}
                 </div>
               </div>
               
               <div class="flex-1 text-right">
-                <div class="font-bold text-on-surface tabular-nums tracking-tight transition-colors duration-300" id="mainprice-${item.symbol}" data-price="${item.rawPrice}">₺ ${item.price}</div>
-                <div class="text-xs font-bold ${item.textColorClass} transition-colors duration-300" id="mainperc-${item.symbol}">${item.change}</div>
+                <div class="text-3xl font-bold text-on-surface tabular-nums tracking-tighter transition-colors duration-300" id="mainprice-${item.symbol}" data-price="${item.rawPrice}">₺ ${item.price}</div>
+                <div class="text-sm font-black ${item.textColorClass} transition-colors duration-300 tracking-widest" id="mainperc-${item.symbol}">${item.change}</div>
               </div>
             </div>
           `).join('');
