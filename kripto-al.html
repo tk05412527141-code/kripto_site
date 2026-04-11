@@ -79,7 +79,38 @@
   </div>
 </header>
 <main class="pt-28 px-4 max-w-5xl mx-auto">
-    <!-- Spotlight section removed as requested -->
+
+    <!-- Aktif P2P İlanları -->
+    <section class="mb-12">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div class="space-y-1">
+                <div class="flex items-center gap-3">
+                    <h2 class="text-3xl font-headline font-bold text-on-surface">Aktif P2P İlanları</h2>
+                    <span class="flex items-center gap-1.5 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-[10px] font-bold uppercase tracking-widest border border-secondary/20">
+                        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        Canlı
+                    </span>
+                </div>
+                <p class="text-on-surface-variant text-sm">Binance P2P üzerindeki güncel ANKA EXCHANGE ilanları</p>
+            </div>
+            <a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer"
+               class="flex items-center gap-2 px-5 py-3 bg-primary/10 hover:bg-primary/20 border border-primary/20 text-primary font-bold text-sm rounded-2xl transition-all hover:scale-105 active:scale-95 shrink-0">
+                <span class="material-symbols-outlined text-xl">open_in_new</span>
+                Binance P2P'ye Git
+            </a>
+        </div>
+
+        <div id="p2p-buy-cards" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+            <!-- Dinamik olarak JS tarafından oluşturulur -->
+            <div class="col-span-full py-16 flex flex-col items-center justify-center gap-4 opacity-40">
+                <div class="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+                <p class="text-sm font-bold uppercase tracking-widest animate-pulse">İlanlar Yükleniyor...</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-px bg-outline-variant/10 mb-12"></div>
+
 <!-- Search & Filters -->
 <div class="mb-8 space-y-6">
 <div class="relative">
@@ -130,7 +161,7 @@
           <h4 class="font-bold text-on-surface mb-4">Hizmetlerimiz</h4>
           <ul class="space-y-2 text-sm text-on-surface-variant">
               <li class="hover:text-primary cursor-pointer transition-colors">Kripto Al</li>
-              <li><a href="kripto-sat.html" class="hover:text-primary cursor-pointer transition-colors block">Kripto Sat</a></li>
+              <li><a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="hover:text-primary cursor-pointer transition-colors block">Kripto Sat</a></li>
               <li class="hover:text-primary cursor-pointer transition-colors">Takas İşlemleri</li>
           </ul>
         </div>
@@ -163,4 +194,7 @@
 <script src="./background-3d.js"></script>
 <script src="./kripto-al.js" type="module"></script>
 </body></html>
+
+
+
 
