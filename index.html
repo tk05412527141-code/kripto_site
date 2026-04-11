@@ -1,56 +1,81 @@
 <!DOCTYPE html>
 <html class="dark" lang="tr">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anka Exchange | Dijital Varlıkların Güvenli Limanı</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <script src="./tailwind-config.js" type="module"></script>
-    <script src="./theme.js" type="module"></script>
-    <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        body { font-family: 'Inter', sans-serif; background-color: #060e20; overflow-x: hidden; }
-        h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
-        .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(189, 157, 255, 0.15) 0%, rgba(6, 14, 32, 0) 70%); }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anka Exchange | Dijital Varlıkların Güvenli Limanı</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script src="./tailwind-config.js" type="module"></script>
+  <script src="./theme.js" type="module"></script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Anka Exchange ile güvenli ve hızlı kripto para alın, satın. Anlık piyasa verileri, P2P işlemler ve SPK uyumlu güvenilir platform." />
-    <meta name="keywords" content="kripto para, bitcoin, ethereum, usdt, anka exchange, kripto al, kripto sat, p2p, kripto borsa, türkiye kripto" />
-    <meta name="author" content="Anka Exchange" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ankaexchange.com/" />
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #060e20;
+      overflow-x: hidden;
+    }
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ankaexchange.com/" />
-    <meta property="og:title" content="Anka Exchange | Dijital Varlıkların Güvenli Limanı" />
-    <meta property="og:description" content="Anka Exchange ile güvenli ve hızlı kripto para alın, satın. Anlık piyasa verileri, P2P işlemler ve SPK uyumlu güvenilir platform." />
-    <meta property="og:image" content="https://ankaexchange.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="Anka Exchange" />
-    <meta property="og:locale" content="tr_TR" />
+    h1,
+    h2,
+    h3,
+    .font-headline {
+      font-family: 'Space Grotesk', sans-serif;
+    }
 
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://ankaexchange.com/" />
-    <meta name="twitter:title" content="Anka Exchange | Dijital Varlıkların Güvenli Limanı" />
-    <meta name="twitter:description" content="Anka Exchange ile güvenli ve hızlı kripto para alın, satın. Anlık piyasa verileri, P2P işlemler ve SPK uyumlu güvenilir platform." />
-    <meta name="twitter:image" content="https://ankaexchange.com/og-image.png" />
+    .hero-gradient {
+      background: radial-gradient(circle at 50% 50%, rgba(189, 157, 255, 0.15) 0%, rgba(6, 14, 32, 0) 70%);
+    }
+  </style>
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <meta name="theme-color" content="#060e20" />
-    <meta name="msapplication-TileColor" content="#060e20" />
-    <!-- Organization Structured Data for Google -->
-    <script type="application/ld+json">
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Anka Exchange ile güvenli ve hızlı kripto para alın, satın. Anlık piyasa verileri, P2P işlemler ve SPK uyumlu güvenilir platform." />
+  <meta name="keywords"
+    content="kripto para, bitcoin, ethereum, usdt, anka exchange, kripto al, kripto sat, p2p, kripto borsa, türkiye kripto" />
+  <meta name="author" content="Anka Exchange" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ankaexchange.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ankaexchange.com/" />
+  <meta property="og:title" content="Anka Exchange | Dijital Varlıkların Güvenli Limanı" />
+  <meta property="og:description"
+    content="Anka Exchange ile güvenli ve hızlı kripto para alın, satın. Anlık piyasa verileri, P2P işlemler ve SPK uyumlu güvenilir platform." />
+  <meta property="og:image" content="https://ankaexchange.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Anka Exchange" />
+  <meta property="og:locale" content="tr_TR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://ankaexchange.com/" />
+  <meta name="twitter:title" content="Anka Exchange | Dijital Varlıkların Güvenli Limanı" />
+  <meta name="twitter:description"
+    content="Anka Exchange ile güvenli ve hızlı kripto para alın, satın. Anlık piyasa verileri, P2P işlemler ve SPK uyumlu güvenilir platform." />
+  <meta name="twitter:image" content="https://ankaexchange.com/og-image.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="./logo.png" type="image/png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <meta name="theme-color" content="#060e20" />
+  <meta name="msapplication-TileColor" content="#060e20" />
+  <!-- Organization Structured Data for Google -->
+  <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -72,237 +97,323 @@
     }
     </script>
 </head>
+
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary-container min-h-screen relative">
   <div class="fixed inset-0 z-0 pointer-events-none opacity-40">
-      <div class="hero-gradient absolute inset-0"></div>
+    <div class="hero-gradient absolute inset-0"></div>
   </div>
-  <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
+  <header
+    class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-surface-container-high flex items-center justify-center px-6 h-20 transition-all">
     <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-       <div class="flex items-center gap-3">
-          <a href="index.html" class="flex items-center gap-3 text-primary transition-all active:scale-90 animate-pulse-glow">
-             <img src="./logo.png" alt="Anka Exchange Logo" class="w-12 h-12 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
-             <img src="./logo-text.png" alt="Anka Exchange" class="h-8 md:h-10 object-contain drop-shadow-md hidden sm:block dark:invert-0 dark:hue-rotate-0 invert hue-rotate-180 transition-all duration-300" />
-          </a>
-       </div>
+      <div class="flex items-center gap-3">
+        <a href="index.html"
+          class="flex items-center gap-3 text-primary transition-all active:scale-90 animate-pulse-glow">
+          <img src="./logo.png" alt="Anka Exchange Logo"
+            class="w-12 h-12 object-contain drop-shadow-[0_0_12px_rgba(189,157,255,0.6)]" />
+          <img src="./logo-text.png" alt="Anka Exchange"
+            class="h-8 md:h-10 object-contain drop-shadow-md hidden sm:block dark:invert-0 dark:hue-rotate-0 invert hue-rotate-180 transition-all duration-300" />
+        </a>
+      </div>
       <nav class="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-medium">
-          <a href="index.html" class="text-primary hover:text-primary-dim transition-all font-bold drop-shadow-[0_0_15px_rgba(189,157,255,0.6)] animate-pulse-glow px-3 py-1 bg-primary/5 rounded-xl">Anasayfa</a>
-          <a href="kripto-al.html" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Satın Al</a>
-          <a href="kripto-sat.html" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Sat</a>
-          <div class="relative group h-full flex items-center">
-            <button class="text-on-surface/80 hover:text-primary transition-all flex items-center gap-1 group-hover:text-primary py-2 text-sm font-medium">
-              Kurumsal
-              <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">expand_more</span>
-            </button>
-                                          <div class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-[280px] pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
-            <div class="bg-surface-container-high/95 backdrop-blur-2xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex flex-col gap-0.5">
-              <a href="hakkimizda.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">info</span>Hakkımızda</a>
-              <a href="nasil-calisir.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">rocket_launch</span>Nasıl Çalışır?</a>
-              <a href="kyc-dogrulama.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">verified_user</span>KYC Doğrulama</a>
+        <a href="index.html"
+          class="text-primary hover:text-primary-dim transition-all font-bold drop-shadow-[0_0_15px_rgba(189,157,255,0.6)] animate-pulse-glow px-3 py-1 bg-primary/5 rounded-xl">Anasayfa</a>
+        <a href="kripto-al.html" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Satın Al</a>
+        <a href="kripto-sat.html" class="text-on-surface/80 hover:text-primary transition-colors">Kripto Sat</a>
+        <div class="relative group h-full flex items-center">
+          <button
+            class="text-on-surface/80 hover:text-primary transition-all flex items-center gap-1 group-hover:text-primary py-2 text-sm font-medium">
+            Kurumsal
+            <span
+              class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">expand_more</span>
+          </button>
+          <div
+            class="absolute top-[calc(100%-8px)] left-1/2 -translate-x-1/2 w-[280px] pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
+            <div
+              class="bg-surface-container-high/95 backdrop-blur-2xl border border-outline-variant/20 rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex flex-col gap-0.5">
+              <a href="hakkimizda.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">info</span>Hakkımızda</a>
+              <a href="nasil-calisir.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">rocket_launch</span>Nasıl Çalışır?</a>
+              <a href="kyc-dogrulama.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">verified_user</span>KYC Doğrulama</a>
               <div class="h-px bg-outline-variant/10 my-1 mx-2"></div>
-              <a href="kullanim-kosullari.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">gavel</span>Kullanım Koşulları</a>
-              <a href="dolandiricilik-onleme.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">security</span>Dolandırıcılık Önleme</a>
-              <a href="mesafeli-satis.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">history_edu</span>Mesafeli Satış</a>
-              <a href="gizlilik.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">shield</span>Gizlilik Politikası</a>
-              <a href="acik-riza.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">border_color</span>Açık Rıza Metni</a>
-              <a href="veri-isleme.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">database</span>Veri İşleme ve İmha</a>
-              <a href="sorumluluk-reddi.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span class="material-symbols-outlined text-[18px]">warning</span>Sorumluluk Reddi</a>
+              <a href="kullanim-kosullari.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">gavel</span>Kullanım Koşulları</a>
+              <a href="dolandiricilik-onleme.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">security</span>Dolandırıcılık Önleme</a>
+              <a href="mesafeli-satis.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">history_edu</span>Mesafeli Satış</a>
+              <a href="gizlilik.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">shield</span>Gizlilik Politikası</a>
+              <a href="acik-riza.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">border_color</span>Açık Rıza Metni</a>
+              <a href="veri-isleme.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">database</span>Veri İşleme ve İmha</a>
+              <a href="sorumluluk-reddi.html"
+                class="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-primary/10 hover:text-primary transition-colors text-[13px] font-medium"><span
+                  class="material-symbols-outlined text-[18px]">warning</span>Sorumluluk Reddi</a>
             </div>
           </div>
-          </div>
+        </div>
       </nav>
       <div class="flex items-center gap-4">
-          <button class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
-            <span class="material-symbols-outlined text-primary">light_mode</span>
-          </button>
+        <button
+          class="theme-toggle-btn hover:bg-primary/10 p-2 rounded-full transition-colors active:scale-95 duration-200">
+          <span class="material-symbols-outlined text-primary">light_mode</span>
+        </button>
       </div>
     </div>
   </header>
   <main class="relative z-10 pt-20">
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-16 sm:pb-20 text-center space-y-6 sm:space-y-8 relative overflow-hidden">
-          <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 border border-primary/20 bg-primary/5 rounded-full text-primary font-bold text-[10px] sm:text-xs uppercase tracking-widest animate-fade-in">
-              <span class="material-symbols-outlined text-sm animate-pulse">verified</span>
-              SPK Uyumlu ve Güvenilir P2P Deneyimi
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-16 sm:pb-20 text-center space-y-6 sm:space-y-8 relative overflow-hidden">
+      <div
+        class="inline-flex items-center gap-2 px-3 sm:px-4 py-2 border border-primary/20 bg-primary/5 rounded-full text-primary font-bold text-[10px] sm:text-xs uppercase tracking-widest animate-fade-in">
+        <span class="material-symbols-outlined text-sm animate-pulse">verified</span>
+        SPK Uyumlu ve Güvenilir P2P Deneyimi
+      </div>
+      <h1
+        class="text-3xl sm:text-5xl md:text-7xl font-headline font-bold text-on-surface leading-[1.15] sm:leading-[1.1] md:leading-[1.1] max-w-4xl mx-auto">
+        Dijital Varlıkların <span class="text-primary italic">Güvenli Limanı</span>
+      </h1>
+      <p
+        class="text-base sm:text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed font-medium px-2 sm:px-0">
+        Anka Exchange ile saniyeler içinde, %100 güvenli ve yerelleştirilmiş bir e-ticaret deneyimine adım atın.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 px-2 sm:px-0">
+        <a href="kripto-sat.html"
+          class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-primary text-on-primary-container font-bold rounded-2xl hover:bg-primary-dim transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20 flex items-center justify-center gap-2 text-sm sm:text-base">
+          Hemen Başla
+          <span class="material-symbols-outlined text-xl">trending_up</span>
+        </a>
+        <a href="nasil-calisir.html"
+          class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-surface-container-low border border-outline-variant/20 text-on-surface font-bold rounded-2xl hover:bg-surface-container-high transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
+          Nasıl Çalışır?
+          <span class="material-symbols-outlined text-xl">help_outline</span>
+        </a>
+      </div>
+      <div
+        class="pt-12 sm:pt-24 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-8 max-w-5xl mx-auto animate-fade-in-up">
+        <div
+          class="p-4 sm:p-6 bg-surface-container-lowest rounded-2xl sm:rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
+          <div class="flex flex-col items-center gap-2 sm:gap-3">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#141f38] p-2 sm:p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/usdt.png" alt="USDT"
+                class="w-full h-full object-contain">
+            </div>
+            <div>
+              <div class="text-[9px] sm:text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">
+                USDT/TRY</div>
+              <div class="text-lg sm:text-2xl font-bold font-headline text-on-surface" id="p2pprice-USDTTRY">₺ --.--
+              </div>
+            </div>
           </div>
-          <h1 class="text-3xl sm:text-5xl md:text-7xl font-headline font-bold text-on-surface leading-[1.15] sm:leading-[1.1] md:leading-[1.1] max-w-4xl mx-auto">
-              Dijital Varlıkların <span class="text-primary italic">Güvenli Limanı</span>
-          </h1>
-          <p class="text-base sm:text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed font-medium px-2 sm:px-0">
-              Anka Exchange ile saniyeler içinde, %100 güvenli ve yerelleştirilmiş bir e-ticaret deneyimine adım atın. 
-          </p>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 px-2 sm:px-0">
-              <a href="kripto-sat.html"  class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-primary text-on-primary-container font-bold rounded-2xl hover:bg-primary-dim transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20 flex items-center justify-center gap-2 text-sm sm:text-base">
-                  Hemen Başla
-                  <span class="material-symbols-outlined text-xl">trending_up</span>
-              </a>
-              <a href="nasil-calisir.html" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-surface-container-low border border-outline-variant/20 text-on-surface font-bold rounded-2xl hover:bg-surface-container-high transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
-                  Nasıl Çalışır?
-                  <span class="material-symbols-outlined text-xl">help_outline</span>
-              </a>
+        </div>
+        <div
+          class="p-4 sm:p-6 bg-surface-container-lowest rounded-2xl sm:rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
+          <div class="flex flex-col items-center gap-2 sm:gap-3">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#141f38] p-2 sm:p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/btc.png" alt="BTC"
+                class="w-full h-full object-contain">
+            </div>
+            <div>
+              <div class="text-[9px] sm:text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">
+                BTC/TRY</div>
+              <div class="text-lg sm:text-2xl font-bold font-headline text-on-surface" id="p2pprice-BTCTRY">₺ --.--
+              </div>
+            </div>
           </div>
-          <div class="pt-12 sm:pt-24 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-8 max-w-5xl mx-auto animate-fade-in-up">
-              <div class="p-4 sm:p-6 bg-surface-container-lowest rounded-2xl sm:rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
-                 <div class="flex flex-col items-center gap-2 sm:gap-3">
-                   <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#141f38] p-2 sm:p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/usdt.png" alt="USDT" class="w-full h-full object-contain">
-                   </div>
-                   <div>
-                     <div class="text-[9px] sm:text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">USDT/TRY</div>
-                     <div class="text-lg sm:text-2xl font-bold font-headline text-on-surface" id="p2pprice-USDTTRY">₺ --.--</div>
-                   </div>
-                 </div>
+        </div>
+        <div
+          class="p-4 sm:p-6 bg-surface-container-lowest rounded-2xl sm:rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
+          <div class="flex flex-col items-center gap-2 sm:gap-3">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#141f38] p-2 sm:p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/eth.png" alt="ETH"
+                class="w-full h-full object-contain">
+            </div>
+            <div>
+              <div class="text-[9px] sm:text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">
+                ETH/TRY</div>
+              <div class="text-lg sm:text-2xl font-bold font-headline text-on-surface" id="p2pprice-ETHTRY">₺ --.--
               </div>
-              <div class="p-4 sm:p-6 bg-surface-container-lowest rounded-2xl sm:rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
-                 <div class="flex flex-col items-center gap-2 sm:gap-3">
-                   <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#141f38] p-2 sm:p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/btc.png" alt="BTC" class="w-full h-full object-contain">
-                   </div>
-                   <div>
-                     <div class="text-[9px] sm:text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">BTC/TRY</div>
-                     <div class="text-lg sm:text-2xl font-bold font-headline text-on-surface" id="p2pprice-BTCTRY">₺ --.--</div>
-                   </div>
-                 </div>
-              </div>
-              <div class="p-4 sm:p-6 bg-surface-container-lowest rounded-2xl sm:rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
-                 <div class="flex flex-col items-center gap-2 sm:gap-3">
-                   <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#141f38] p-2 sm:p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/eth.png" alt="ETH" class="w-full h-full object-contain">
-                   </div>
-                   <div>
-                     <div class="text-[9px] sm:text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">ETH/TRY</div>
-                     <div class="text-lg sm:text-2xl font-bold font-headline text-on-surface" id="p2pprice-ETHTRY">₺ --.--</div>
-                   </div>
-                 </div>
-              </div>
-              <div class="p-4 sm:p-6 bg-surface-container-lowest rounded-2xl sm:rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
-                 <div class="flex flex-col items-center gap-2 sm:gap-3">
-                   <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#141f38] p-2 sm:p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/bnb.png" alt="BNB" class="w-full h-full object-contain">
-                   </div>
-                   <div>
-                     <div class="text-[9px] sm:text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">BNB/TRY</div>
-                     <div class="text-lg sm:text-2xl font-bold font-headline text-on-surface" id="p2pprice-BNBTRY">₺ --.--</div>
-                   </div>
-                 </div>
-              </div>
+            </div>
           </div>
-      </section>
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-32">
-          <div class="bg-surface-container-lowest/40 backdrop-blur-3xl rounded-2xl sm:rounded-[3rem] border border-outline-variant/10 overflow-hidden shadow-2xl">
-              <div class="p-5 sm:p-8 md:p-12 border-b border-outline-variant/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6">
-                  <div>
-                      <h2 class="text-xl sm:text-3xl font-headline font-bold text-on-surface mb-1 sm:mb-2">Canlı Piyasa Fiyatları</h2>
-                      <p class="text-xs sm:text-sm text-on-surface-variant font-medium">Binance Spot ve P2P pazarından anlık veriler.</p>
-                  </div>
-                  <div class="relative w-full md:w-80">
-                      <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
-                      <input type="text" id="main-search" placeholder="Coin Ara... (BTC, ETH, USDT)" class="w-full bg-surface-container-high border-none rounded-2xl py-3 sm:py-4 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary/50 transition-all font-medium placeholder:text-on-surface-variant/70" />
-                  </div>
+        </div>
+        <div
+          class="p-4 sm:p-6 bg-surface-container-lowest rounded-2xl sm:rounded-[2rem] border border-outline-variant/10 hover:border-primary/30 transition-all hover:-translate-y-1 group">
+          <div class="flex flex-col items-center gap-2 sm:gap-3">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#141f38] p-2 sm:p-2.5 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <img src="https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/128/color/bnb.png" alt="BNB"
+                class="w-full h-full object-contain">
+            </div>
+            <div>
+              <div class="text-[9px] sm:text-[10px] font-bold text-outline uppercase tracking-widest mb-1 opacity-60">
+                BNB/TRY</div>
+              <div class="text-lg sm:text-2xl font-bold font-headline text-on-surface" id="p2pprice-BNBTRY">₺ --.--
               </div>
-              <div class="p-4 sm:p-8 md:p-12">
-                  <div id="market-list" class="grid grid-cols-1 gap-4 sm:gap-6 min-h-[300px] sm:min-h-[400px] items-center justify-center">
-                      <p class="font-headline font-bold tracking-widest text-[10px] uppercase animate-pulse">Piyasa Verileri Yükleniyor...</p>
-                  </div>
-              </div>
+            </div>
           </div>
-      </section>
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 bg-primary/5 rounded-2xl sm:rounded-[4rem] border border-primary/10 mb-20 text-center">
-          <div class="text-center space-y-3 sm:space-y-4 mb-8 sm:mb-12">
-              <h2 class="text-2xl sm:text-3xl font-headline font-bold text-on-surface">Nasıl Başlanır?</h2>
-              <p class="text-on-surface-variant text-xs sm:text-sm">4 Kolay adımda güvenli alışverişe başlayın.</p>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-32">
+      <div
+        class="bg-surface-container-lowest/40 backdrop-blur-3xl rounded-2xl sm:rounded-[3rem] border border-outline-variant/10 overflow-hidden shadow-2xl">
+        <div
+          class="p-5 sm:p-8 md:p-12 border-b border-outline-variant/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6">
+          <div>
+            <h2 class="text-xl sm:text-3xl font-headline font-bold text-on-surface mb-1 sm:mb-2">Canlı Piyasa Fiyatları
+            </h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant font-medium">Binance Spot ve P2P pazarından anlık
+              veriler.</p>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
-              <div class="text-center space-y-4">
-                  <div class="w-12 h-12 bg-primary text-on-primary-container rounded-2xl flex items-center justify-center font-bold mx-auto">1</div>
-                  <h4 class="font-bold text-on-surface text-sm">İlana Tıkla</h4>
-              </div>
-              <div class="text-center space-y-4">
-                  <div class="w-12 h-12 bg-primary/20 text-primary rounded-2xl flex items-center justify-center font-bold mx-auto">2</div>
-                  <h4 class="font-bold text-on-surface text-sm">Sipariş Oluştur</h4>
-              </div>
-              <div class="text-center space-y-4">
-                  <div class="w-12 h-12 bg-primary/20 text-primary rounded-2xl flex items-center justify-center font-bold mx-auto">3</div>
-                  <h4 class="font-bold text-on-surface text-sm">KYC Doğrula</h4>
-              </div>
-              <div class="text-center space-y-4">
-                  <div class="w-12 h-12 bg-primary/20 text-primary rounded-2xl flex items-center justify-center font-bold mx-auto">4</div>
-                  <h4 class="font-bold text-on-surface text-sm">Ödeme Yap</h4>
-              </div>
+          <div class="relative w-full md:w-80">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+            <input type="text" id="main-search" placeholder="Coin Ara... (BTC, ETH, USDT)"
+              class="w-full bg-surface-container-high border-none rounded-2xl py-3 sm:py-4 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary/50 transition-all font-medium placeholder:text-on-surface-variant/70" />
           </div>
-          <div class="text-center mt-12">
-              <a href="nasil-calisir.html" class="text-primary font-bold text-sm hover:underline flex items-center justify-center gap-1">
-                  Detaylı İşlem Rehberini Gör
-                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
+        </div>
+        <div class="p-4 sm:p-8 md:p-12">
+          <div id="market-list"
+            class="grid grid-cols-1 gap-4 sm:gap-6 min-h-[300px] sm:min-h-[400px] items-center justify-center">
+            <p class="font-headline font-bold tracking-widest text-[10px] uppercase animate-pulse">Piyasa Verileri
+              Yükleniyor...</p>
           </div>
-      </section>
+        </div>
+      </div>
+    </section>
+    <section
+      class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 bg-primary/5 rounded-2xl sm:rounded-[4rem] border border-primary/10 mb-20 text-center">
+      <div class="text-center space-y-3 sm:space-y-4 mb-8 sm:mb-12">
+        <h2 class="text-2xl sm:text-3xl font-headline font-bold text-on-surface">Nasıl Başlanır?</h2>
+        <p class="text-on-surface-variant text-xs sm:text-sm">4 Kolay adımda güvenli alışverişe başlayın.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
+        <div class="text-center space-y-4">
+          <div
+            class="w-12 h-12 bg-primary text-on-primary-container rounded-2xl flex items-center justify-center font-bold mx-auto">
+            1</div>
+          <h4 class="font-bold text-on-surface text-sm">İlana Tıkla</h4>
+        </div>
+        <div class="text-center space-y-4">
+          <div
+            class="w-12 h-12 bg-primary/20 text-primary rounded-2xl flex items-center justify-center font-bold mx-auto">
+            2</div>
+          <h4 class="font-bold text-on-surface text-sm">Sipariş Oluştur</h4>
+        </div>
+        <div class="text-center space-y-4">
+          <div
+            class="w-12 h-12 bg-primary/20 text-primary rounded-2xl flex items-center justify-center font-bold mx-auto">
+            3</div>
+          <h4 class="font-bold text-on-surface text-sm">KYC Doğrula</h4>
+        </div>
+        <div class="text-center space-y-4">
+          <div
+            class="w-12 h-12 bg-primary/20 text-primary rounded-2xl flex items-center justify-center font-bold mx-auto">
+            4</div>
+          <h4 class="font-bold text-on-surface text-sm">Ödeme Yap</h4>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="nasil-calisir.html"
+          class="text-primary font-bold text-sm hover:underline flex items-center justify-center gap-1">
+          Detaylı İşlem Rehberini Gör
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+    </section>
   </main>
-  <footer class="bg-surface-container-lowest border-t border-surface-container-high py-12 sm:py-20 pb-28 md:pb-20 relative z-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-16">
-          <div class="space-y-6 sm:space-y-8 col-span-2 md:col-span-1">
-            <div class="flex items-center gap-3">
-                <img src="./logo.png" alt="Anka" class="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
-                 <img src="./logo-text.png" alt="Anka Exchange" class="h-5 sm:h-6 object-contain dark:invert-0 dark:hue-rotate-0 invert hue-rotate-180 transition-all duration-300" />
-            </div>
-            <p class="text-on-surface-variant text-xs sm:text-sm leading-relaxed">Yeni nesil finansal dünya için geliştirilen, güvenli ve hızlı kripto para işlem platformu.</p>
-            <div class="space-y-2">
-                <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">İletişim Üssü</p>
-                <a href="mailto:info@ankaexchange.com" class="text-xs sm:text-sm font-bold text-on-surface hover:text-primary transition-colors break-all">info@ankaexchange.com</a>
-            </div>
-          </div>
-          <div class="space-y-6">
-            <h4 class="font-headline font-bold text-on-surface">Piyasalar</h4>
-            <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
-                <li class="hover:text-primary cursor-pointer transition-colors">USDT Pariteleri</li>
-                <li class="hover:text-primary cursor-pointer transition-colors">BTC Piyasası</li>
-                <li class="hover:text-primary cursor-pointer transition-colors">Yüksek Hacim</li>
-            </ul>
-          </div>
-          <div class="space-y-6">
-            <h4 class="font-headline font-bold text-on-surface">Platform</h4>
-            <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
-                <li><a href="kripto-al.html" class="hover:text-primary transition-colors">Kripto Al</a></li>
-                <li><a href="kripto-sat.html" class="hover:text-primary transition-colors">Kripto Sat</a></li>
-                <li><a href="nasil-calisir.html" class="hover:text-primary transition-colors">Nasıl Çalışır?</a></li>
-                <li><a href="kyc-dogrulama.html" class="hover:text-primary transition-colors">KYC Doğrulama</a></li>
-            </ul>
-          </div>
-          <div class="space-y-6">
-            <h4 class="font-headline font-bold text-on-surface">Yasal</h4>
-            <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
-                <li><a href="gizlilik.html" class="hover:text-primary transition-colors">Gizlilik Politikası</a></li>
-                <li><a href="kullanim-kosullari.html" class="hover:text-primary transition-colors">Kullanım Koşulları</a></li>
-                <li><a href="acik-riza.html" class="hover:text-primary transition-colors">Açık Rıza Metni</a></li>
-                <li><a href="sorumluluk-reddi.html" class="hover:text-primary transition-colors">Sorumluluk Reddi</a></li>
-            </ul>
-          </div>
+  <footer
+    class="bg-surface-container-lowest border-t border-surface-container-high py-12 sm:py-20 pb-28 md:pb-20 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-16">
+      <div class="space-y-6 sm:space-y-8 col-span-2 md:col-span-1">
+        <div class="flex items-center gap-3">
+          <img src="./logo.png" alt="Anka" class="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+          <img src="./logo-text.png" alt="Anka Exchange"
+            class="h-5 sm:h-6 object-contain dark:invert-0 dark:hue-rotate-0 invert hue-rotate-180 transition-all duration-300" />
+        </div>
+        <p class="text-on-surface-variant text-xs sm:text-sm leading-relaxed">Yeni nesil finansal dünya için
+          geliştirilen, güvenli ve hızlı kripto para işlem platformu.</p>
+        <div class="space-y-2">
+          <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">İletişim Üssü</p>
+          <a href="mailto:info@ankaexchange.com"
+            class="text-xs sm:text-sm font-bold text-on-surface hover:text-primary transition-colors break-all">info@ankaexchange.com</a>
+        </div>
       </div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 mt-12 sm:mt-20 pt-6 sm:pt-8 border-t border-surface-container-high flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 text-[9px] sm:text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em]">
-          <p>© 2026 Anka Finansal Hizmetler ve Ticaret Limited Şirketi. Tüm Hakları Saklıdır.</p>
-          <div class="flex gap-8 opacity-40">
-              <span class="hover:text-primary transition-colors cursor-pointer">Sovereign Motoru</span>
-              <span class="hover:text-primary transition-colors cursor-pointer">Küresel Uyumluluk</span>
-          </div>
+      <div class="space-y-6">
+        <h4 class="font-headline font-bold text-on-surface">Piyasalar</h4>
+        <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
+          <li class="hover:text-primary cursor-pointer transition-colors">USDT Pariteleri</li>
+          <li class="hover:text-primary cursor-pointer transition-colors">BTC Piyasası</li>
+          <li class="hover:text-primary cursor-pointer transition-colors">Yüksek Hacim</li>
+        </ul>
       </div>
+      <div class="space-y-6">
+        <h4 class="font-headline font-bold text-on-surface">Platform</h4>
+        <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
+          <li><a href="kripto-al.html" class="hover:text-primary transition-colors">Kripto Al</a></li>
+          <li><a href="kripto-sat.html" class="hover:text-primary transition-colors">Kripto Sat</a></li>
+          <li><a href="nasil-calisir.html" class="hover:text-primary transition-colors">Nasıl Çalışır?</a></li>
+          <li><a href="kyc-dogrulama.html" class="hover:text-primary transition-colors">KYC Doğrulama</a></li>
+        </ul>
+      </div>
+      <div class="space-y-6">
+        <h4 class="font-headline font-bold text-on-surface">Yasal</h4>
+        <ul class="text-on-surface-variant text-sm space-y-4 font-medium">
+          <li><a href="gizlilik.html" class="hover:text-primary transition-colors">Gizlilik Politikası</a></li>
+          <li><a href="kullanim-kosullari.html" class="hover:text-primary transition-colors">Kullanım Koşulları</a></li>
+          <li><a href="acik-riza.html" class="hover:text-primary transition-colors">Açık Rıza Metni</a></li>
+          <li><a href="sorumluluk-reddi.html" class="hover:text-primary transition-colors">Sorumluluk Reddi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 mt-12 sm:mt-20 pt-6 sm:pt-8 border-t border-surface-container-high flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 text-[9px] sm:text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em]">
+      <p>© 2026 Anka Finansal Hizmetler ve Ticaret Limited Şirketi. Tüm Hakları Saklıdır.</p>
+      <div class="flex gap-8 opacity-40">
+        <span class="hover:text-primary transition-colors cursor-pointer">Sovereign Motoru</span>
+        <span class="hover:text-primary transition-colors cursor-pointer">Küresel Uyumluluk</span>
+      </div>
+    </div>
   </footer>
-  <nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-4 bg-surface/90 backdrop-blur-2xl rounded-t-3xl z-50 border-t border-surface-container-high shadow-[0px_-8px_30px_rgba(0,0,0,0.5)]">
-      <a href="index.html" class="flex flex-col items-center justify-center text-primary transition-all active:scale-90 animate-pulse-glow">
-        <span class="material-symbols-outlined mb-1 text-2xl font-bold">home</span>
-        <span class="font-medium text-[10px]">Piyasa</span>
-      </a>
-      <a href="kripto-al.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
-        <span class="material-symbols-outlined mb-1 text-2xl">add_shopping_cart</span>
-        <span class="font-medium text-[10px]">Alış</span>
-      </a>
-      <a href="kripto-sat.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
-        <span class="material-symbols-outlined mb-1 text-2xl">sell</span>
-        <span class="font-medium text-[10px]">Satış</span>
-      </a>
-      <a href="hakkimizda.html" class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
-        <span class="material-symbols-outlined mb-1 text-2xl">corporate_fare</span>
-        <span class="font-medium text-[10px]">Kurumsal</span>
-      </a>
+  <nav
+    class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-4 bg-surface/90 backdrop-blur-2xl rounded-t-3xl z-50 border-t border-surface-container-high shadow-[0px_-8px_30px_rgba(0,0,0,0.5)]">
+    <a href="index.html"
+      class="flex flex-col items-center justify-center text-primary transition-all active:scale-90 animate-pulse-glow">
+      <span class="material-symbols-outlined mb-1 text-2xl font-bold">home</span>
+      <span class="font-medium text-[10px]">Piyasa</span>
+    </a>
+    <a href="kripto-al.html"
+      class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
+      <span class="material-symbols-outlined mb-1 text-2xl">add_shopping_cart</span>
+      <span class="font-medium text-[10px]">Alış</span>
+    </a>
+    <a href="kripto-sat.html"
+      class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
+      <span class="material-symbols-outlined mb-1 text-2xl">sell</span>
+      <span class="font-medium text-[10px]">Satış</span>
+    </a>
+    <a href="hakkimizda.html"
+      class="flex flex-col items-center justify-center text-on-surface/60 hover:text-primary transition-all active:scale-90">
+      <span class="material-symbols-outlined mb-1 text-2xl">corporate_fare</span>
+      <span class="font-medium text-[10px]">Kurumsal</span>
+    </a>
   </nav>
   <script src="./background-3d.js" type="module"></script>
   <script src="./main.js" type="module"></script>
 </body>
+
 </html>
