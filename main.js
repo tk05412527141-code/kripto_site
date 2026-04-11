@@ -151,10 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
                       <div class="text-3xl font-bold font-headline text-on-surface tracking-tighter drop-shadow-sm transition-colors duration-300" id="p2pprice-dynamic-${coinData.symbol}">₺ ${p2pPrice}</div>
                     </div>
                     
-                    <button class="w-full bg-gradient-to-tr from-error-dim/20 to-error-dim/5 hover:from-error-dim/30 hover:to-error-dim/10 text-error border border-error-dim/30 py-3 rounded-full font-bold transition-all text-sm relative z-10 flex items-center justify-center gap-2 active:scale-[0.98] drop-shadow-sm">
+                    <a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-tr from-error-dim/20 to-error-dim/5 hover:from-error-dim/30 hover:to-error-dim/10 text-error border border-error-dim/30 py-3 rounded-full font-bold transition-all text-sm relative z-10 flex items-center justify-center gap-2 active:scale-[0.98] drop-shadow-sm">
                       <span class="material-symbols-outlined text-lg">shopping_cart_checkout</span>
                       ${coinData.baseCoin} Sat
-                    </button>
+                    </a>
                  </div>
                 `;
             }).join('');

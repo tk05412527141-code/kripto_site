@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="font-headline font-bold text-on-surface transition-colors duration-300">₺ ${formatPrice(item.current_price)}</p>
                         <p class="text-xs font-bold ${textColorClass} transition-colors duration-300">${sign}${(item.price_change_percentage_24h || 0).toFixed(2)}%</p>
                       </div>
-                      <a href="index.html" onclick="event.stopPropagation()" class="bg-error-dim/10 text-error-dim border border-error-dim/30 hover:bg-error-dim/20 text-[11px] uppercase tracking-wider px-4 py-2 rounded-full font-bold transition-colors active:scale-95 shadow-[0_0_8px_rgba(189,157,255,0.1)] flex items-center justify-center">Sat</a>
+                      <a href="https://c2c.binance.com/en/advertiserDetail?advertiserNo=s0891cd65af033d108117ef9c2f780042" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="bg-error-dim/10 text-error-dim border border-error-dim/30 hover:bg-error-dim/20 text-[11px] uppercase tracking-wider px-4 py-2 rounded-full font-bold transition-colors active:scale-95 shadow-[0_0_8px_rgba(189,157,255,0.1)] flex items-center justify-center">Sat</a>
                     </div>
                   </div>
                   <div class="chart-container overflow-hidden h-0 transition-all duration-500 bg-[#0c1222]"></div>
