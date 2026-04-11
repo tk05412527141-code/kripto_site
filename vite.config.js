@@ -18,6 +18,7 @@ export default defineConfig({
         acikRiza: resolve(__dirname, 'acik-riza.html'),
         veriIsleme: resolve(__dirname, 'veri-isleme.html'),
         sorumlulukReddi: resolve(__dirname, 'sorumluluk-reddi.html'),
+        dogrulamaRehberi: resolve(__dirname, 'dogrulama-rehberi.html'),
       },
     },
   },
