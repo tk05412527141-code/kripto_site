@@ -196,4 +196,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Auto Refresh every 60 seconds (CoinGecko friendly)
     setInterval(fetchLiveCryptoData, 60000);
+
+    // Mobile bottom-nav: highlight current page icon
+    try {
+      const bottomNavs = Array.from(document.querySelectorAll('nav')).filter(n => n.className && n.className.includes('fixed') && n.className.includes('bottom-0'));
+      const currentFile = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+      bottomNavs.forEach(nav => {
+        const links = nav.querySelectorAll('a[href]');
+        links.forEach(a => {
+          const href = a.getAttribute('href') || '';
+          const hrefFile = href.split('/').pop().toLowerCase();
+          if (hrefFile === currentFile || (currentFile === '' && (hrefFile === 'index.html' || hrefFile === ''))) {
+            a.classList.remove('text-on-surface/60');
+            a.classList.add('text-primary', 'animate-pulse-glow');
+          } else {
+            a.classList.remove('text-primary', 'animate-pulse-glow');
+            if (!a.classList.contains('text-on-surface/60')) a.classList.add('text-on-surface/60');
+          }
+        });
+      });
+    } catch (e) {
+      console.error('Bottom nav highlight error', e);
+    }
 });
